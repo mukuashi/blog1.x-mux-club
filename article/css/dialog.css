@@ -1,0 +1,84 @@
+.dialog,.dialog__overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.dialog {
+	position: fixed;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.dialog__overlay {
+	position: absolute;
+	z-index: 1;
+	background: rgba(55, 58, 71, 0.9);
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.dialog--open .dialog__overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dialog__content {
+	width: 50%;
+	max-width: 560px;
+	min-width: 290px;
+	background: #fff;
+	padding: 4em;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	opacity: 0;
+	margin:15% auto;
+}
+
+.dialog--open .dialog__content {
+	pointer-events: auto;
+}
+
+/* Content */
+.dialog h3 {
+    color: #fff;
+  text-shadow: 1px 2px 3px #C84E50;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding: 0 0 0.3em;
+  border-bottom: 1px solid #fff;
+}
+ul .buttonmenu{margin:0;padding:0;}
+ul .buttonmenu li{list-style-type:none;float:left;margin:0 8%;}
+@media screen and (max-width:1176px){
+	ul .buttonmenu li{margin:0 2%;}
+	ul .buttonmenu li button{padding:0.65em 2.8em;}
+}
+@media screen and (max-width:960px){
+	ul .buttonmenu li{margin:0 4%;}
+	ul .buttonmenu li button{padding:0.5em 1.8em;}
+	.dialog-inner h3{font-size:1em;}
+}
+@media screen and (max-width:768px){
+	ul .buttonmenu{width:130%;}
+	ul .buttonmenu li{margin:0 11.5% 0 -8%;text-align:center;}
+	ul .buttonmenu li button{padding:0.6em 2.5em;}
+	.dialog-inner h3{font-size:1.2em;}
+}
+@media screen and (max-width:640px){
+	ul .buttonmenu li{margin:0 1.2%;}
+	ul .buttonmenu li button{padding:0.5em 1.6em;}
+	.dialog-inner h3{font-size:0.91em;padding-bottom:1em;}
+}
+@media screen and (max-width:320px){
+	ul .buttonmenu li button{padding:0.4em 1.5em;}
+}

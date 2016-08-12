@@ -1,0 +1,145 @@
+*, body { font-family: Helvetica, Arial, sans-serif; }
+h1 {
+	font-weight: 300;
+	font-size: 36px;
+	line-height: normal;
+	margin:30px auto 0;
+	text-align: center;
+	text-shadow: 1px 1px 2px #FFFC00;
+}
+.form-horizontal .control-label { padding-top: 0; }
+.form-horizontal.templatemo-payment-form .radio.templatemo-no-padding-top {	padding-top: 0; }
+.control-wrapper {
+	position: relative;
+	padding-left: 30px;
+}
+.control-wrapper label.fa-label {
+	position: absolute;
+	left: 4px;
+	top: 6px;
+}
+.form-group:last-child { margin-bottom: 0; }
+.form-horizontal .control-label { margin-bottom: 10px; }
+.table { margin-bottom: 0; }
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, 
+.table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+	vertical-align: middle;
+}
+.templatemo-form-list-container { max-width: 600px; }
+.templatemo-input-icon-container { position: relative; }
+.templatemo-input-icon-container .fa {
+	color: gray;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.templatemo-input-icon-container input, 
+.templatemo-input-icon-container textarea {
+	padding-left: 30px;
+}
+.templatemo-container {
+	background-color: rgba(255,255,255,0.8);
+	border: 1px solid #dedede;
+	border-radius: 8px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.templatemo-bg-gray { background-color:#eee;margin:5% 0 0 0; }
+.templatemo-bg-gray h1 { color: rgb(74, 164, 180); }
+.templatemo-bg-image-1 {
+	background-color: rgb(60,60,60);
+	background-image: url(../images/bg1.jpg);	
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;	
+    background-size: cover;
+    margin-bottom:3%;
+}
+.font-size-small { font-size: 0.8em; }
+.margin-bottom-15 {	margin-bottom: 15px; }
+.margin-bottom-30 {	margin-bottom: 30px; }
+.form-group { margin-bottom:5%; }
+.form-group a {	line-height: 34px; }
+.fa { font-size: 16px; }
+.fa.login-with {
+	font-size: 30px;
+	margin: 0 5px;
+}
+.fa-medium { font-size: 20px; }
+.inline-block { display: inline-block; }
+.col-md-12 ul{padding:0;margin:0;}
+.col-md-12 ul li{list-style-type:none;float:left;margin:0 8%;}
+.col-md-12 ul li a{color:#fff;}
+.col-md-12 ul li a:hover{color:#0ff;}
+a.question{color:#0ff!important;}
+a.question:hover{text-decoration:none;color:#FFE904!important;}
+
+
+/*-------------------------------------
+3. login-form-2
+---------------------------------------*/
+.templatemo-login-form-2 {
+	background-color: rgba(13,13,13,0.25);
+	border-radius: 8px;
+	color: #fff;
+	font-weight: 300;
+	max-width: 650px;
+	padding: 0 30px 30px 30px;
+	margin: 7% auto 0 auto;
+}
+.templatemo-login-form-2 h1 { color: #fff; margin-bottom: 40px; }
+.templatemo-login-form-2 a { color: #DBDBDB;text-decoration:none; }
+.templatemo-login-form-2 .form-control {
+	background-color: rgba(83, 78, 78, 0.35);
+	border: 1px solid rgba(255, 255, 255, 0.27);
+	color: rgb(0,255,255);
+}
+.templatemo-login-form-2 .templatemo-input-icon-container .fa {	color: rgb(190, 190, 190); }
+.templatemo-login-form-2 .control-label { margin-bottom: 10px; }
+.templatemo-login-form-2 .btn {	width: 100%; }
+.templatemo-login-form-2 .btn-social { max-width: 220px; }
+.templatemo-login-form-2 label { font-weight: 400; }
+.templatemo-login-form-2 .templatemo-one-signin { border-right: 1px solid rgba(200, 200, 200, 0.5); }
+
+
+
+/*-------------------------------------
+2. forgot-password
+---------------------------------------*/
+.templatemo-forgot-password-form {
+	background-color: #fff;	
+	max-width: 550px;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+
+/*-------------------------------------
+3. Media Queries
+---------------------------------------*/
+@media screen and (max-width: 767px) {
+	.templatemo-header .col-md-12 {	line-height: 20px; }
+	.templatemo-header .btn { margin-bottom: 15px; }
+	.templatemo-container {	padding: 15px; }
+	.control-wrapper label.fa-label { top: 6px;	}
+	.templatemo-header form { margin-top: 0; }
+	.templatemo-login-form-2 .btn-social{float:left;margin:4% 1%!important;}
+}
+@media screen and (max-width: 991px) {
+	.templatemo-login-form-2 .btn-social{float:left;margin:1% 5% 2% 3%;}
+	.templatemo-login-form-2 .templatemo-one-signin {
+		border-right: none;
+		border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+	}
+	.templatemo-login-form-2 .templatemo-other-signin {	padding-top: 30px; }
+	.templatemo-login-form-2 .form-group:last-child { margin-bottom: 30px; }
+	.templatemo-create-account .col-md-6, .templatemo-create-account .col-md-12 {
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}
+	.templatemo-create-account .form-group { margin-bottom: 0; }
+	.templatemo-radio-group { margin-top: 0; }
+	.templatemo-contact-form-2 .checkbox {	margin-bottom: 15px; }
+	.templatemo-contact-form-2 { padding: 30px 30px 0 30px;	}
+	.templatemo-radio-container { margin-left: 30px; }
+}
