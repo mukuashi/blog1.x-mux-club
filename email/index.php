@@ -10,7 +10,7 @@ include("class.phpmailer.php");
 include("class.smtp.php");
 $smtp = "smtp.qq.com";//必填，设置SMTP服务器 QQ邮箱是smtp.qq.com(163或139类似)
 $youremail ='mks572512250@foxmail.com'; // 必填，开通SMTP服务的邮箱；也就是发件人Email。
-$password = "bzrmvioysterbbeh"; //必填， 以上邮箱对应的密码
+$password = "ormesclvoxfvbbjj"; //必填， 以上邮箱对应的密码
 $ymail = "mks572512250@foxmail.com"; //收信人的邮箱地址，也就是你自己收邮件的邮箱
 $yname = "PhotoArtLife"; //收件人称呼
 function get_ip(){
@@ -45,9 +45,9 @@ if($_POST['yourname']){
   $mail->MsgHTML($html);  
   $mail->IsHTML(true); 
   if(!$mail->Send()) {
-    echo '<script>alert("您的信息填写有误提交失败了，请重新填写信息，谢谢啦！");window.history.go(-1);</script>';
+    echo '<script>alert("您的信息填写有误提交失败了，请重新填写信息！");window.history.go(-1);</script>';
   } else {
-    echo '<script>alert("您好，我已经收到您的邮件，稍后会给您答复的，谢谢啦！");window.location.href="../project/works/index.html#four";</script>';
+    echo '<script>alert("您的邮件已经！");window.location.href="../project/works/index.html#four";</script>';
   }
 }
 ?>

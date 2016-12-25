@@ -10,7 +10,7 @@ include("class.phpmailer.php");
 include("class.smtp.php");
 $smtp = "smtp.qq.com";//必填，设置SMTP服务器 QQ邮箱是smtp.qq.com(163或139类似)
 $youremail ='mks572512250@foxmail.com'; // 必填，开通SMTP服务的邮箱；也就是发件人Email。
-$password = "bzrmvioysterbbeh"; //必填， 以上邮箱对应的密码
+$password = "ormesclvoxfvbbjj"; //必填， 以上邮箱对应的密码
 $ymail = "mks572512250@foxmail.com"; //收信人的邮箱地址，也就是你自己收邮件的邮箱
 $yname = "PhotoArtLife"; //收件人称呼
 function get_ip(){
