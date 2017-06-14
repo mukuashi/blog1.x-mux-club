@@ -1,9 +1,7 @@
 /**
- * Copyright (c) 2015-至今 PhotoArtLife All rights reseved.
- * @author mukuashi@PhotoArtLife | mks572512250@foxmail.com
+ * Copyright (c) 2015-Now PhotoArtLife All rights reseved.
+ * @author Mich | mks572512250@foxmail.com
  * @version 1.0 | 2015-012-01 公共弹窗组件
-//调用异步加载图片技术echo.js
-// echo.render(); is also available for non-scroll callbacks
  **/
 $(document).ready(function(){
   //判断打开设备\电话提示栏
@@ -21,21 +19,24 @@ $(document).ready(function(){
   /* Act on the event */
   });
   //微信提示框
+  	//1-公共微信
    $('.wechat').on('click', function(){
     layer.open({
     type: 1,
     title:'微信扫一扫(或微信里长按识别二维码)',
     skin: 'layui-layer-rim', //加上边框
     area: ['350px', '410px'], //宽高
-    content: '<div class="img_wechat"><img src="http://www.kquanr.com/arts/images/photoartlife.jpg" alt="请检查您的网络连接哟"><p>微信公众号ID：PhotoArtLife<br>如有问题，请关注微信联系作者！</p></div>'});
+    content: '<div class="img_wechat"><img src="http://www.kquanr.com/arts/images/photoartlife.jpg" alt="请检查您的网络连接哟"><p>微信公众号ID：PhotoArtLife<br>如有问题，可以给我留言哈</p></div>'});
     });
-
-   //tips弹出提示框
-   $('.tips_website').on('click', function(){
-    layer.tips('Hi，我的驿站网址是 kquanr.com ','.tips_website',{
-      tips:[1,'#0fa6d8']//可自由配置颜色
+   	//2-个人微信
+   $('.private-wechat').on('click', function(){
+    layer.open({
+    type: 1,
+    title:'微信扫一扫(或微信里长按识别二维码)',
+    skin: 'layui-layer-rim', //加上边框
+    area: ['350px', '410px'], //宽高
+    content: '<div class="img_wechat"><img src="http://www.kquanr.com/arts/images/private-wechat.jpg" alt="请检查您的网络连接哟"><p>作者微信ID：mukuashi<br>如有问题，可以给我留言哈。</p></div>'});
     });
-   });
 
    //避免HTML5表单提交失败的验证
     $('#submit').on('click', function(e) {

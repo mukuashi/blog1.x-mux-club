@@ -50,7 +50,7 @@ if($_POST['yourname']){
     echo '<script>alert("您的信息填写有误提交失败了，请重新填写信息，谢谢啦！");history.go(-1);</script>';
   } else {
     header("Content-Type: text/html; charset=utf-8");
-      echo '<script>alert("您好，我已经收到您的邮件，稍后会给您答复的，谢谢啦！");location.href="../arts/index.html#three";</script>';
+      echo '<script>alert("邮件发送成功！稍后我会及时给你答复的，谢谢反馈哈！");location.href="../arts/index.html#three";</script>';
   }
 }
 ?>

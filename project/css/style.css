@@ -176,11 +176,12 @@
 
 	header.major {
 		padding: 1em 0;
-		text-align: center;
+		text-align: left;
+    	text-indent: 5%;
 	}
 
 	header.major h2 {
-		margin: 0;
+		line-height: 1.45em;
 	}
 	header.major h2.alone{
 		color: #01BBA3;
@@ -516,11 +517,12 @@
 				h3.h3title{
 					clear:both;
 					margin:-0.5em 0 0.5em;
-					font-weight:600;
+					font-weight:600;				text-align: left;
+
 				}
 			.box p.pzonghe{
 				text-align: left;
-				font-weight:600;
+				font-weight:400;
 				color:#E89980;
 			}
 			ul.hezuo{
@@ -1339,12 +1341,18 @@
 	#fenhang{
 		word-wrap:break-word;
 		overflow:hidden;
+	}
+	#fenhang:after{
 		display:block;
+		content: '↓';
+		font-size: 160%;
+		margin-top: 6%;
 	}
 	li#cprtone em.beian{
-    	       word-wrap: break-word;
-    	       word-break: normal;
-    	       display:block;
+    	word-wrap: break-word;
+    	word-break: normal;
+    	display:block;
+
     }
 }
 
