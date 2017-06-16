@@ -25,13 +25,13 @@ if(!IsPC()) {
 //首页版本切换-弹框提示
 swal({
   html: true,
-  title: '新版本上线了，来观摩一下么?<p>当前版本2017及之后 / 老版本2016及之前</p><br /><p>5秒后系统会默认为你选择老版本</p>',
+  title: '新版本上线了，来观摩一下么?<p>当前版本2017及之后 / 老版本2016及之前</p><br/><p>5秒后系统会默认为你选择老版本</p>',
   type: 'info',
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
-  cancelButtonText: '嗯，先看老的',
-  confirmButtonText: '去啊，Go',
+  cancelButtonText: '先老的吧',
+  confirmButtonText: '去啊Go',
   closeOnConfirm: false, 
   closeOnCancel: false,
   timer: 5000
