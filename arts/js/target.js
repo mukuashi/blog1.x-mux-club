@@ -37,6 +37,9 @@ $(document).ready(function() {
     $('.web_pcjc').click(function(){
          location.href="http://kquanr.com/jiacheng2";
     });
+    $('.web_now').click(function(){
+         location.href="http://kquanr.com/2016-now";
+    });
 
     $('.web_hushenghao').click(function(){
     layer.open({
