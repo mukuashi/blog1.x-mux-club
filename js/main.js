@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2015-Now PhotoArtLife All rights reseved.
  * @author Mich | mks572512250@foxmail.com
- * @version 1.0 | 2015-012-01 公共弹窗组件
+ * @version 1.0 | 2015-12-01 公共弹窗组件
  **/
 $(document).ready(function(){
   //判断打开设备\电话提示栏
