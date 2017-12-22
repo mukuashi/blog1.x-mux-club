@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>mukuashi@PhotoArtLife</title>
+		<title>mukuashi@PhotoArtLife | 1.x</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="PhotoArtLife@穆跨世-个人驿站社区-mukuashi@PhotoArtLife" />
-		<meta name="keywords" content="穆跨世@PhotoArtLife-个人网站及博客-作品驿站-项目中心-摄影设计作品-生活纪实" />
+		<meta name="keywords" content="穆跨世@PhotoArtLife-个人网站及博客-作品驿站-项目代码-摄影作品-生活纪实" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
@@ -31,8 +31,8 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>PhotoArtLife</h1>
-						<h2>自由摄影师&nbsp;&bull;&nbsp;前端工程师（偏全栈）&nbsp;&bull;&nbsp;公路/专栏作者&nbsp;&bull;&nbsp;半个设计师&nbsp;&bull;&nbsp;影视后期控</h2>
-						<p>一只拍片写稿、画图敲代码的斜杠文青患者，走在产品学习与输入输出的路上</p>
+						<h2>自由摄影师&nbsp;&bull;&nbsp;程序猿&nbsp;&bull;&nbsp;自媒体/公路作者&nbsp;&bull;&nbsp;制片人</h2>
+						<p>一只拍片码稿写代码的文盲(作)患者，走在产品学习与输入输出的路上</p>
 						<nav>
 							<ul>
 								<li>
@@ -71,7 +71,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<span class="copyright">
-						<em class="beian">备案号：鲁ICP备15022927号 <a id="version" title="当前版本" href="javascript:;" style="text-decoration: none;border:none;">版本1.x</a></em> Copyright&nbsp;&copy; 2015-Now <a id="meMore" href="javascript:;" title="关于作者" target="_blank"> mukuashi@Mich </a>Design For Life</span>
+						<em class="beian">备案号：鲁ICP备15022927号 <a id="version" title="当前版本" href="javascript:;" style="text-decoration: none;border:none;">版本1.x</a></em> Copyright&nbsp;&copy; 2015-Now <a id="meMore" href="javascript:;" title="关于作者" target="_blank"> mukuashi </a>Design For Life</span>
 					</footer>
 			</div>
 		</div>
@@ -87,13 +87,13 @@ swal({
   title: '新版本上线了，来观摩一下么?<p>当前博客版本<a href="javascript:;" style="color: #3085d6;">1.x</a>（2016之前）<br/>新版本<a href="http://kquanr.com/2016-now" style="color: #3085d6;">2.x</a>（2016及之后）</p><br/><p>3秒后系统会默认为你选择老版本</p>',
   type: 'info',
   showCancelButton: true,
-  confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
   cancelButtonText: '先老的吧',
-  confirmButtonText: '去啊Go',
+  confirmButtonColor: '#3085d6',
+  confirmButtonText: '带我去看下Go',
   closeOnConfirm: false,
   closeOnCancel: false,
-  timer: 4200
+  timer: 5000
 },function(isConfirm){
   if (isConfirm) {
     swal({
@@ -111,8 +111,8 @@ swal({
       type: 'warning',
       title: '您主动或系统默认选择了老版本 :)',
       text: '3秒后自动关闭',
-      confirmButtonText: '好的，OK',
-      timer: 2000
+      confirmButtonText: '嗯，知道了',
+      timer: 1000
     });
   } 
 });
@@ -120,12 +120,12 @@ swal({
 document.getElementById('version').addEventListener("click", function(){
     swal({
       html: true,
-      timer: 3500,
-      title: 'Hey，欢迎访问 PhotoArtLife<a href="javascript:;" style="display: block;text-decoration: none;color: #09bfac;font-weight: 400;">version: 1.x</a>',
-      text: '这是2016年及之前的老版本，<a href="http://kquanr.com/2016-now" style="border:none;color: rgba(222, 67, 23, 0.76);font-weight: 400;">新版本 </a><br />可在此或首页选择访问（3秒后自动关闭）',
+      timer: 5800,
+      title: 'Hey，欢迎访问 PhotoArtLife<a href="javascript:;" style="display: block;text-decoration: none;color: #09bfac;font-weight: 40←0;">version: 1.x</a>',
+      text: '当前页是2016及之前的老版本<br /><a href="http://kquanr.com/2016-now" style="border:none;color: rgba(222, 67, 23, 0.76);font-weight: 400;">新版本2.x </a>←点击访问（3秒后系统自动关闭）',
       imageUrl: 'http://kquanr.com/images/now1.png',
-      confirmButtonText: '好的，OK'
-    });
+	  confirmButtonText: '关闭'
+   });
 });
 </script>
 <!--引用腾讯分析网站分析脚本-->
