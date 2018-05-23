@@ -1,0 +1,10 @@
+# production
+.idea
+yarn.lock
+package-lock.json
+.DS_Store
+npm-debug.log*
+yarn-error.log
+kquanr.txt
+wb_341970d81a15025c.txt
+/php
