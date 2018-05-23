@@ -1,0 +1,22 @@
+html,body {
+	background-color: #efeff4;
+}
+.mui-off-canvas-left {color: #fff;}
+.title {margin: 11% 3.5% 3%;
+  font-size: 1.25em;
+}
+.title+.content {
+	margin: 10px 15px 35px;
+	color: #bbb;
+	text-indent: 1em;
+	font-size: 14px;
+	line-height: 24px;
+}
+.mui-table-view {
+	margin-bottom: 35px;
+}
+#offCanvasHide{
+    padding: 7px 20px;
+    margin:-10% auto 0;
+}
+.nav1 li{padding: 6.5% 8%;}

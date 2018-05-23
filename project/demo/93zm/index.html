@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/><meta name="format-detection" content="telephone=no"/>
+    <title>九三智盟</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  </head>
+<body>
+<!--头部导航栏-->
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+<a class="fl" href="dongtai.html"><span class="mui_quan mui-icon mui-icon-pengyouquan"></span></a>
+    <div class="search" onclick=window.location.href="search.html">
+        <span class="search_ico mui-icon mui-icon-search"></span><label>搜索更多内容</label>
+        <!-- <i class="search_ico fa fa-search fa-3x"></i> -->
+    </div>
+<a class="fr" href="history.html"><i class="fa fa-history fa-4x"></i></a>
+</header>
+</div>
+<!-- 幻灯片-->
+<div id='slide' class='swipe'>
+    <div class='swipe-wrap'>
+        <div>
+            <img src="image/slide/slide1.jpg" />
+            <label>推广：新一季撕名牌大战开启</label>
+        </div>
+        <div>
+            <img src="image/slide/slide2.jpg" />
+            <label>2015周华健全球巡演 郑州站 选歌抢票</label>
+        </div>
+        <div>
+            <img src="image/slide/slide3.jpg" />
+            <label>多尔衮统一中国为何我会失败，六大弊政之谜又是什么？</label>
+        </div>
+        <div>
+            <img src="image/slide/slide4.jpg" />
+            <label>最新更新，全本完结，不容错过！</label>
+        </div>
+        <div>
+            <img src="image/slide/slide1.jpg" />
+            <label>推广：新一季撕名牌大战开启</label>
+        </div>
+        <div>
+            <img src="image/slide/slide2.jpg" />
+            <label>2015周华健全球巡演 郑州站 选歌抢票</label>
+        </div>
+        <div>
+            <img src="image/slide/slide3.jpg" />
+            <label>多尔衮统一中国为何我会失败，六大弊政之谜又是什么？</label>
+        </div>
+        <div>
+            <img src="image/slide/slide4.jpg" />
+            <label>最新更新，全本完结，不容错过！</label>
+        </div>
+    </div>
+    <em class="pointer"></em>
+</div>
+<div id="main">
+    <nav>
+        <ul>
+            <li><a href="menu1.html"><i class="fa fa-globe fa-4x icomain"><span>互联网+</span></i></a></li>
+            <li><a href="menu2.html"><i class="fa fa-leaf fa-4x icomain"><span>创业天地</span></i></a></li>
+            <li><a href="menu3.html"><i class="fa fa-user-md fa-4x icomain"><span>战略咨询</span></i></a></li>
+            <li><a href="menu4.html"><i class="fa fa-pie-chart fa-4x icomain"><span>财务管理</span></i></a></li>
+            <li><a href="menu5.html"><i class="fa fa-shopping-cart fa-4x icomain"><span>营销服务</span></i></a></li>
+            <li><a href="menu6.html"><i class="fa fa-truck fa-4x icomain"><span>研发生产</span></i></a></li>
+            <li><a href="menu7.html"><i class="fa fa-slideshare fa-4x icomain"><span>人力资源</span></i></a></li>
+            <li><a href="menu8.html"><i class="fa fa-sitemap fa-4x icomain"><span>组织运营</span></i></a></li>
+            <li><a href="menu9.html"><i class="fa fa-street-view fa-4x icomain"><span>职业素养</span></i></a></li>
+            <li><a href="menu10.html"><i class="fa fa-building fa-4x icomain"><span>通用管理</span></i></a></li>
+        </ul>
+    </nav>
+</div>
+<!-- 底部导航菜单 -->
+<nav class="mui-bottom mui-bar-tab">
+    <a class="mui-tab-item mui-active" href="javascript:void(0);">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="find.html">
+        <span class="mui-icon mui-icon-personadd"></span>
+        <span class="mui-tab-label">找智客</span>
+    </a>
+    <a id="circle" class="mui-tab-item" href="luzhi.html">
+       <i class="fa fa-headphones fa-6x"></i>
+    </a>
+    <a class="mui-tab-item" href="news.html">
+        <span class="mui-icon mui-icon-chatbubble"></span>
+        <span class="mui-tab-label">消息</span>
+    </a>
+    <a class="mui-tab-item" href="reg_login/login.html">
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">我</span>
+    </a>
+</nav>
+</body>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript">
+//首页幻灯片控制
+window.mySwipe = new Swipe(document.getElementById('slide'), {
+    auto: 5000,
+    continuous: true,
+    disableScroll: true,
+    stopPropagation: true,
+    callback: function(index, elem) {
+        var $pointer = $('#slide .pointer');
+        var left = 12.5 * index;
+        $pointer.css('left', left + '%');
+    },
+    transitionEnd: function(index, elem) {}
+});
+
+//
+//
+//取消浏览器的所有事件，使得active的样式在手机上正常生效
+document.addEventListener('touchstart', function() {
+    return false;
+}, true);
+// 禁止选择
+document.oncontextmenu = function() {
+    return false;
+};
+// H5 plus事件处理
+var as = 'pop-in'; // 默认窗口动画
+
+function plusReady() {
+    // 隐藏滚动条
+    plus.webview.currentWebview().setStyle({
+        scrollIndicator: 'none'
+    });
+    // Android处理返回键
+    plus.key.addEventListener('backbutton', function() {
+        if (confirm('确认退出？')) {
+            plus.runtime.quit();
+        }
+    }, false);
+    compatibleAdjust();
+}
+if (window.plus) {
+    plusReady();
+} else {
+    document.addEventListener('plusready', plusReady, false);
+}
+// DOMContentLoaded事件处理
+var _domReady = false;
+document.addEventListener('DOMContentLoaded', function() {
+    _domReady = true;
+    compatibleAdjust();
+}, false);
+// 兼容性样式调整
+var _adjust = false;
+
+function compatibleAdjust() {
+    if (_adjust || !window.plus || !_domReady) {
+        return;
+    }
+    _adjust = true;
+    // iOS平台使用div的滚动条
+    if ('iOS' == plus.os.name) {
+        document.getElementById('content').className = 'scontent';
+    }
+    // 预创建二级窗口
+    //  preateWebviews();
+    // 关闭启动界面
+    setTimeout(function() {
+        plus.navigator.closeSplashscreen();
+    }, 500);
+}
+// 处理点击事件
+var _openw = null;
+function clicked(id, a, s) {
+    if (_openw) {
+        return;
+    }
+    a || (a = as);
+    _openw = preate[id];
+    if (_openw) {
+        _openw.showded = true;
+        _openw.show(a, null, function() {
+            _openw = null; //避免快速点击打开多个页面
+        });
+    } else {
+        //      var wa=plus.nativeUI.showWaiting();
+        _openw = plus.webview.create(id, id, {
+            scrollIndicator: 'none',
+            scalable: false,
+            popGesture: 'hide'
+        }, {
+            preate: true
+        });
+        preate[id] = _openw;
+        _openw.addEventListener('loaded', function() { //叶面加载完成后才显示
+            //      setTimeout(function(){//延后显示可避免低端机上动画时白屏
+            //          wa.close();
+            _openw.showded = true;
+            s || _openw.show(a, null, function() {
+                _openw = null; //避免快速点击打开多个页面
+            });
+            s && (_openw = null); //避免s模式下变量无法重置
+            //      },10);
+        }, false);
+        _openw.addEventListener('close', function() { //页面关闭后可再次打开
+            _openw = null;
+            preate[id] && (preate[id] = null); //兼容窗口的关闭
+        }, false);
+    }
+}
+</script>
+</html>

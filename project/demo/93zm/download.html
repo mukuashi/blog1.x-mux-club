@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>下载进度</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/download.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/download.js"></script>
+</head>
+<body>
+<!--顶部导航栏-->
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+   <a class="mui-pull-left mui-action-back w0_left"><i class="fa fa-angle-left"></i></a>
+   <h1 class="mui-title">下载进度</h1>
+   <a onclick="showAlert()" class="mui-action-menu mui-pull-right w0_right"><i class="fa fa-question-circle"></i></a>
+</header>
+</div>
+<!--干货中间体部分-->
+<ul id="OA_task_2" class="mui-table-view gh1">
+    <li class="mui-table-view-cell">
+		<div class="mui-slider-left mui-disabled">
+			<a class="mui-btn mui-btn-red">删除</a>
+		</div>
+		<div class="mui-slider-right mui-disabled">
+			<a class="mui-btn mui-btn-red">删除</a>
+		</div>
+		<div class="mui-slider-handle"><span>P2P和非法集资的模糊边界</span>
+			<a href="data/fm1.html">
+			   <img class="mui-media-object mui-pull-left" src="image/people/1.jpg">
+			   <p>共12分钟&nbsp;&nbsp;收费1元&nbsp;&nbsp;456次收听</p>
+		    </a>
+		</div>
+		<!--下载进度列表-->
+		<div id="content">
+    <div id="loadBar01" class="loadBar">
+        <div>
+             <span class="percent">
+                <i></i>
+             </span>
+        </div>
+        <span class="percentNum" id="alertyz">0%</span>
+    </div>
+</div>
+
+
+
+	</li>
+</ul>
+
+
+</body>
+
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+            //右上角菜单提示框
+            function showAlert(){
+            	plus.nativeUI.alert("帮助提示：每条干货向左拖拽或向右滑动释放后都会自动触发删除框",function(e){},"九三智盟","关闭");}
+            //向左拖拽或向右滑动弹出删除框
+			(function($) {
+				//$.swipeoutOpen(el,direction)//打开指定列的滑动菜单，el:指定列的dom对象，direction：取值left|right，指定打开的是左侧或右侧滑动菜单
+				//$.swipeoutClose(el);//关闭指定列的滑动菜单，el:指定列的dom对象
+				//				setTimeout(function() {
+				//					$.swipeoutOpen(document.getElementById("OA_task_1").querySelector('li:last-child'), 'left');
+				//					setTimeout(function() {
+				//						$.swipeoutClose(document.getElementById("OA_task_1").querySelector('li:last-child'));
+				//					}, 1000);
+				//				}, 1000);
+				var btnArray = ['确认', '取消'];
+				//第二个demo，向左拖拽后显示操作图标，释放后自动触发的业务逻辑
+				$('#OA_task_2').on('slideleft', '.mui-table-view-cell', function(event) {
+					var elem = this;
+					mui.confirm('确认删除该条干货？', '九三智盟', btnArray, function(e) {
+						if (e.index == 0) {
+							elem.parentNode.removeChild(elem);
+						}
+					});
+				});
+				//第二个demo，向右拖拽后显示操作图标，释放后自动触发的业务逻辑
+				$('#OA_task_2').on('slideright', '.mui-table-view-cell', function(event) {
+					var elem = this;
+					mui.confirm('确认删除该条干货？', '九三智盟', btnArray, function(e) {
+						if (e.index == 0) {
+							elem.parentNode.removeChild(elem);
+						}
+					});
+				});
+			})(mui);
+</script>
+</html>

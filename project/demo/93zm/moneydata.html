@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>资产分析</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+<a class="mui-pull-left mui-action-back w0_left"><i class="fa fa-angle-left"></i></a>
+<h1 class="mui-title">资产分析</h1>
+</header>
+</div>
+<ul class="mui-table-view mui-table-view-chevron data1">
+		<li class="mui-table-view-cell mui-media">
+		<div class="money6 money6_5 money6_6"><i class="fa fa-refresh fa-spin"></i></div>
+			<div class="mui-media-body money7">智客账户安全保障中
+				<p>2015-08-28生效</p>
+			</div>
+			<button class="mui-btn mui-btn-positive">保障中</button>
+		</li>
+</ul>
+<div class="chart" id="pieChart"></div>
+
+<ul class="data2">
+	<li><span class="mui-badge mui-badge-success mui-badge-data2_1">余额</span><label>3452.77</label></li>
+	<li><span class="mui-badge mui-badge-warning mui-badge-data2_2">充值</span><label>1575.80</label></li>
+	<li><span class="mui-badge mui-badge-danger mui-badge-data2_3">消费</span><label>1656.60</label></li>
+	<li><span class="mui-badge mui-badge-purple mui-badge-data2_4">提现</span><label>3500.00</label></li>
+</ul>
+</body>
+<script src="js/mui.min.js"></script>
+<script src="libs/echarts-all.js"></script>
+<script>
+			var getOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+					calculable: false,
+					series: [{
+						name: '资金流动',
+						type: 'pie',
+						radius: '65%',
+						center: ['50%', '50%'],
+						data: [{
+							value: 335,
+							name: '充值'
+						}, {
+							value: 310,
+							name: '消费'
+						}, {
+							value: 534,
+							name: '提现'
+						}, {
+							value: 1548,
+							name: '余额'
+						}]
+					}]
+				} : {
+					toolbox: {
+						show: false,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: false
+							},
+							magicType: {
+								show: true,
+								type: ['line', 'bar']
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					}
+				};
+				return chartOption;
+			};
+			var byId = function(id) {
+				return document.getElementById(id);
+			};
+			var pieChart = echarts.init(byId('pieChart'));
+			pieChart.setOption(getOption('pie'));
+		</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+a, button {
+	color: #74716D;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #c94e50;
+	outline: none;
+}
+
+button {
+	padding: 1em 3em;
+	outline: none;
+	font-weight: 600;
+	border: none;
+	color: #fff;
+	background: #c94e50;
+}
+button.trigger {
+	background: #c94e50;
+	color: #fff;
+	border: none;
+}

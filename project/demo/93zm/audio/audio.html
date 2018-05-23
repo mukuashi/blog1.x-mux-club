@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>干货列表</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/music_ico.css">
+</head>
+<body>
+<!--顶部导航栏-->
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+   <a class="mui-pull-left mui-action-back w0_left" onclick="window.history.back();"><i class="fa fa-angle-left"></i></a>
+   <h1 class="mui-title">干货列表</h1>
+   <a id="music_switch" class="mui-pull-right" href="javascript:void(0);">
+        	<span id="add_music" class="musicbar inline">
+                <span class="bar1 a1 bg-primary lter"></span>
+                <span class="bar2 a2 bg-info lt"></span>
+                <span class="bar3 a3 bg-success"></span>
+                <span class="bar4 a4 bg-warning dk"></span>
+                <span class="bar5 a5 bg-danger dker"></span>
+            </span>
+    </a>
+   </header>
+</div>
+<!--干货中间体部分-->
+<section id="menu">
+	<ul class="menu_tagList">
+		<li id="newSong" class="menu_hover">收听</li>
+		<li id="songCharts">下载</li>
+		<li id="singer">收藏</li>
+<!--    <li id="radioStation">电台</li> -->
+	</ul>
+</section>
+<section id="content"></section>
+<section id="playwrap">
+	<div id="playContent">
+			<div>
+				<audio id="myMusic"></audio>
+			</div>
+			<div onClick="myControl.selectTime(event)" id="progressWrap">
+				<div id="progress"></div>
+			</div>
+			<div class="img">
+				<img id="singerHead" src="../image/people/1.jpg">
+			</div>
+			<div class="info">
+				<div class="songname clearfix">
+					<label id="musicTitle" for="musicTitle">请先选择播放内容</label>
+					<label style="display: none;" id="songname" for="songname" style="color: rgb(204, 0, 0);">您的手机不支持html5播放器，赶快换个吧</label>
+					<label id="timeshow" for="time"><span id="currentTime">00:00</span>/<span id="totleTime">00:00</span></label>
+				</div>
+				<div class="audioControl">
+					<a id="prevButton" class="last" onClick="myControl.prev()" href="javascript:void(0);"><i class="fa fa-fast-backward direction"></i></a>
+					<a id="playButton" class="play" onClick="myControl.mainControl()" href="javascript:void(0);"></a>
+					<a id="nextButton" class="next" onClick="myControl.next()" href="javascript:void(0);"><i class="fa fa-fast-forward direction"></i></a>
+					<a id="modeButton" class="mode-default" onClick="myControl.selectMode()" href="javascript:void(0);"></a>
+					<a class="download" href="javascript:void(0)" onclick="download_Confirm()"><i class="fa fa-download direction"></i></a>
+					<a id="playDetail" class="showDetail" href="javascript:void(0);"></a>
+				</div>
+			</div>
+	</div>
+</section>
+<div style="display:none;" id="oWindow"></div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jqmobi.js"></script>
+<script type="text/javascript" src="../js/mui.min.js"></script>
+<script type="text/javascript" src="js/all.js"></script>
+<script type="text/javascript">
+function download_Confirm(){
+layer.open({
+    type: 2,
+    content: '<a href="../history_download.html" class="btn btn1">查看下载</a><a href="../download.html" class="btn btn2">查看进度</a><a href="javascript:window.close()" class="btn btn3_1">取消</a>',
+    style: 'width:240px; height:180px; padding:10px; background-color:#F05133; color:#fff; border:none;'
+});
+}
+</script>
+<link rel="stylesheet" type="text/css" href="../layer/linshi.css">
+<link rel="stylesheet" type="text/css" href="../layer/layer.css">
+<script type="text/javascript" src="../layer/layer.m.js"></script>
+<!-- layer弹出插件-->
+</body>
+</html>

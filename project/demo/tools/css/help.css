@@ -1,0 +1,8 @@
+body{
+	 padding:0;margin:0;background:#ddd;font-size:14px;
+}
+#main{
+	width:960px;background:#fff; border:1px solid #eee;margin:20px auto;padding:20px 40px;
+}
+a,a:visited{color:#003399; text-decoration:none}
+a:hover{color:#CC3300}

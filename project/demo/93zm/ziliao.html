@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个性资料</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/mui.listpicker.css">
+<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+		  <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+		   <h1 class="mui-title">个人资料</h1>
+</header>
+
+<div class="mui-content">
+<ul class="mui-table-view">
+	<li class="mui-table-view-cell mui-media zluser">
+	    <a class="mui-navigate-right" id="picture-btn"><span>修改头像</span>
+			<img src="image/people/user1.png" alt="加载中">
+		</a>
+	</li>
+</ul>
+
+<div class="set3">基础资料</div>
+<ul class="mui-table-view mui-table-view-chevron zl1">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="edit_name.html"><span class="mui-badge mui-badge-text">跨世</span>
+						昵称
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='showUserPicker'>
+					<span id='userResult' class="mui-badge mui-badge-text">男
+					</span>性别
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="edit_email.html"><span class="mui-badge mui-badge-text">尚未填写</span>
+						邮箱
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id='showCityPicker'><span class="mui-badge mui-badge-text" id="cityResult">尚未填写</span>
+						所在地
+					</a>
+					<div id='cityResult' class="ui-alert"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="edit_phone.html"><span class="mui-badge mui-badge-text">13470938207</span>
+						绑定手机
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="edit_shiming.html"><span class="mui-badge mui-badge-text">未认证</span>
+						实名认证
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right"><span class="mui-badge mui-badge-text">编辑一下</span>
+						专长领域
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="edit_zuoyouming.html"><span class="mui-badge mui-badge-text">尚未填写</span>
+						座右铭
+					</a>
+				</li>
+</ul>
+</div>
+<script type="text/javascript">
+		document.getElementById("picture-btn").addEventListener('tap',function () {
+			var btnArray = [{title:"拍照"},{title:"系统相册"}];
+			plus.nativeUI.actionSheet( {
+				title:"选择照片",
+				cancel:"取消",
+				buttons:btnArray
+			}, function(e){
+				var index = e.index;
+				switch (index){
+					case 0:
+						return true;
+						break;
+					case 1:
+						return appendByCamera(true,upload());
+						break;
+					case 2:
+						return appendByGallery(true,upload());
+						break;
+				}
+			});
+	});
+    //上传文件
+var server="../php文件";
+var files=[];
+function upload(){
+    var wt=plus.nativeUI.showWaiting();
+    var task=plus.uploader.createUpload(server,
+        {method:"POST"},
+        function(t,status){ //上传完成
+            if(status==200){
+                outLine("上传成功："+t.responseText);
+                plus.storage.setItem("uploader",t.responseText);
+                var w=plus.webview.create("#","#",{scrollIndicator:'none',scalable:false});
+                w.addEventListener("loaded",function(){
+                    wt.close();
+                    w.show("slide-in-right",300);
+                },false);
+            }else{
+                outLine("上传失败："+status);
+                wt.close();
+            }
+        }
+    );
+    task.addData("client","HelloH5+");
+    task.addData("uid",getUid());
+    for(var i=0;i<files.length;i++){
+        var f=files[i];
+        task.addFile(f.path,{key:f.name});
+    }
+    task.start();
+}
+// 拍照添加文件
+function appendByCamera(){
+    plus.camera.getCamera().captureImage(function(p){
+        appendFile(p);
+    }); 
+}
+// 从相册添加文件
+function appendByGallery(){
+    plus.gallery.pick(function(p){
+        appendFile(p);
+    });
+}
+// 添加文件
+var index=1;
+function appendFile(p){
+    var fe=document.getElementById("files");
+    var li=document.createElement("li");
+    var n=p.substr(p.lastIndexOf('/')+1);
+    li.innerText=n;
+    fe.appendChild(li);
+    files.push({name:"uploadkey"+index,path:p});
+    index++;
+    empty.style.display="none";
+}
+// 产生一个随机数
+function getUid(){
+    return Math.floor(Math.random()*100000000+10000000).toString();
+}
+</script>
+<script type="text/javascript" src="js/mui.listpicker.js"></script>
+<script type="text/javascript" src="js/mui.poppicker.js"></script>
+<script type="text/javascript" src="js/city.data.js"></script>
+<script type="text/javascript">
+(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//选择性别
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'man',
+						text: '男'
+					}, {
+						value: 'woman',
+						text: '女'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('userResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//级联示例-选择城市
+					var cityPicker = new $.PopPicker({
+						layer: 2
+					});
+					cityPicker.setData(cityData);
+					var showCityPickerButton = doc.getElementById('showCityPicker');
+					var cityResult = doc.getElementById('cityResult');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker.show(function(items) {
+							cityResult.innerText =items[0].text + " " + items[1].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+</body>
+</html>

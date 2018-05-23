@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="blue" manifest="tasks.appcache">
+<head>
+<meta charset="utf-8">
+<title>录制干货</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/audio.css">
+<link rel="stylesheet" type="text/css" href="css/music_ico.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Carter+One">
+<link rel="stylesheet" type="text/css" href="css/style_lz.css">
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left yue_1" onclick="window.location.href='index.html'"></a>
+        <h1 class="mui-title"><span id="user_name"> </span>干货</h1>
+        <a class="mui-pull-right" href="audio/audio.html">
+        	<span class="musicbar animate inline">
+                <span class="bar1 a1 bg-primary lter"></span>
+                <span class="bar2 a2 bg-info lt"></span>
+                <span class="bar3 a3 bg-success"></span>
+                <span class="bar4 a4 bg-warning dk"></span>
+                <span class="bar5 a5 bg-danger dker"></span>
+            </span>
+        </a>
+</header>
+</div>
+<div id="slider" class="mui-slider">
+	<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<a class="mui-control-item" href="#item1mobile">添加干货</a>
+		<a class="mui-control-item" href="#item2mobile">编辑语录</a>
+		<a class="mui-control-item" href="#item3mobile">开始录制</a>
+	</div>
+	<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+	<div class="mui-slider-group">
+		<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+            <nav>
+                <ul>
+                    <li><a href="#list" class="list">干货列表</a></li>
+                    <li><a href="#add" class="add">新建干货</a></li>
+                    <li><a href="#settings" class="settings">个性设置</a></li>
+                </ul>
+            </nav>
+        <section class="list">
+            <form name="search">
+                <span class="mui-icon mui-icon-search"></span>
+                <input type="search" name="query" placeholder="搜索最近的干货 . . ." required autofocus>
+            </form>
+            <ul id="task_list"></ul>
+        </section>
+        <section class="add">
+            <form name="add">
+                <label>
+                   <span>新建干货名称</span>
+                   <input type="text" placeholder="干货名称" name="desc">
+                </label>
+
+                <label>
+                   <span>填写添加日期</span>
+                    <input type="date" name="due_date">
+                </label>
+                <input type="submit" value="提交">
+            </form>
+        </section>
+        <section class="settings">
+            <form name="settings">
+                <label>
+                    <span>个性标题</span>
+                    <input type="text" placeholder="个性标题"  name="name">
+                </label>
+                <label>
+                    <span>颜色主题</span>
+                    <select name="color_scheme">
+                        <option>白色</option>
+                        <option>青色</option>
+                        <option>黄色</option>
+                    </select>
+                </label>
+                <input type="submit" value="保存设置">
+                <input type="reset" value="清除所有数据">
+            </form>
+        </section>
+        </div>
+
+		<div id="item2mobile" class="mui-slider-item mui-control-content">
+			<div class="mui-input-row" style="margin: 10px 5px;">
+               <textarea name="textarea" name="textarea" rows="7" placeholder="您可以在此输入一定的录音备注" required></textarea>
+            </div>
+		</div>
+
+		<div id="item3mobile" class="mui-slider-item mui-control-content">
+		  <div class="public_lz0  lz_3">
+		    <span class="mui-icon mui-icon-mic" onclick="startRecord()"></span>
+		  </div>
+		<div id="dcontent" class="dcontent">
+		<!-- History list -->
+			<ul id="history" class="dlist" style="text-align:left;">
+				<li id="empty" class="ditem-empty">无历史记录</li>
+			</ul>
+			<div class="button button-waring" onclick="cleanHistory();">清空历史记录</div>
+
+		</div>
+		<div id="output" class="audio_output"></div>
+		<div id="play" class="rp">
+			<div id="ptime" class="ptime">00:00:00/00:00:00</div><br/>
+			<div id="progress" class="progress"><div id="schedule" class="schedule"></div></div>
+			<br/>
+			<div class="stop" onclick="stopPlay();outSet('停止播放！');"></div>
+		</div>
+		<div id="record" class="rp">
+			<div style="width:100%;height:20%;"></div>
+			<div class="rprogress"><div class="rschedule"></div></div>
+			<br/>
+			<div id="rtime" class="rtime">00:00:00</div><br/>
+			<div class="stop" onclick="stopRecord();"></div>
+		</div>
+
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	// function showPrompt(){
+	// outSet( "执行结果" );
+	// var bts=["确认","取消"];
+	// plus.nativeUI.prompt("新建干货",function(e){
+	// 	var i=e.index;
+	// 	outLine("\"新建干货\""+((i>=0)?bts[e.index]:"")+e.value);
+	// },"九三智盟","请输入干货名称",bts);}
+//开始录音
+var gentry=null,hl=null,le=null;
+var er=null,ep=null;
+// H5 plus事件处理
+function plusReady(){
+	// 获取音频目录对象
+	plus.io.resolveLocalFileSystemURL( "_doc/", function ( entry ) {
+		entry.getDirectory( "audio", {create:true}, function ( dir ) {
+			gentry = dir;
+			updateHistory();
+		}, function ( e ) {
+			outSet( "Get directory \"audio\" failed: "+e.message );
+		} );
+	}, function ( e ) {
+		outSet( "Resolve \"_doc/\" failed: "+e.message );
+	} );
+}
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener("plusready",plusReady,false);
+}
+// DOMContentLoaded事件处理
+document.addEventListener("DOMContentLoaded",function(){
+	// 获取DOM元素对象
+	hl = document.getElementById("history");
+	le = document.getElementById("empty");
+	er = document.getElementById("record");
+	rt = document.getElementById("rtime");
+	ep = document.getElementById("play");
+	pt = document.getElementById("ptime");
+	pp = document.getElementById("progress")
+	ps = document.getElementById("schedule");
+},false);
+// 添加播放项
+function createItem( entry ) {
+	var li = document.createElement("li");
+	li.className = "ditem";
+	li.innerHTML = '<span class="iplay"><font class="aname"></font><br/><font class="ainf"></font></span>';
+	li.setAttribute( "onclick", "playAudio(this);" );
+	hl.insertBefore( li, le.nextSibling );
+	li.querySelector(".aname").innerText = entry.name;
+	li.querySelector(".ainf").innerText = "...";
+	li.entry = entry;
+	updateInformation( li );
+	// 设置空项不可见
+	le.style.display = "none";
+}
+// 开始录音
+var r=null,t=0,ri=null,rt=null;
+function startRecord() {
+	outSet( "最新录音" );
+	r = plus.audio.getRecorder();
+	if ( r == null ) {
+		outLine( "录音对象未获取" );
+		return;
+	}
+	r.record( {filename:"_doc/audio/"}, function ( p ) {
+		outLine( "干货地址："+p );
+		plus.io.resolveLocalFileSystemURL( p, function ( entry ) {
+			createItem( entry );
+		}, function ( e ) {
+			outLine( "读取录音文件错误："+e.message );
+		} );
+	}, function ( e ) {
+		outLine( "录音失败："+e.message );
+	} );
+	er.style.display = "block";
+	t = 0;
+	ri = setInterval( function () {
+		t++;
+		rt.innerText = timeToStr(t);
+	}, 1000 );
+}
+// 停止录音
+function stopRecord(){
+	er.style.display = "none";
+	rt.innerText = "00:00:00";
+	clearInterval( ri );
+	ri = null;
+	r.stop();
+	w = null;
+	r = null;
+	t = 0;
+}
+// 清除历史记录
+function cleanHistory() {
+	hl.innerHTML = '<li id="empty" class="empty_teshu">赶快开启您的录音之旅吧</li>';
+	le = document.getElementById( "empty" );
+	// // 删除音频文件
+	// outSet( "清空录音历史记录：" );
+	// gentry.removeRecursively( function () {
+	// 	// Success
+	// 	outLine( "操作成功！" );
+	// }, function ( e ) {
+	// 	ouline( "操作失败："+e.message );
+	// });
+}
+// 获取录音历史列表
+function updateHistory() {
+	if ( !gentry ) {
+		return;
+	}
+  	var reader = gentry.createReader();
+  	reader.readEntries( function ( entries ) {
+  		for ( var i in entries ) {
+  			if ( entries[i].isFile ) {
+  				createItem( entries[i] );
+  			}
+  		}
+  	}, function ( e ) {
+  		outLine( "读取录音列表失败："+e.message );
+  	} );
+}
+// 获取录音文件信息
+function updateInformation( li ) {
+	if ( !li || !li.entry ) {
+		return;
+	}
+	var entry = li.entry;
+	entry.getMetadata( function ( metadata ) {
+		li.querySelector( ".ainf" ).innerText = dateToStr( metadata.modificationTime );
+	}, function ( e ) {
+		outLine( "获取文件\""+entry.name+"\"信息失败："+e.message );
+	} );
+}
+// 播放音频文件
+function playAudio( li ) {
+	if ( !li || !li.entry ) {
+		ouSet( "无效的音频文件" );
+		return;
+	}
+	outSet( "播放音频文件："+li.entry.name );
+	startPlay( "_doc/audio/"+li.entry.name );
+}
+// 播放文件相关对象
+var p=null,pt=null,pp=null,ps=null,pi=null;
+// 开始播放
+function startPlay( url ) {
+	ep.style.display = "block";
+	var L = pp.clientWidth;
+	p = plus.audio.createPlayer( url );
+	p.play( function () {
+		outLine( "播放完成！" );
+		// 播放完成
+		pt.innerText = timeToStr(d)+"/"+timeToStr(d);
+		ps.style.webkitTransition = "all 0.3s linear";
+		ps.style.width = L+"px";
+		stopPlay();
+	}, function ( e ) {
+		outLine( "播放音频文件\""+url+"\"失败："+e.message );
+	} );
+	// 获取总时长
+	var d = p.getDuration();
+	if ( !d ) {
+		pt.innerText = "00:00:00/"+timeToStr(d);
+	}
+	pi = setInterval( function () {
+		if ( !d ) { // 兼容无法及时获取总时长的情况
+			d = p.getDuration();
+		}
+		var c = p.getPosition();
+		if ( !c ) {  // 兼容无法及时获取当前播放位置的情况
+			return;
+		}
+		pt.innerText = timeToStr(c)+"/"+timeToStr(d);
+		var pct = Math.round(L*c/d);
+		if ( pct < 8 ) {
+			pct = 8;
+		}
+		ps.style.width = pct+"px";
+	}, 1000 );
+}
+// 停止播放
+function stopPlay() {
+	clearInterval(pi);
+	pi=null;
+	setTimeout(resetPlay,500);
+	// 操作播放对象
+	if(p){
+		p.stop();
+		p=null;
+	}
+}
+// 重置播放页面内容
+function resetPlay() {
+	ep.style.display = "none";
+	ps.style.width = "8px";
+	ps.style.webkitTransition = "all 1s linear";
+	pt.innerText = "00:00:00/00:00:00";
+}
+// 重写关闭
+var _back=window.back;
+function resetback(){
+	// 停止播放
+	if(ep.style.display == "block"){
+		stopPlay();
+	}else if(er.style.display == "block"){
+		stopRecord();
+	}else{
+		_back();
+	}
+}
+window.back=resetback;
+</script>
+</html>

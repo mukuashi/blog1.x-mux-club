@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>内置地图</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script type="text/javascript" src="../js/mui.min.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back yue_1"></a>
+	<h1 class="mui-title">应用内置地图</h1>
+	<a class="mui-icon mui-icon-navigate mui-pull-right" onclick="userLocation();"></a>
+</header>
+<div id="map">地图加载中...</div>
+<script type="text/javascript">
+var ws=null,wo=null;
+var em=null,map=null;
+// H5 plus事件处理
+function plusReady(){
+	if(!em||ws){return};
+	// 获取窗口对象
+	ws=plus.webview.currentWebview();
+	wo=ws.opener();
+	setTimeout(function(){
+		map=new plus.maps.Map("map");
+		map.centerAndZoom(new plus.maps.Point(116.3977,39.906016),12);
+		createMarker();
+		// 创建子窗口
+		createSubview();
+	},300);
+	// 显示页面并关闭等待框
+    ws.show("pop-in");
+}
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener("plusready",plusReady,false);
+}
+// DOMContentloaded事件处理
+document.addEventListener("DOMContentLoaded",function(){
+	em=document.getElementById("map");
+	window.plus&&plusReady();
+},false);
+function userLocation(){
+	map.showUserLocation( true );
+	map.getUserLocation(function(state,pos){
+		if(0==state){
+			map.setCenter(pos);
+		}
+	});
+}
+function createMarker(){
+	var marker=new plus.maps.Marker(new plus.maps.Point(116.347496,39.970191));
+	marker.setIcon("../image/login.png");
+	marker.setLabel("九三智盟");
+	var bubble = new plus.maps.Bubble("让智慧像流水一样川流不息");
+	marker.setBubble(bubble);
+	map.addOverlay(marker);
+}
+function createSubview(){
+	if('Android'!=plus.os.name){
+		return;
+	}
+	var wsub=plus.webview.create('map_back.html','sub',{top:'44px',height:'60px',position:'absolute',scrollIndicator:'none',background:'transparent'});
+	ws.append(wsub);
+}
+function resetMap(){
+	map.centerAndZoom(new plus.maps.Point(116.3977,39.906016),12);
+}
+</script>
+</body>
+</html>

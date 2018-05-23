@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的钱包</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<!--顶部导航栏-->
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+			<a class="mui-pull-left mui-action-back w0_left"><i class="fa fa-angle-left"></i></a>
+			<h1 class="mui-title">我的钱包</h1>
+			<a class="mui-pull-right w0_right">
+			   <i class="fa fa-eye" id="view0"></i>
+			   <i class="fa fa-eye-slash" id="view1" style="display:none;"></i>
+			</a>
+</header>
+</div>
+<!--中间部分-->
+<ul class="mui-table-view zk2">
+				<li class="mui-table-view-cell money0"><a class="mui-navigate-right money1" href="moneydata.html"><i class="fa fa-rmb"></i><span id="m0">3452.77</span><span id="m1" style="display:none;">* * * * * *</span></a></li>
+				<li class="mui-table-view-cell money2 money2_1">
+				        <ul>
+				        	<li><i class="fa fa-dollar"></i><span>成长投入(元)</span><label>1276.50</label></li>
+				        	<li><i class="fa fa-area-chart"></i><span>价值回报(元)</span><label>9805.07</label></li>
+				        	<div class="xian xian1"></div>
+				        	<li><i class="fa fa-male"></i><span>累计充值(元)</span><label>1575.80</label></li>
+				        	<li><i class="fa fa-female"></i><span>累计提现(元)</span><label>3500</label></li>
+				        </ul>
+			     	
+			    </li>
+			    <li class="mui-table-view-cell money2 money3 money2_2">
+				        <ul>
+				        	<li><a href="money_chong.html">进账记录</a></li>
+				        	<li><a href="money_ti.html">消费记录</a></li>
+				        </ul>
+			    </li>
+
+			    <li class="mui-table-view-cell money2 money3">
+				        <ul>
+				        	<li><a href="zhifu.html"><button class="mui-btn mui-btn-primary money5">充值</button></a></li>
+				        	<li><a href="tixian.html"><button class="mui-btn mui-btn-negative money5">提现</button></a></li>
+				        </ul>
+			    </li>
+		</ul>
+
+
+<ul class="mui-table-view zk2">
+     <li class="mui-table-view-cell"><a class=""><span class="mui-badge mui-badge-success">免费会员</span><i class="fa fa-trophy"></i>会员类型</a></li>
+</ul>
+<div class="set3">升级VIP会员</div>
+<ul class="mui-table-view w1">
+	<li class="mui-table-view-cell">一个月VIP<span>￥10元</span><button type="button" class="mui-btn mui-btn-royal" onclick=window.location.href="vip1.html">购买</button>
+	</li>
+	<li class="mui-table-view-cell">三个月VIP<span>￥25元</span><button type="button" class="mui-btn mui-btn-royal" onclick=window.location.href="vip2.html">购买</button>
+	</li>
+	<li class="mui-table-view-cell">六个月VIP<span>￥40元</span><button type="button" class="mui-btn mui-btn-royal" onclick=window.location.href="vip3.html">购买</button>
+	</li>
+	<li class="mui-table-view-cell">一年VIP<span> &nbsp;&nbsp;￥60元</span><button type="button" class="mui-btn mui-btn-royal" onclick=window.location.href="vip4.html">购买</button>
+	</li>
+	<li class="mui-table-view-cell">三年VIP<span> &nbsp;&nbsp;￥150元</span><button type="button" class="mui-btn mui-btn-royal" onclick=window.location.href="vip5.html">购买</button>
+	</li>
+</ul>
+<div class="set3">会员权益</div>
+<ul class="mui-table-view mui-table-view-chevron">
+	<li class="mui-table-view-cell mui-media">
+			<div class="money6 money6_1"><i class="fa fa-ban"></i></div>
+			<div class="mui-media-body money7"><span>无广告</span>
+				<p>屏蔽一切杂念，专心倾听智慧世界</p>
+			</div>
+	</li>
+	<li class="mui-table-view-cell mui-media">
+			<div class="money6 money6_2"><i class="fa fa-download"></i></div>
+			<div class="mui-media-body money7"><span>免费下载</span>
+				<p>海量干货畅想听无限下</p>
+			</div>
+	</li>
+	<li class="mui-table-view-cell mui-media">
+			<div class="money6 money6_3"><i class="fa fa-diamond"></i></div>
+			<div class="mui-media-body money7"><span>等级认证</span>
+				<p>尊属级别，更显会员资质</p>
+			</div>
+	</li>
+	<li class="mui-table-view-cell mui-media">
+			<div class="money6 money6_4"><i class="fa fa-slideshare"></i></div>
+			<div class="mui-media-body money7"><span>智客联盟</span>
+				<p>获取高质量人脉的线下聚会</p>
+			</div>
+	</li>
+	<li class="mui-table-view-cell mui-media">
+			<div class="money6 money6_5"><i class="fa fa-spinner fa-spin"></i></div>
+			<div class="mui-media-body money7"><span>更多权限</span>
+				<p>更多会员权益敬请期待不断补充中</p>
+			</div>
+	</li>
+</ul>
+
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#view0").click(function(){
+     $("#view0").hide();
+     $("#view1").show();
+     $("#m0").hide();
+     $("#m1").show();
+  });
+  $("#view1").click(function(){
+     $("#view1").hide();
+     $("#view0").show();
+     $("#m1").hide();
+     $("#m0").show();
+  });
+});
+</script>
+</html>

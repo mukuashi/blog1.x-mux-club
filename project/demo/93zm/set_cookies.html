@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数据管理</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+<a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+<h1 class="mui-title">数据管理</h1>
+</header>
+<div class="mui-scroll-wrapper set_public">
+            <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media">
+                       <a class="mui-navigate-right" onclick="showConfirm()">
+                       <div class="mui-media-body">清除缓存
+                            <p class='mui-ellipsis'>清除存储在本地的所有缓存数据</p>
+                        </div>
+                        </a>
+                    </li>
+            </ul>
+</div>
+</body>
+<script type="text/javascript">
+    function showConfirm(){
+    outSet( "弹出系统：" );
+    var bts=["是","否","取消"];
+    plus.nativeUI.confirm("确定清除所有缓存？",function(e){
+        var i=e.index;
+        outLine( "按\""+((i>=0)?bts[e.index]:"返回")+"\"关闭！" );
+    },"九三智盟",bts);
+}
+</script>
+</html>

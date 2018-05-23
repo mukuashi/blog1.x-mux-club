@@ -1,0 +1,263 @@
+﻿@charset "utf-8";
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+.clearBoth {
+	clear: both;
+	font-size: 1px;
+	height: 1px;
+	line-height: 1px;
+}
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+.clearfix {
+	display: block;
+}
+.l {
+	float: left;
+}
+
+.r {
+	float: right;
+}
+
+.m {
+	text-align: center;
+	line-height: 45px;
+	cursor: pointer;
+}
+ul {
+	list-style: none outside none;
+}
+li:hover, li:active, li {
+	outline: 0 none;
+}
+header, #menu, #footer, #playwrap {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	overflow: hidden;
+}
+#menu {
+	height: 40px;
+	margin:0.6% auto 0;
+	z-index: 1000;
+	background: -webkit-linear-gradient(left, #09AEAE 0%, #0BA695 100%);
+	background: -moz-linear-gradient(left center , #09AEAE 0%, #0BA695 100%) repeat scroll 0 0 transparent;
+	background: #09AEAE;
+}
+.menu_tagList {
+	color: #fff;
+	line-height:40px;
+	font-size: 16px;
+}
+.menu_tagList li{
+	text-align: center;
+	float: left;
+	width: 33.3%;
+	box-sizing: border-box;
+	border-right:1px solid rgba(252, 252, 252, 0.21);
+	cursor: pointer;
+	letter-spacing: 1.2px;
+}
+.menu_tagList li:last-child{
+	border-right:none;
+}
+.menu_hover {
+	background: url(../images/hoverbg.png) 0 0 no-repeat;
+	background-size: 100%;
+}
+#content {
+	padding:12% 0 21%;
+	width: 100%;
+}
+#content li {
+	border-bottom: 1px solid #CCC;
+	cursor: pointer;
+	font-size:1em;
+	height: 55px;
+	overflow: hidden;
+	margin:1% 0% 2% 2%;
+}
+
+.picStyle {
+	height: 35px;
+	width: 35px;
+	margin: 4px 8px 0px 3px;
+}
+
+.textBox {
+	font-size: 14px;
+	color: #1E1E1E;
+	margin-top: 2px;
+}
+
+.textBox p {
+	color: #787878;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.frmPlay {
+	float: right;
+	height: 45px;
+	width: 56px;
+	background: url(../images/fmplay.png) center center no-repeat;
+	background-size: 44%;
+}
+
+.frmPause {
+	background-image: url(../images/fmpause.png);
+}
+
+/*control*/
+#playwrap {
+	background: -webkit-linear-gradient(left, #930E0E 0%, #930E0E 100%);
+	background: -moz-linear-gradient(left center , #930E0E 0%, #930E0E 100%) repeat scroll 0 0 transparent;
+	background:#930E0E;
+	color: #fff;
+	bottom: 0;
+	font-family: Microsoft YaHei;
+	height: 74px;
+	text-align: center;
+	z-index: 1000;
+}
+
+#playContent {
+	height: 74px;
+	margin: 0 auto;
+	width: 320px;
+}
+
+#progressWrap {
+	background: none repeat scroll 0 0 #09AEAE;
+	height:4px;
+	margin: 6.5px 0 0 0;
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+}
+#progress {
+	background: none repeat scroll 0 0 #FFF;
+	height:4px;
+	width: 0;
+}
+
+.img {
+	box-shadow: 0 0 5px #333333;
+	float: left;
+	height: 47px;
+	width: 47px;
+    margin:2%  2.5% 0 3.5%;
+
+}
+.img img {
+	border: 1px solid #fff;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+}
+.info {
+	float: left;
+	width: 240px;
+}
+
+.control {
+	margin: 2px 0 0;
+	text-align: left;
+}
+
+.audioControl a {
+	display: inline-block;
+	height: 30px;
+	margin: 0 0 0 8px;
+	width: 30px;
+}
+i.direction{
+	font-size:1.4em;
+	position: absolute;
+    margin: 2% -2%;
+}
+.audioControl a.pause {
+	background: url("../images/bg3.png") no-repeat scroll 1px -72px transparent;
+}
+
+.audioControl a.play {
+	background: url("../images/bg3.png") no-repeat scroll 1.5px -141.5px transparent;
+}
+
+
+#modeButton {
+	background-image: url("../images/bg3.png");
+	background-repeat: no-repeat;
+	margin-left: 16px;
+	width: 35px;
+}
+.download .fa{
+	margin:2.5% 0;
+	font-size:1.4em;
+}
+.audioControl a.mode-default {
+	background-position: 0 -324.5px;
+}
+
+.audioControl a.mode-random {
+	background-position: -2px -220.5px;
+}
+
+.audioControl a.mode-single {
+	background-position: -2px -290px;
+}
+
+#songname {
+	color: #FFFFFF;
+	float: left;
+	background: red;
+	font-size: 14px;
+	margin: 4px 0 0 12px;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 220px;
+}
+
+#timeshow {
+	color: #FFFFFF;
+	float: right;
+	font-size: 14px;
+	margin-top:5px;
+}
+
+#musicTitle {
+	float: left;
+	margin:4px 0 0 20px;
+	width: 135px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#oWindow {
+	position: fixed;
+	z-index: 2000;
+	top: 50%;
+	left: 50%;
+	background: -moz-linear-gradient(left center , #69A3D4 0%, #4888BE 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(left, #69A3D4 0%, #4888BE 100%);
+	background: #4888BE;
+	color: #fff;
+	padding: 13px 20px;
+	font-size: 16px;
+}

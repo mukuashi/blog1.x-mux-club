@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智客主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+</head>
+<body>
+<!--顶部导航栏-->
+<div class="bg_login1">
+ <a class="mui-pull-left mui-action-back zlu_left"><i class="fa fa-reply"></i></a>
+	<ul class="login2">
+	    <li><img class="mui-media-object mui-pull-left" src="image/people/2.jpg"></li>
+		<li><span>Larry</span><label>V4 23000</label><p>踏踏实实办企业，老老实实做人</p></li>
+	</ul>
+	<div class="xian"></div>
+	<ul class="login3">
+	    <li><a href="zhike_logined_user2_1.html"><i class="fa fa-fire"></i><label>简介</label></a></li>
+		<li><a href="javascript:void(0);"><i class="fa fa-book i1"></i><label class="i1">干货</label></a></li>
+		<li><a href="zhike_logined_user2_3.html"><i class="fa fa-send-o"></i><label>关注</label></a></li>
+		<li><a href="zhike_logined_user2_4.html"><i class="fa fa-users"></i><label>粉丝</label></a></li>
+	</ul>
+</div>
+<!--中间部分-->
+<ul class="mui-table-view">
+  <li class="mui-table-view-cell">
+        <div class="mui-slider-handle"><span>P2P和非法集资的模糊边界</span>
+			<a href="data/fm1.html">
+			   <img class="mui-media-object mui-pull-left" src="image/people/2.jpg">
+			   <p>01:39&nbsp;&nbsp;免费课&nbsp;&nbsp;456次收听</p>
+		    </a>
+		</div>
+	</li>
+    <li class="mui-table-view-cell">
+        <div class="mui-slider-handle"><span>编制给我们的思考</span>
+			<a href="data/fm2.html">
+			   <img class="mui-media-object mui-pull-left" src="image/people/2.jpg">
+			   <p>00:59&nbsp;&nbsp;收费1元&nbsp;&nbsp;150次收听</p>
+		    </a>
+		</div>
+	</li>
+	<li class="mui-table-view-cell">
+        <div class="mui-slider-handle"><span>听李开复谈死神</span>
+			<a href="data/fm3.html">
+			   <img class="mui-media-object mui-pull-left" src="image/people/2.jpg">
+			   <p>10:53 &nbsp;&nbsp;免费课&nbsp;&nbsp;456次收听</p>
+		    </a>
+		</div>
+	</li>
+	<li class="mui-table-view-cell">
+        <div class="mui-slider-handle"><span>强者阿里与苏宁的联姻</span>
+			<a href="data/fm4.html">
+			   <img class="mui-media-object mui-pull-left" src="image/people/2.jpg">
+			   <p>01:00&nbsp;&nbsp;收费1元&nbsp;&nbsp;150次收听</p>
+		    </a>
+		</div>
+	</li>
+	<li class="mui-table-view-cell">
+        <div class="mui-slider-handle"><span>中国的经济信任道路</span>
+			<a href="data/fm5.html">
+			   <img class="mui-media-object mui-pull-left" src="image/people/2.jpg">
+			   <p>01:00&nbsp;&nbsp;免费课&nbsp;&nbsp;456次收听</p>
+		    </a>
+		</div>
+	</li>
+</ul>
+<div class="none">亲，没有更多内容了</div>
+<!-- 底部导航菜单 -->
+<nav class="mui-bottom mui-bar-tab">
+    <a class="mui-tab-item" id="gz1" href="javascript:void(0);">
+        <span class="mui-icon mui-icon-plus"></span>
+        <span class="mui-tab-label">关注</span>
+    </a>
+    <a class="mui-tab-item" id="gz2" href="javascript:void(0);" style="display:none;">
+        <span class="mui-icon mui-icon-plus"></span>
+        <span class="mui-tab-label">已关注</span>
+    </a>
+    <a class="mui-tab-item" href="data/dashang.html">
+        <span class="mui-icon mui-icon-starhalf"></span>
+        <span class="mui-tab-label">打赏</span>
+    </a>
+    <a id="circle" class="mui-tab-item" href="luzhi.html">
+       <i class="fa fa-headphones fa-6x"></i>
+    </a>
+    <a class="mui-tab-item" href="data/yue.html">
+        <span class="mui-icon mui-icon-personadd"></span>
+        <span class="mui-tab-label">约见</span>
+    </a>
+    <a class="mui-tab-item" href="chat2.html">
+        <span class="mui-icon mui-icon-chatbubble"></span>
+        <span class="mui-tab-label">咨询</span>
+    </a>
+</nav>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#gz1').click(function() {
+        $('#gz1').css("display","none");
+        $('#gz2').css("display","");
+    });
+    $('#gz2').click(function() {
+        $('#gz2').css("display","none");
+        $('#gz1').css("display","");
+    });
+});
+</script>
+</html>

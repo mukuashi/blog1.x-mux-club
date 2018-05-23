@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	form{
+		margin:5em;
+		backface-visibility:hidden;
+	}
+	.input{
+		position:relative;
+		float:left;
+		margin:10px;
+	}
+	input{
+		border:1px solid #eee;
+		padding:1em .5em;
+		outline:none;
+	}
+	input + label{
+		position:absolute;
+		left:10px;
+		top:50%;
+		transform:translateY(-50%);
+		color:#aaa;
+		transition: all .2s ease;
+	}
+	input:focus + label,{
+		color:#52a5fb;
+		font-size:.65em;
+		top:8%;
+		transform: none;
+	}
+	.not-empty + label{
+		color:#fff;
+	}
+</style>
+<div class="header">
+<header class="mui-bar mui-bar-nav">
+		  <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+		   <h1 class="mui-title">测试</h1>
+</header>
+</div>
+<!--中间实体部分-->
+<form>
+	<div class="input">
+		<input type="text" id="name">
+		<label for="name">Your name</label>
+	</div>
+	<div class="input">
+		<input type="text" id="name">
+		<label for="email">Your email</label>
+	</div>
+</form>
+</body>
+<script type="text/javascript">
+	var inputs=document.getElementsByTagName('input');
+	for(i=0;i<inputs.length;i++){
+		var input=inputs[i];
+		input.addEventListener('keyup',bindUI,false);
+	}
+	function bindUI{
+		if(this.value){
+			this.classList.add('not-empty');
+		}else{
+			this.classList.remove('not-empty');
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<link type="text/css" rel="stylesheet" href="res/css/basic.css" />
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+
+<script type="text/javascript" src="../js/mui.min.js"></script>
+<script type="text/javascript" src="res/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="res/js/switch_pwd.js"></script>
+<!--初步加载样式-->
+<script type="text/javascript">
+$(window).load(function() {
+	$("#status").fadeOut();
+	$("#preloader").delay(250).fadeOut("slow");
+});
+</script>
+</head>
+<body>
+<div class="w"> 
+  <!--页面加载 开始-->
+  <div id="preloader">
+    <div id="status">
+      <p class="center-text">加载中. . .<em>请稍等片刻!</em> </p>
+    </div>
+  </div>
+  <!--页面加载 结束--> 
+  <!--header 开始-->
+<header>
+    <div class="header"> 
+    <a class="new-a-back mui-action-back"><i class="fa fa-angle-left fa-5x"></i></a>
+      <h2>欢迎智客</h2>
+    <a class="new-a-right" href="../index.html"><i class="fa fa-home"></i></a>
+    </div>
+</header>
+  <!--header 结束-->
+<div class="page">
+    <div class="main">
+      <form id="frm_login" method="post" action="#">
+        <div class="item item-userphone">
+          <label for="userphone" class="control-label" id="notice1"></label>
+          <input id="userphone" class="txt-input txt-userphone" type="text" placeholder="请输入常用手机号" value="" name="userphone"  autocomplete="on" required>
+          <span id="sms_yzm" onclick="getCode()">获取验证码</span>
+          <span class=""><input type="hidden" id="hiddenVerificationCode"></span>
+        </div>
+
+        <div class="item input-info">
+            <label for="sms_yzm" class="control-label" id="notice2"></label>
+            <input id="verificationCode" class="txt-input txt-captcha" type="text" placeholder="请输入短信验证码" autocomplete="off" maxlength="6" size="11" required>
+        </div>
+
+        <div class="item item-password">
+          <label for="password" class="control-label" id="notice3"></label>
+          <input id="password" class="txt-input txt-password" type="password" placeholder="请输入密码" name="password" style="display: inline;" required>
+        </div>
+        
+        <div class="item item-password">
+          <label for="password_PwdTwo" class="control-label" id="notice4"></label>
+          <input id="password_PwdTwo" class="txt-input txt-password_PwdTwo ciphertext_PwdTwo" type="password" placeholder="再确认一次密码" name="password_PwdTwo" style="display: inline;" required>
+        </div>
+        <div class="item item-captcha">
+          <div class="err-tips"><input type="checkbox" checked="checked">  我同意 <a href="xieyi.html"> 用户服务协议</a> </div>
+        </div>
+         <input type="submit" id="submit" value="提交注册"  class="ui-btn-primary">
+         <div class="have"><a href="login.html">已经有账户了?  快直接登录吧</a></div>
+      </form>
+    </div>
+  </div>
+  <!--footer 开始-->
+  
+  <!--footer end--> 
+</div>
+</body>
+</html>

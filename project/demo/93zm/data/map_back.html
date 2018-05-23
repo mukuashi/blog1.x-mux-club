@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>我目前的位置</title>
+		<script type="text/javascript">
+		  function resetMap(){
+		  	plus.webview.currentWebview().opener().evalJS('resetMap()');
+		}
+		</script>
+		<style type="text/css">
+		   html,body{overflow:hidden;}
+		   .button_map{
+		   	background: #1CA37D;
+		   	color: #fff;
+		   	display:block;
+		   	position:absolute;
+		   	right:1%;
+		   	bottom:2%;
+		   	border-radius:10px;
+		   	padding:10px 20px;
+		   	line-height:15px;
+		   	float:right;
+		   }
+		</style>
+	</head>
+	<body>
+		<div class="button_map"  onclick="resetMap()">初始化</div>
+	</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'microsoft yahei', 'Helvetica', simhei, simsun, sans-serif;
+	background-color: #F7F7F7;
+}
+
+a {
+	text-decoration: none;
+}
+
+figcaption {
+	font-size: 16px;
+	text-align: center;
+	margin: 3% 0;
+}
+
+.player {
+	max-width: 100%;
+    min-width: 360px;
+	margin: 0 auto;
+	background: #000 url(../images/loading.gif) center/300px no-repeat;
+	position: relative;
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.controls {
+	width: 100%;
+	height: 40px;
+	background-color: #2196F3;
+	position: absolute;
+	left: 0;
+	bottom: -40px;
+	z-index: 99;
+	opacity: 0.7;
+}
+
+.player:hover .controls {
+	opacity: 1;
+}
+
+/*播放/暂停*/
+.controls .switch {
+	display: block;
+	width: 4%;
+	height: 20px;
+	font-size: 1.3em;
+	color: #FFF;
+	position: absolute;
+	top: 25%;
+    left: 2%;
+}
+.controls .switch:hover {
+	color: blue;
+}
+/*进度条*/
+.controls .progress {
+	width: 65%;
+	max-width: 70%;
+	height: 10px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #fff;
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+    left: 8%;
+}
+/*下载进度*/
+.controls .progress .loaded {
+	width: 0;
+	height: 100%;
+	background-color: blue;
+}
+
+/*播放进度*/
+.controls .progress .line {
+	width: 0;
+	height: 100%;
+	background-color: #FFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/**/
+.controls .progress .bar {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+/*时间进度条*/
+.controls .timer {
+	width: 10%;
+	min-width: 117px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	left: 79%;
+	top: 27%;
+	color: #FFF;
+	font-size: 0.8em;
+}
+/*全屏按钮*/
+.controls .expand {
+	display: block;
+	width: 3%;
+	height: 20px;
+	font-size: 20px;
+	color: #FFF;
+	position: absolute;
+	right: 2%;
+	top: 25%;
+}
+.controls .expand:hover {
+	color: blue;
+}
+/*当页面视频可以播放即是loading加载完成开始通过js在video标签上add这个class*/
+.loadingVideo {
+	display: none;
+}
+/*一个控制播放按钮显示与隐藏的div*/
+.videoPause {
+    display: none;
+}
+/*播放按钮切换*/
+.playPause {
+	position: absolute;
+    z-index: 1;
+    top: 54%;
+    left: 50%;
+    width: 3em;
+    height: 3em;	
+    transform: translate(-50%,-50%);
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-touch-action:manipulation;
+    cursor: pointer;
+}
+.playPause i.fa-SwitchVideo {	
+    color: #fff;
+    background: #00bcd4;           
+    width: 3em;
+    height: 3em;
+    border: 3px solid currentColor;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    transition: all .3s ease;
+}
+.playPause i.fa-SwitchVideo:before {
+    position: relative;
+    font-size: 1.8em;
+    top: 20%;
+    left: 34%; 
+}
+.playPause:focus,.playPause i:focus{
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}

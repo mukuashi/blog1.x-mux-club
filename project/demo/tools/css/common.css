@@ -1,0 +1,225 @@
+* {
+    -webikit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font: 14px/22px "Hiragino Sans GB", "Helvetica Neue", "Microsoft Yahei", "微软雅黑","Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+code{
+	white-space: pre-wrap;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body,input,textarea,select {
+    color:#333;
+    font: 14px/22px "Hiragino Sans GB", "Helvetica Neue",  "微软雅黑","Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;/*fixed导航条，控制内容距离顶部距离*/
+    margin:0;
+    padding:0;
+}
+input,textarea,select {
+    color:#7a7a7a;
+    font: 16px/22px "Hiragino Sans GB", "Helvetica Neue",  "微软雅黑","Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ol, ul {
+	list-style: none;
+        margin:0;
+        padding:0;
+}
+dd {
+    margin:0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    color:#303030;
+    outline:0;
+    text-decoration: none;
+}
+a:hover {
+    outline:0;
+    text-decoration: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@-ms-viewport { width: device-width; }
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+/*兼容所有浏览器的清除浮动 用于父级*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+/*content: " ";*/
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+@font-face{
+    font-family:cate_icon;
+    src:url(/static/fonts/cate.woff) format("woff"),url(/static/fonts/cate.otf);
+}
+@font-face{
+    font-family:base_icon;
+    src:url(/static/fonts/base.woff) format("woff"),url(/static/fonts/base.otf);
+}
+.dn {display: none;}
+.fl {float:left;}
+.fr {float:right;}
+
+a:hover {
+    color:#27ac02;
+}
+
+.boxshadow {
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.15);
+}
+
+.btn {
+    display:inline-block;
+    padding:0 20px;
+    border-radius:8px;
+    background-color:#27ac02;
+    height:50px;
+    line-height:50px;
+    font-size:25px;
+    color:#fff;
+    outline:0;
+    border:0;
+    text-align: center;
+}
+.btn:hover {
+    color:#fff;
+}
+.btn-small {
+    height:35px;
+    line-height:35px;
+    font-size:14px;
+}
+
+.input-error {
+    border:1px solid red;
+}
+.loginboxf{ cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    width: 100px; color:#3a3332;
+}
+.ysall{ background-color:#f8f5ef; padding:10px; font-family: "Microsoft YaHei","微软雅黑";}
+.ysall a:hover{ color:#000;}
+.tabs li{ position:relative;}
+.tabs li i{ background:url(../images/lanmutubiao.png) no-repeat; position:absolute; display:inline-block;}
+.menu div{ background:url(../images/lanmutubiao.png)#db512d no-repeat; display:inline-block; padding-left:15px;}
+.menu div.loginbox{ background-position: -59px 2px;}
+.menu div.copy-editor-html{ background-position: -59px -28px;}
+.menu div.clear-editor{ background-position: -59px -60px;}
+.menu div.clear-editor{ background-position: -59px -60px;}
+.menu div#phone{ background-position: -61px -90px;}
+.menu div#clear-editora{ background-position: -61px -122px;}
+.menu div#kefu{ background-position: -61px -157px;}
+.menu div#clear-editorc{ background-position: -61px -190px;}
+.tabs li.tabsa .liico{ background-position: -30px -5px;
+   background-position: -20px -5px;
+    height: 16px;
+    left: 13px;
+    top: 20px;
+    width: 26px;}
+	.tabs li.tabsb .liico{ background-position: -30px -5px;
+    background-position: -18px -20px;
+    height: 34px;
+    left: 13px;
+    top: 2px;
+    width: 26px;}
+	.tabs li.tabsc .liico{ background-position: -30px -5px;
+     background-position: -20px -65px;
+    height: 30px;
+    left: 15px;
+    top: 10px;
+    width: 25px;}
+	.tabs li.tabsd .liico{ background-position: -30px -5px;
+  background-position: -19px -102px;
+    height: 30px;
+    left: 13px;
+    top: 10px;
+    width: 27px;}
+	.tabs li.tabse .liico{ background-position: -30px -5px;
+   
+	
+	 background-position: -20px -132px;
+    height: 22px;
+    left: 13px;
+    top: 10px;
+    width: 27px;
+	}
+	.tabs li.tabsf .liico{ background-position: -30px -5px;
+   
+	 background-position: -18.5px -160px;
+    height: 35px;
+    left: 13px;
+    top: 5px;
+    width: 25px;
+	}
+	.tabs li.tabsg .liico{ background-position: -30px -5px;
+    background-position: -20px -190px;
+    height: 35px;
+    left: 14px;
+    top: 5px;
+    width: 30px;}
+	.tabs li.tabsh .liico{ background-position: -30px -5px;
+    background-position: -20px -225px;
+    height: 35px;
+    left: 14px;
+    top: 12px;
+    width: 30px;}
+	.tabs li.tabsi .liico{ background-position: -30px -5px;
+      background-position: -20px -255px;
+    height: 35px;
+    left: 15px;
+    top: 10px;
+    width: 30px;}
+	.tabs li.tabsj .liico{ background-position: -30px -5px;
+   background-position: -20px -285px;
+    height: 35px;
+    left: 16px;
+    top: 11px;
+    width: 30px;}
