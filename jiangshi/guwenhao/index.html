@@ -1,0 +1,232 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script id="tinyhippos-injected">
+if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
+<head>
+<link rel="shortcut icon" href="images/bitbug_favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<title>顾文豪讲师微官网</title>
+<meta name="keywords" content="顾文豪">
+<meta name="description" content="顾文豪">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/gu1.js"></script>
+<script src="js/gu2.js"></script>
+</head>
+<body data-pinterest-extension-installed="cr1.36">
+<a name="ding" id="ding"></a>
+<div class="header"> 
+<a href="index.html"><img alt="顾文豪" src="images/1.png"></a> 
+</div>
+<div class="nav">
+  <li><a  href="main.html#fengcai">讲师风采</a></li>
+  <li><a href="video.html#fengcai">视频展示</a></li>
+  <li><a href="about.html#fengcai">关于我们</a></li>  
+  <li><a href="kecheng.html#fengcai">精品课程</a></li>
+  <li><a href="contact.html#fengcai">联系我们</a></li>
+  <li><a target="_blank" href="https://www.jinshuju.net/f/gJyhKZ">在线报名</a></li>
+</div>
+
+<div class="sou">
+<!--<div class="left">
+<form class="xunsou" id="SearchForm" action="/tpl/Wap/default/common/wz/plus/search/index.asp" method="Get" name="SearchForm">
+<div class="searchsd">
+<input class="textbox" type="text" onfocus="this.select();" value="请输入关键字" name="key">
+<span>
+<b style="display:none;"><select name="m" style="width:80px;">
+<option value="0">全部</option>
+</select></b>
+<input name="Submit1" type="submit" class="inputButton" alt="搜" align="absmiddle">
+</span>
+</div>
+<input type="hidden" name="__hash__" value="34f5968e6a3b240263d535f02ba6eb74_59211d62bb56a1d6a774b774246a4962" /></form>
+</div>-->
+<a class="tle" target="_blank" href="tel:13669793964">电话咨询:13669793964</a>
+</div>
+<div class="huandeng">
+<section class="indexPhoto">
+ <div class="gallery clearfix" style="overflow: hidden;">
+    <ul style="width: 8094px; transition: 0s; -webkit-transition: 0s; transform: translate(-325px, 0px); -webkit-transform: translate3d(-1349px, 0px, 0px);">
+        <li style="width: 1349px; -webkit-perspective: 1000;" id="null"><a href="#"><img src="images/2.jpg"></a></li>
+        <li style="width: 1349px; -webkit-perspective: 1000;"><a href="#"><img src="images/3.jpg"></a></li>
+        <li style="width: 1349px; -webkit-perspective: 1000;"><a href="#"><img src="images/4.jpg"></a></li>
+        <li style="width: 1349px; -webkit-perspective: 1000;" id="null"><a href="#"><img src="images/5.jpg"></a></li></ul>
+        </div>
+        <div class="ctrls">
+            <div class="imgPageBtn imgPageBtn-l"></div>
+            <ul>
+            <li class="current"></li>
+            <li class=""></li>
+            <li class=""></li>
+             <li class=""></li>
+            </ul>
+            <div class="imgPageBtn"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+    scrollTo(0,1);
+    //导航
+    NTUI.htmlHelper.navigator();
+    tpl={};
+    tpl.cateEntry = '进入<#=cname#>频道';
+    //栏目数据 & 资讯模块滑动
+    var topicHolder = X('.topNews>nav>ul'),cateEntry = X('.newsList .cateEntry'),slideHolder = X('.newsList'),ns;
+    for(i=0;i<topicHolder.length;i++){
+        ns = new NTUI.slide(slideHolder[i],{onTouchEnd:slideHandler,slideIndex:i});
+        ns.cateEntry = cateEntry[i];
+        ns.topics = topicHolder[i];
+        topicHolder[i].slide = slideHolder[i].slide = ns;
+    }
+    //资讯模块滑动事件处理
+    function slideHandler(e,cp,preP){
+        var t = this,cLi = t.topics.children[cp],tid=cLi.getAttribute('tid');
+        X(t.topics.children).removeClass('current');
+        cLi.className='current';
+        t.cateEntry.innerHTML =  NTUI.simpleParse(tpl.cateEntry,{cname:cLi.getAttribute('cname')});
+        t.cateEntry.href = 'http://3g.163.com/touch/'+cLi.getAttribute('curl');+'/?from=index';
+        if(cp!==preP){
+            if(t.options.slideIndex)NTUI.scrollToEl(t.topics);	//fix the position of the 1st module
+        }
+    }
+    //栏目头点击跳转
+    topicHolder.click(function(e){
+        var t = e.target;
+        while(t.tagName !== 'LI'){
+            t=t.parentNode;
+        }
+        if(t.className!=='current'){
+            var _ntes_a_t,_ntes_a_h,_ntes_p_url = 'http%3A//3g.163.com/touch/',
+                    _ncw = screen.width,
+                    _nmx = e.clientX,
+                    _nmy = e.clientY+ document.body.scrollTop||document.documentElement.scrollTop;
+            X(this.children).removeClass('current');
+            t.className = 'current';
+            var cp = t.getAttribute('page'),tid=t.getAttribute('tid'),s=this.slide;
+            s.cateEntry.innerHTML =  NTUI.simpleParse(tpl.cateEntry,{cname:t.getAttribute('cname')});
+            s.cateEntry.href = 'http://3g.163.com/touch/'+t.getAttribute('curl');+'/?from=index';
+            _ntes_a_t = encodeURI(X(t).find('span').html());			_ntes_a_h = t.getAttribute('curl');
+            this.slide.slideToPage(cp,'.5');
+            var _ntes_p_q = '_nacc=' + _ntes_nacc + '&_npurl=' + _ntes_p_url + '&_nah=' + _ntes_a_h + '&_nat=' + _ntes_a_t+ '&_ncw=' + _ncw + '&_nmx=' + _nmx + '&_nmy=' + _nmy + '&_end';
+            NTUI.importJs('http://analytics.163.com/ntes_p?' + _ntes_p_q);
+        }
+    });
+    //图集
+    var photoCtrls = X('.indexPhoto .ctrls li'),imgPageBtn = X('.imgPageBtn'),
+            gallerySlide = new NTUI.slide(X('.gallery')[0],{
+                onTouchEnd:function(e,cp){
+                    photoCtrls.removeClass('current');
+                    photoCtrls[cp].className = 'current';
+                }
+            });
+    imgPageBtn.click(function(){
+        if(this.className.indexOf('imgPageBtn-l')===-1){
+            gallerySlide.next(0.4,1);
+        }
+        else{
+            gallerySlide.prev(0.4,1);
+        }
+    });
+    mask.style.display = 'none';
+    X('.topNews,body>footer').css({display:'block'});
+    loading=false;
+    //搜索模块
+    var searchForm = X('#searchForm'),searchText = X('#searchText'),searchBtn = X('#searchBtn'),searchDefault;
+    searchDefault = searchText.attr('data');
+    (function(searchDefault){
+        var v = searchDefault[0].split(','),
+                i = Math.floor(Math.random()*v.length);
+        searchText.attr('value',v[i]);
+    })(searchDefault);
+    searchBtn.click(function(){
+        doSearch();
+    });
+    searchForm.submit(function(){
+        doSearch();
+        return false;
+    });
+    function doSearch(){
+        var ls = window.localStorage,v = searchText.attr('value');
+        if(ls){
+            ls.setItem('3g.163.touch.searchvalue',v);
+            searchForm[0].submit();
+        }
+    }
+    //应用模块tab
+    var appViews = X('.apps-view-4>div'),appNavs = X('.apps nav li');
+    appNavs.click(function(e){
+        if(this.className !== 'current'){
+            appNavs.removeClass('current');
+            appViews.removeClass('current');
+            this.className = 'current';
+            appViews[this.getAttribute('index')].className='current';
+        }
+    });
+    //读取应用数据
+    var appHolder = X('.apps-view-4>div>ul'),platform='other'
+    ,isAndroid=navigator.userAgent.match(/android/ig)
+    ,appUrl = 'http://3g.163.com/touch/app/cpsSoftware/12.html';
+    if(isAndroid){
+        X('.apps').css({display:'block'});
+        var titleHolder = X('.apps>nav li span');
+        titleHolder[0].innerHTML = '热门游戏推荐';
+        NTUI.importJs(appUrl);
+    }
+    var appLi = '<a href="/m/android/software/<#=id#>.html#from=t"><img src="<#=icon#>"/><span><#=name#></span></a>';
+    function appList(d){
+        if(!d)return;
+        var i=j=0,apps,app,tmp;
+        tmp='';
+        for(j=0;j<d.length;j++){
+            if(j%4===0){tmp+='<li>'}
+            app = d[j];
+            tmp += NTUI.simpleParse(appLi,{icon:app.icon,id:app.id,name:app.name});
+            if(j%4===3){tmp+='</li>'}
+        }
+        appHolder[0].innerHTML = tmp;
+        new NTUI.slide(appViews[0],{wrapperW:window.innerWidth*0.92});
+        X('.apps').css({display:'block'});
+    }
+    //广告
+</script>
+</div>
+
+
+<div class="title"><a href="contact.html" class="y">公司简介</a></div>
+
+<div class="text">
+   <p style="text-align:left;text-indent:2em;">
+	<span style="line-height:1.5;font-size:14px;">顾文豪老师是国内优秀实战型企业训导培训师，《HR职业素能提升与修炼》、《打造企业金牌面官》、《非人</span>
+    <span style="line-height:1.5;font-size:14px;">力资</span>
+    <span style="font-size:14px;line-height:1.5;">源管理》、《8090后的员工管理与人才培养》以及《非人力资源总裁管理》等品牌课程受到同行HR和企业客户的好评；他长期学习研究的人际关系、职业礼仪、团队管理、管理心理学等多门企业管理学科并理论结合实际融会贯通，独创了适合职场各层级、各类职场人士所需的必修课教材《玩转职场360管理系列课程》，为全国数家培训机构、人力资源管理公司、企业咨询公司提供培训与诊断顾问咨询服务，受邀为不同类型的企业、高等院校做过多次大型演讲及参与全国职业培训巡讲，为大中专毕业生宣讲就业指导课程，并免费提供就业指导服务。</span> 
+</p></div>
+<div class="title"><a href="kecheng.html" class="y">课程推荐</a></div>
+
+
+<ul class="yydt">
+    <li><a href="wen1.html">HR职业化素养提升品牌课程</a></li>
+    <li><a href="wen2.html">中层管理品牌课程</a></li>
+    <li><a href="wen3.html">专业专题技能训练品牌课程</a></li>
+    <li><a href="wen4.html">综合管理品牌系列</a></li></ul>
+
+<div class="foot_nav">
+        <a href="main.html">讲师介绍</a>
+        <a href="contact.html">联系我们</a>
+        <a target="_blank" href="https://www.jinshuju.net/f/gJyhKZ">在线报名</a></div>
+<div class="bottom">
+电话：13669793964<br>
+手机：13669793964<br>
+传真：010-56219802<br>
+地址：北京平谷区平谷科技园<br>
+<!--在这里添加-->
+</div>
+<div class="g_zixun">
+<a href="tel:13669793964">拨打电话</a><a  href="sms:13669793964">短信咨询</a>
+</div>
+
+</body></html>

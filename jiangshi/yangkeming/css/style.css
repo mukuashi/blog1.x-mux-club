@@ -1,0 +1,35 @@
+@charset "utf-8";
+@font-face{
+	font-family:'icomoon';
+	src:url(../fonts/icomoon.eot);
+}
+.box{ margin:10px; padding:15px; overflow:hidden; background:#FFF; border:1px solid #DDD; border-radius:5px; box-shadow:0 0 5px #DDD;}
+.lanm{ position:relative; width:100%; height:45px; left:0; top:0; z-index:998; 
+background-image: -webkit-gradient(linear, left top, left bottom, from(#0095e5), to(#0089d1));
+background-image: -webkit-linear-gradient(top, #0095e5, #0089d1);
+background-image: linear-gradient(to bottom, #0095e5, #0089d1);
+display:box; display:-webkit-box; display:-moz-box;}
+.lanm span{ width:40px; height:100%; display:block;}
+.lanm h1{ display:block; color:#FFF; box-flex:1.0; -webkit-box-flex:1.0; -moz-box-flex:1.0;margin-right:15%;line-height:45px; text-align:center; font-size:18px; font-weight:bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#back a{ display:block; height:100%; background:url(../images/back.png) no-repeat center; background-size:10px auto}
+#lm{ height:100%; background:url(../images/lm.png) no-repeat center; background-size:auto 15px; -webkit-background-size:auto 15px; -moz-background-size:auto 15px; -o-background-size:auto 15px;}
+.lanm .submenu{ position:absolute; width:100%; left:0; top:45px; background:#FFF; display:none;}
+.lanm .submenu a{ display:block; height:40px; line-height:40px; border-bottom:1px solid #E8E8E8; margin:0 10px; background:url(../images/arr.png) no-repeat right center;background-size:auto 12px;}
+.lanm .submenu a:last-child{ border:none;}
+.zhezhao2{width:100%;height:100%;background-color:rgba(0,0,0,0.3);position:fixed;left:0;top:0;z-index:990;display:none}
+/*新闻*/
+.newslist {}
+.newslist li { border-bottom: 1px solid #DDD; }
+
+.newslist li a { display: block; overflow: hidden; padding: 20px 10px; }
+.newslist li img { width: 80px; height: 60px; float: left; margin-right: 10px; }
+.newslist li h1 { color:#0089d1; font-size: 16px; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.newslist li p { margin: 0; padding: 0; line-height: 30px; font-size: 14px; color: #666; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.pagelist { margin: 20px 10px; height: 40px; background:#FFF; font-weight: bold; line-height: 40px; display: box; font-size: 16px; border: 1px solid #0089d1; display: -moz-box; display: -webkit-box; border-radius: 5px; }
+.pagelist span { display: block; text-align: center; box-flex: 1.0; -moz-box-flex: 1.0; -webkit-box-flex: 1.0; }
+.pagelist span a { display: block; color:#0089d1;}
+.page { width:30px; overflow:hidden;  border-left: 1px solid #0089d1; border-right: 1px solid #0089d1;}
+.page select{ font-size:16px; height:40px; background:none; text-align:center; border:none; font-family: Arial; color:#0089d1; -webkit-appearance:none; -moz-appearance: none; appearance:none; }
+.news_tit{ padding:10px; line-height:20px; text-align:center; margin-top:10px; border-bottom:1px solid #DDD; font-size:16px; font-weight:bold;}
+.news_txt{ line-height:200%; padding:10px; overflow:hidden; font-size:14px;}
+.news_txt img{ max-width:100%; height:auto;}

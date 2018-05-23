@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>徐锦元讲师微官网</title>
+<meta name="author" content="讲师培训-企业内训-元鹰传媒搭建企业与讲师的平台" />
+<meta name="keywords" content="北京元鹰文化传媒有限公司" />
+<meta name="description" content="讲师培训-企业内训-搭建企业与讲师的平台"/>
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<link rel="shortcut icon" href="images/bitbug_favicon.ico">
+<link type="text/css" rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/g.base.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('wrapper', {
+            snap: true,
+            momentum: false,
+            hScrollbar: false,
+            onScrollEnd: function() {
+                document.querySelector('#indicator > li.active').className = '';
+                document.querySelector('#indicator > li:nth-child(' + (this.currPageX + 1) + ')').className = 'active';
+            }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+</head>
+
+<body>
+<header>
+    <div class="banner">
+        <div id="wrapper" style="overflow: hidden; ">
+            <div id="scroller">
+                <ul id="thelist">
+                    <li><a href="#"><img src="images/1.jpg" /></a></li>
+                    <li><a href="#"><img src="images/2.jpg" /></a></li>
+                    <li><a href="#"><img src="images/3.jpg" /></a></li>
+                    <li><a href="#"><img src="images/4.jpg" /></a></li>
+                    <li><a href="#"><img src="images/5.jpg" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div id="prev" onClick="javascript:myScroll.scrollToPage('prev', 0);"></div>
+        <ul id="indicator">
+            <li class="active"></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+        </ul>
+        <div id="next" onClick="javascript:myScroll.scrollToPage('next', 0, 400, 2);"></div>
+    </div>
+    <div class="clr"></div>
+</header>
+<script>
+    var count = document.getElementById("thelist").getElementsByTagName("img").length;
+    for (i = 0; i < count; i++) {
+        document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+    }
+    document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    setInterval(function() {
+        myScroll.scrollToPage('next', 0, 400, count);
+    }, 3500);
+    window.onresize = function() {
+        for (i = 0; i < count; i++) {
+            document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+        }
+        document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    };
+</script>
+<div class="content">
+    <a href="main.html">
+        <div class="img" style="background:url(images/1.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">讲师风采</div>
+    </a><a href="zhongxin.html">
+        <div class="img" style="background:url(images/2.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">课程中心</div>
+    </a><a href="kegang.html">
+        <div class="img" style="background:url(images/3.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">综合课纲</div>
+    </a><a href="xianchang.html">
+        <div class="img" style="background:url(images/4.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">培训现场</div>
+    </a><a href="anli.html">
+        <div class="img" style="background:url(images/5.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">经典课程</div>
+    </a><a href="photo.html">
+        <div class="img" style="background:url(images/6.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">相册回顾</div>
+    </a><a href="kehu.html">
+        <div class="img" style="background:url(images/7.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">合作客户</div>
+    </a><a href="lianxi.html">
+        <div class="img" style="background:url(images/8.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">联系我们</div>
+    </a></div>
+<div class="footer">
+   <p class="footer-top">&copy;徐锦元讲师版权所有</p>
+</div>
+<div class="navdi">
+    <ul>
+        <li><a href="http://www.zywxrg.com" target="_blank"><img src="images/9.png"></a></li>
+        <li><a href="tel:18959117991"><img src="images/plugmenu1.png"></a></li>
+        <li id="hometext"><a href="index.html"><img src="images/home.png"></a></li>     
+        <li><a href="sms:18959117991"><img src="images/plugmenu4.png"></a></li>
+        <li><a href="http://map.baidu.com/" target="_blank"><img src="images/plugmenu3.png"></a></li>
+    </ul>
+</div>
+</body>
+</html>

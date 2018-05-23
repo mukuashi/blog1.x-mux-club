@@ -1,0 +1,82 @@
+/* CSS Document */
+@charset "utf-8";
+* {padding:0; margin:0;}
+html, body{background:#c0c0c0;margin: 0;padding: 0;width: 100%;height: 100%;min-height: 100%;font-family: "宋体" ,Helvetica, Arial, sans-serif;
+font-size: 16px;line-height: 1.231;-webkit-touch-callout: none;display: -webkit-box;-webkit-box-orient: vertical;-webkit-box-align:stretch;position: relative;}
+div.mapid{
+text-align: center;
+  color: #00FFEC;
+  text-shadow: 1px 1px 2px #000;
+  text-decoration: none;
+  margin-top: 3%;
+  font-weight: 600;
+  font-size: 1em;
+
+}
+footer {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #333;
+	position: fixed;
+	left: 0;
+	bottom: 0
+}
+
+footer a {
+	display: block;
+	width: 20%;
+	height: 40px;
+	float: left;
+	background: no-repeat center;
+	background-size: auto 28px
+}
+
+footer a#sharetest {
+	background-image: url(../images/back.png);
+}
+
+footer a#sms {
+	background-image: url(../images/plugmenu4.png);
+}
+
+footer a#tel {
+	background-image: url(../images/tel.png);
+}
+
+footer a#map {
+	background-image: url(../images/map.png);
+}
+footer a#user {
+	background-image: url(../images/user.png);
+}
+/*ul.contact{
+	display: block;
+    column-count:2;
+    -webkit-column-count:2;
+    -moz-column-count:2;
+
+}
+ul.contact1 li{
+  background: #F97F12;
+    border-radius: 32px;
+  padding: 3% 0;
+
+}
+ul.contact1 li a{
+	font-size:1em;
+	color:#fff;
+}
+ul.contact2 li{
+	  background: #F97F12;
+    border-radius: 32px;
+  padding: 3% 0;
+  margin:3% auto;
+}
+ul.contact2 li a{
+	font-size:1em;
+	color:#fff;
+}*/
+
+
+

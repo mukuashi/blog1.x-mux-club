@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>张九元老师微网站</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="张九元老师个人网站-博客小站-项目中心-文章">
+<meta name="description" content="张九元老师微官网">
+<meta name="HandheldFriendly" content="Photoartlife">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="css/cate.css" rel="stylesheet" type="text/css" />
+<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon"  href="images/bitbug_favicon">
+<!--幻灯片代码-->
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onScrollEnd: function () {
+			document.querySelector('#indicator > li.active').className = '';
+			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+		}
+	});
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+var playbox = (function(){
+	//author:eric_wu
+	var _playbox = function(){
+		var that = this;
+		that.box = null;
+		that.player = null;
+		that.src = null;
+		that.on = false;
+		//
+		that.autoPlayFix = {
+			on: true,
+			//evtName: ("ontouchstart" in window)?"touchend":"click"
+			evtName: ("ontouchstart" in window)?"touchstart":"mouseover"
+			
+		}
+
+	}
+	_playbox.prototype = {
+		init: function(box_ele){
+			this.box = "string" === typeof(box_ele)?document.getElementById(box_ele):box_ele;
+			this.player = this.box.querySelectorAll("audio")[0];
+			this.src = this.player.src;
+			this.init = function(){return this;}
+			this.autoPlayEvt(true);
+			return this;
+		},
+		play: function(){
+			if(this.autoPlayFix.on){
+				this.autoPlayFix.on = false;
+				this.autoPlayEvt(false);
+			}
+			this.on = !this.on;
+			if(true == this.on){
+				this.player.src = this.src;
+				this.player.play();
+			}else{
+				this.player.pause();
+				this.player.src = null;
+			}
+			if("function" == typeof(this.play_fn)){
+				this.play_fn.call(this);
+			}
+		},
+		handleEvent: function(evt){
+			this.play();
+		},
+		autoPlayEvt: function(important){
+			if(important || this.autoPlayFix.on){
+				document.body.addEventListener(this.autoPlayFix.evtName, this, false);
+			}else{
+				document.body.removeEventListener(this.autoPlayFix.evtName, this, false);
+			}
+		}
+	}
+	//
+	return new _playbox();
+})();
+
+playbox.play_fn = function(){
+	this.box.className = this.on?"btn_music on":"btn_music";
+}
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	playbox.init("playbox");
+	/*
+	setTimeout(function() {
+		// IE
+		if(document.all) {
+			document.getElementById("playbox").click();
+		}
+		// 其它浏览器
+		else {
+			var e = document.createEvent("MouseEvents");
+			e.initEvent("click", true, true);
+			document.getElementById("playbox").dispatchEvent(e);
+		}
+	}, 2000);
+	*/
+});
+</script>
+
+<span id="playbox" class="btn_music" onclick="playbox.init(this).play();"><audio id="audio" loop src="http://mkstest-photoartlife.stor.sinaapp.com/July%20-%20In%20Love.mp3"></audio></span>
+<div class="banner">
+	<div id="wrapper">
+		<div id="scroller">
+			<ul id="thelist">
+				<li><p>著名管理专家、书法家、国学教授</p><a href="javascript:void(0)"><img src="images/1.jpg" /></a></li>
+				<li><p>《简约管理》、《稳健经营》创始人</p><a href="javascript:void(0)"><img src="images/2.jpg" /></a></li>
+				<li><p>清华大学总裁班特聘教授</p><a href="javascript:void(0)"><img src="images/3.jpg" /></a></li>
+				<li><p>中华龙商学院院长，墨宝网总裁</p><a href="javascript:void(0)"><img src="images/4.jpg" /></a></li>
+				<li><p>中国培训行业联谊会监事长</p><a href="javascript:void(0)"><img src="images/5.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="nav">
+		<ul id="indicator">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<div class="mainbg" style="background:#7ABDE9;"><img src="images/8.jpg" /></div>
+<ul class="mainmenu">
+	<li><a href="wen/main.html" ><p><img src="images/1.png" /><span>讲师风采</span></p></a></li>
+	<li><a href="wen/kecheng.html" ><p><img src="images/2.png" /><span>课程介绍</span></p></a></li>
+	<li><a href="wen/wenzhai.html" ><p><img src="images/wen.png" /><span>九元文摘</span></p></a></li>
+	<li><a href="wen/ding.html" ><p><img src="images/ding.png" /><span>课程预订</span></p></a></li>
+	<li><a href="wen/anli.html" ><p><img src="images/success.png" /><span>课程案例</span></p></a></li>
+	<li><a href="wen/relax.html" ><p><img src="images/3.png" /><span>闲情雅致</span></p></a></li>
+	<li><a href="wen/video.html" ><p><img src="images/video.png" /><span>视频在线</span></p></a></li>
+	<li><a href="wen/contact.html" ><p><img src="images/4.png" /><span>联系我们</span></p></a></li>
+
+</ul>
+
+<script type="text/javascript">
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+
+for(i=0;i<count;i++){
+ document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+setInterval(function(){
+	myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+
+window.onresize = function(){ 
+	for(i=0;i<count;i++){
+		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+	}
+ document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+}
+</script>
+	
+<div class="copyright">Copyright©2015张九元老师版权所有</div><br><br>
+
+<div class="top_bar">
+	<ul id="top_menu" class="top_menu">
+		<li><a href="http://j.map.baidu.com/3wSf3" target="_blank"><img src="images/plugmenu3.png"><label>导航</label></a></li>
+		<li><a href="share.html"><img src="images/plugmenu5.png"><label>分享</label></a></li> 
+		<li><a href="tel:010-51663679"><img src="images/plugmenu1.png"><label>拨号</label></a></li>
+		<li><a href="mailto:jiuyuan99@126.com"><img src="images/plugmenu8.png"><label>邮件</label></a></li>
+	</ul>
+</div>
+</body>
+</html>

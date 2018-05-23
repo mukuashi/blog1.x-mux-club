@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="title" content="济大师生考试系统平台">
+<meta name="description" content="济大师生考试系统平台">
+<meta name="keywords" content="济大师生考试系统平台">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>济大师生考试系统平台</title>
+<link href="app/core/styles/css/bootstrap.css" rel="stylesheet">
+<link href="app/core/styles/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="app/core/styles/css/plugin.css" rel="stylesheet">
+<link href="app/user/styles/css/theme.css" rel="stylesheet" type="text/css" />
+<link href="app/core/styles/css/datetimepicker.css" rel="stylesheet">
+<script type="text/javascript" src="app/core/styles/js/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="app/exam/styles/css/mathquill.css" type="text/css">
+<script type="text/javascript" src="app/core/styles/js/jquery-ui.js"></script>
+<script type="text/javascript" src="app/core/styles/js/jquery.json.js"></script>
+<script type="text/javascript" src="app/core/styles/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/core/styles/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="app/core/styles/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="app/core/styles/js/swfu/swfupload.js"></script>
+<!--
+<script type="text/javascript" src="app/core/styles/js/fingerprint/fingerprint.js"></script>
+<script type="text/javascript" src="app/core/styles/js/fingerprint/plugin.js"></script>
+-->
+<script type="text/javascript" src="app/core/styles/js/plugin.js"></script>
+<script src="app/exam/styles/js/plugin.js"></script>
+</head><body>
+<div class="row-fluid topLine">
+	<div class="container-fluid">
+		<div class="span4"></div>
+		<div class="span8">
+			<span class="pull-right">
+						您好（mks1）&nbsp;&nbsp;<a href="index.php?user-center"><em class="icon-user"></em> 用户中心</a>&nbsp;&nbsp;<a class="ajax" href="index.php?user-app-logout"><em class="icon-lock"></em> 退出</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>
+		</div>
+	</div>
+</div>
+<div class="row-fluid top">
+	<div class="container-fluid">
+		<div class="span4"><a name="top"></a><h2><img src="app/user/styles/img/theme/logo.png" /></h2></div>
+		<div class="span8">
+			<div class="navbar" id="menuNav">
+				<div class="">
+					<div class="nav-collapse">
+						<ul class="nav pull-right">
+							<li class="mainmenu">
+								<a href="index.php">主页</a>
+							</li>
+							<li class="active mainmenu">
+								<a href="index.php?exam">在线考试</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><div class="row-fluid">
+	<div class="container-fluid examcontent">
+		<div class="exambox" id="datacontent">
+			<form class="examform form-horizontal" id="form1" name="form1" action="index.php?exam-app-exam-score" method="post">
+				<ul class="breadcrumb">
+					<li>
+						<span class="icon-home"></span> <a href="index.php?exam">考场选择</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a href="index.php?exam-app-basics">BAT校招模拟水平考试</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a href="index.php?exam-app-exam">正式考试</a> <span class="divider">/</span>
+					</li>
+					<li class="active">
+						系统随机组卷					</li>
+				</ul>
+				<h3 class="text-center">系统随机组卷</h3>
+																																<div id="panel-type2" class="tab-pane active">
+					<ul class="breadcrumb">
+						<li>
+							<h5>1、多选题</h5>
+						</li>
+					</ul>
+						                	                	                <div id="question_237" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">1</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('237',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_237"></a>从1942年春天起，中国共产党在全党范围内展开了一次整风运动。下列属于这次整风运动的任务的是（）。<input id="time_237" type="hidden" name="time[237]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、反对主观主义以整顿学风</p><p>B、反对宗派主义以整顿党风</p><p>C、反对机会主义以整顿作风</p><p>D、反对党八股以整顿文风</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[237][0]" rel="237" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[237][1]" rel="237" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[237][2]" rel="237" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[237][3]" rel="237" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_258" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">2</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('258',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_258"></a>社会主义初级阶段是我国建设社会主义不可逾越的一个历史阶段（）<input id="time_258" type="hidden" name="time[258]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、它反映了社会主义代替资本主义的客观必然性</p><p>B、它反映了我国建设社会主义的特殊性</p><p>C、它是由生产力落后、商品经济不发达的客观条件决定的</p><p>D、它的历史任务是实现工业化和经济的社会化、市场化、现代化</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[258][0]" rel="258" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[258][1]" rel="258" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[258][2]" rel="258" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[258][3]" rel="258" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_284" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">3</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('284',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_284"></a>从1978年到2009年，我国国内生产总值由3645亿元增长到33、35万亿元，年均实际增长9、7％，是同期世界经济年均增长率的３倍多，2010年我国经济总量上升为世界第二。30多年的实践证明改革开放是（）<input id="time_284" type="hidden" name="time[284]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、决定当代中国命运的关键抉择</p><p>B、党执政兴国的第一要务</p><p>C、发展中国特色社会主义的必由之路</p><p>D、解决当代中国发展问题的权宜之计</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[284][0]" rel="284" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[284][1]" rel="284" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[284][2]" rel="284" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[284][3]" rel="284" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_304" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">4</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('304',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_304"></a>坚持以人为本，就是要坚持（）<input id="time_304" type="hidden" name="time[304]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、发展为了人民</p><p>B、发展依靠人民</p><p>C、发展成果由人民共享</p><p>D、实现人的全面发展</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[304][0]" rel="304" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[304][1]" rel="304" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[304][2]" rel="304" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[304][3]" rel="304" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_311" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">5</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('311',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_311"></a>始终做到“三个代表”，是我们党的（）。（）<input id="time_311" type="hidden" name="time[311]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、第一要务</p><p>B、立党之本</p><p>C、执政之基</p><p>D、力量之源</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[311][0]" rel="311" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[311][1]" rel="311" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[311][2]" rel="311" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[311][3]" rel="311" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_331" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">6</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('331',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_331"></a>要正确认识和妥善处理中国特色社会主义事业中的重大关系，统筹（）、区域发展、（）、人与自然和谐发展、（）。（）<input id="time_331" type="hidden" name="time[331]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、城乡发展</p><p>B、经济社会发展</p><p>C、国内发展和对外开放</p><p>D、当前利益和长远利益</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[331][0]" rel="331" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[331][1]" rel="331" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[331][2]" rel="331" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[331][3]" rel="331" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_369" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">7</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('369',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_369"></a>凡属重大问题，党的各级委员会都要按照集体领导、（）、个别酝酿、（）的原则，由党的委员会集体讨论，作出决定。（）<input id="time_369" type="hidden" name="time[369]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、党员参与</p><p>B、民主集中</p><p>C、会议决定</p><p>D、求真务实</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[369][0]" rel="369" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[369][1]" rel="369" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[369][2]" rel="369" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[369][3]" rel="369" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_382" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">8</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('382',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_382"></a>党员缺乏革命意志，（），（），经党的支部对其进行教育并在限期内仍无改正和转变的，党组织应当劝其退党。（）<input id="time_382" type="hidden" name="time[382]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、不履行党员义务</p><p>B、不行使党员权利</p><p>C、不符合党员条件</p><p>D、不按时交纳党费</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[382][0]" rel="382" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[382][1]" rel="382" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[382][2]" rel="382" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[382][3]" rel="382" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_387" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">9</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('387',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_387"></a>中国共产党坚持（）的和平外交政策，坚持和平发展道路，坚持互利共赢的开放战略，统筹（）两个大局，积极发展对外关系，努力为我国的改革开放和现代化建设争取有利的国际环境。（）<input id="time_387" type="hidden" name="time[387]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、和平共处</p><p>B、独立自主</p><p>C、国内国际</p><p>D、和平发展</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[387][0]" rel="387" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[387][1]" rel="387" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[387][2]" rel="387" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[387][3]" rel="387" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_390" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">10</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('390',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_390"></a>禁止党员领导干部利用职权和职务上的影响谋取不正当利益，不准有以下哪些行为：（）。<input id="time_390" type="hidden" name="time[390]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、索取、接受或者以借为名占用管理和服务对象以及其他与行使职权有关系的单位或者个人的财物；</p><p>B、以交易、委托理财等形式谋取不正当利益；</p><p>C、利用知悉或者掌握的内幕信息谋取利益；</p><p>D、违反规定多占住房，或者违反规定买卖经济适用房、廉租住房等保障性住房。</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[390][0]" rel="390" value="A" />A </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[390][1]" rel="390" value="B" />B </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[390][2]" rel="390" value="C" />C </label>
+			                        			                        			                        <label class="checkbox inline"><input type="checkbox" name="question[390][3]" rel="390" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+														</div>
+																																																								<div id="panel-type1" class="tab-pane">
+					<ul class="breadcrumb">
+						<li>
+							<h5>2、单选题</h5>
+						</li>
+					</ul>
+						                	                	                <div id="question_33" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">1</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('33',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_33"></a>理论联系实际，是实事求是思想路线的（）。<input id="time_33" type="hidden" name="time[33]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、前提和基础</p><p>B、途径和方法</p><p>C、实质</p><p>D、验证条件和目的</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[33]" rel="33" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[33]" rel="33" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[33]" rel="33" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[33]" rel="33" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_43" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">2</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('43',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_43"></a>党的十一届三中全会以后，我国农村集体经济组织普遍采取了（）。<input id="time_43" type="hidden" name="time[43]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、政社合一的经营体制</p><p>B、三级所有的经营体制</p><p>C、家庭承包经营为基础的统分结合的双层经营体制</p><p>D、土地公有基础上家庭承包经营的分散式经营体制</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[43]" rel="43" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[43]" rel="43" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[43]" rel="43" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[43]" rel="43" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_64" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">3</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('64',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_64"></a>科学发展观中的以人为本的“人”是指（）。<input id="time_64" type="hidden" name="time[64]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、全体党员</p><p>B、工农联盟</p><p>C、人民群众</p><p>D、工人阶级</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[64]" rel="64" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[64]" rel="64" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[64]" rel="64" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[64]" rel="64" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_70" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">4</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('70',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_70"></a>落实科学发展观，就必须树立正确的政绩观，我们要用全面的、实践的、群众的观点看待政绩，追求政绩的根本出发点和归宿是（）。<input id="time_70" type="hidden" name="time[70]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、实现人民群众的根本利益</p><p>B、建设社会主义和谐社会</p><p>C、实践“三个代表”重要思想</p><p>D、发展中国特色社会主义</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[70]" rel="70" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[70]" rel="70" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[70]" rel="70" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[70]" rel="70" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_134" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">5</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('134',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_134"></a>2001年11月10日，在（）举行的世界贸易组织第四届部长级会议通过中国加入世界贸易组织的决定。12月11日，中国正式成为世贸组织成员国，标志着中国对外开放进入新的阶段。<input id="time_134" type="hidden" name="time[134]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、巴黎</p><p>B、巴黎</p><p>C、多哈</p><p>D、纽约</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[134]" rel="134" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[134]" rel="134" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[134]" rel="134" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[134]" rel="134" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_135" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">6</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('135',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_135"></a>加强和改进党的建设，必须加强党的执政能力建设，提高党的（）。<input id="time_135" type="hidden" name="time[135]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、抵御风险能力和水平</p><p>B、驾驭全局能力和水平</p><p>C、领导水平和执政水平</p><p>D、</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[135]" rel="135" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[135]" rel="135" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[135]" rel="135" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[135]" rel="135" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_136" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">7</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('136',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_136"></a>( )10月，毛泽东率红一方面军攻打吉安取得胜利，使湘赣苏区与赣西南苏区连成一片，成为全国最大的苏区，“中央苏区”名称从此叫响。<input id="time_136" type="hidden" name="time[136]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、1930</p><p>B、1931</p><p>C、1929</p><p>D、1932</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[136]" rel="136" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[136]" rel="136" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[136]" rel="136" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[136]" rel="136" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_141" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">8</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('141',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_141"></a>新中国成立后制定的第一部基本法律是（）。<input id="time_141" type="hidden" name="time[141]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、《中华人民共和国民族区域自治实施纲要》</p><p>B、《中华人民共和国婚姻法》</p><p>C、《中华人民共和国土地改革法》</p><p>D、《中华人民共和国宪法》</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[141]" rel="141" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[141]" rel="141" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[141]" rel="141" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[141]" rel="141" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_152" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">9</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('152',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_152"></a>十八大党章共11章（）条。<input id="time_152" type="hidden" name="time[152]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、50</p><p>B、53</p><p>C、58</p><p>D、60</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[152]" rel="152" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[152]" rel="152" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[152]" rel="152" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[152]" rel="152" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+						                	                <div id="question_213" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">10</span></a>
+								</li>
+								<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('213',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_213"></a>申请入党的人必须有两名党员作介绍人。这里的党员是指（）。<input id="time_213" type="hidden" name="time[213]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、党员领导干部</p><p>B、正式党员</p><p>C、预备党员</p><p>D、党小组长或党组成员</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[213]" rel="213" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[213]" rel="213" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[213]" rel="213" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[213]" rel="213" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+													</div>
+					</div>
+														</div>
+																																<div aria-hidden="true" id="submodal" class="modal hide fade" role="dialog" aria-labelledby="#mySubModalLabel">
+					<div class="modal-header">
+						<button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+						<h3 id="mySubModalLabel">
+							交卷
+						</h3>
+					</div>
+					<div class="modal-body" id="modal-body" style="max-height:100%;">
+						<p>共有试题 <span class="allquestionnumber">50</span> 题，已做 <span class="yesdonumber">0</span> 题。您确认要交卷吗？</p>
+					</div>
+					<div class="modal-footer">
+						 <button type="button" onclick="javascript:submitPaper();" class="btn btn-primary">确定交卷</button>
+						 <input type="hidden" name="insertscore" value="1"/>
+						 <button aria-hidden="true" class="btn" type="button" data-dismiss="modal">再检查一下</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div aria-hidden="true" id="fenlumodal" class="modal hide fade" role="dialog" aria-labelledby="#myFenluModalLabel">
+	<div class="modal-header">
+		<button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+		<h3 id="myFenluModalLabel">
+			交卷
+		</h3>
+	</div>
+	<div class="modal-body" id="modal-fenlubody" style="max-height:100%;">
+		<p>共有试题 <span class="allquestionnumber">50</span> 题，已做 <span class="yesdonumber">0</span> 题。您确认要交卷吗？</p>
+	</div>
+	<div class="modal-footer">
+		 <button type="button" class="btn btn-primary">确定</button>
+		 <button aria-hidden="true" class="btn" type="button" data-dismiss="modal">取消</button>
+	</div>
+</div>
+<div aria-hidden="true" id="modal" class="modal hide fade" role="dialog" aria-labelledby="#myModalLabel">
+	<div class="modal-header">
+		<button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+		<h3 id="myModalLabel">
+			试题列表
+		</h3>
+	</div>
+	<div class="modal-body" id="modal-body" style="max-height:560px;">
+		    	    	    	    	                <dl class="clear">
+        	<dt class="float_l"><b>1、多选题</b></dt>
+            <dd>
+            	                                            	<a id="sign_237" href="#question_237" rel="0" class="badge questionindex">1</a>
+            	                            	<a id="sign_258" href="#question_258" rel="0" class="badge questionindex">2</a>
+            	                            	<a id="sign_284" href="#question_284" rel="0" class="badge questionindex">3</a>
+            	                            	<a id="sign_304" href="#question_304" rel="0" class="badge questionindex">4</a>
+            	                            	<a id="sign_311" href="#question_311" rel="0" class="badge questionindex">5</a>
+            	                            	<a id="sign_331" href="#question_331" rel="0" class="badge questionindex">6</a>
+            	                            	<a id="sign_369" href="#question_369" rel="0" class="badge questionindex">7</a>
+            	                            	<a id="sign_382" href="#question_382" rel="0" class="badge questionindex">8</a>
+            	                            	<a id="sign_387" href="#question_387" rel="0" class="badge questionindex">9</a>
+            	                            	<a id="sign_390" href="#question_390" rel="0" class="badge questionindex">10</a>
+            	            	            </dd>
+        </dl>
+                            	    	    	                    	    	    	                <dl class="clear">
+        	<dt class="float_l"><b>2、单选题</b></dt>
+            <dd>
+            	                                            	<a id="sign_33" href="#question_33" rel="0" class="badge questionindex">1</a>
+            	                            	<a id="sign_43" href="#question_43" rel="0" class="badge questionindex">2</a>
+            	                            	<a id="sign_64" href="#question_64" rel="0" class="badge questionindex">3</a>
+            	                            	<a id="sign_70" href="#question_70" rel="0" class="badge questionindex">4</a>
+            	                            	<a id="sign_134" href="#question_134" rel="0" class="badge questionindex">5</a>
+            	                            	<a id="sign_135" href="#question_135" rel="0" class="badge questionindex">6</a>
+            	                            	<a id="sign_136" href="#question_136" rel="0" class="badge questionindex">7</a>
+            	                            	<a id="sign_141" href="#question_141" rel="0" class="badge questionindex">8</a>
+            	                            	<a id="sign_152" href="#question_152" rel="0" class="badge questionindex">9</a>
+            	                            	<a id="sign_213" href="#question_213" rel="0" class="badge questionindex">10</a>
+            	            	            </dd>
+        </dl>
+                            	            	        	</div>
+	<div class="modal-footer">
+		 <button aria-hidden="true" class="btn" data-dismiss="modal">隐藏</button>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="toolcontent">
+		<div class="container-fluid footcontent">
+			<div class="span2">
+				<ul class="unstyled">
+					<li><h4><img src="app/core/styles/images/icons/Watches.png" style="width:1.3em;"/> <span id="timer_h">00</span>：<span id="timer_m">00</span>：<span id="timer_s">00</span></h4></li>
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="unstyled">
+					<li><h6><a href="#top"><em class="icon-circle-arrow-up"></em>回顶部</a> &nbsp; <a href="#modal" data-toggle="modal"><em class="icon-calendar"></em>试题列表</a></h6></li>
+				</ul>
+			</div>
+			<div class="span6">
+				<ul class="unstyled">
+					<li><h6>已做 <span class="yesdonumber">0</span> 题 共 <span class="allquestionnumber">50</span> 题 总分：<span class="orange">100</span>分 合格分数线：<span class="orange">60</span>分 考试时间：<span class="orange">60</span>分钟</h6></li>
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="unstyled">
+					<li class="text-right"><a href="#submodal" role="button" class="btn btn-primary" data-toggle="modal"> 交 卷 </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
+		var setting = {
+						time:60,
+						hbox:$("#timer_h"),
+			mbox:$("#timer_m"),
+			sbox:$("#timer_s"),
+			finish:function(){submitPaper();}
+		}
+		setting.lefttime = parseInt(data);
+		countdown(setting);
+	});
+	//setInterval(refreshRecord,5000);
+	setInterval(saveanswer,300000);
+
+	$('.allquestionnumber').html($('.paperexamcontent').length);
+	$('.yesdonumber').html($('#modal-body .badge-info').length);
+
+	initData = $.parseJSON(storage.getItem('questions'));
+	if(initData){
+		for(var p in initData){
+			if(p!='set')
+			formData[p]=initData[p];
+			$("#time_"+$('[name="'+p+'"]').attr('rel')).val(initData[p].time);
+		}
+
+		var textarea = $('#form1 textarea');
+		$.each(textarea,function(){
+			var _this = $(this);
+			if(initData[_this.attr('name')])
+			{
+				_this.val(initData[_this.attr('name')].value);
+				CKEDITOR.instances[_this.attr('id')].setData(initData[_this.attr('name')].value);
+				if(initData[_this.attr('name')].value && initData[_this.attr('name')].value != '')
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}
+		});
+
+		var texts = $('#form1 :input[type=text]');
+		$.each(texts,function(){
+			var _this = $(this);
+			if(initData[_this.attr('name')])
+			{
+				_this.val(initData[_this.attr('name')]?initData[_this.attr('name')].value:'');
+				if(initData[_this.attr('name')].value && initData[_this.attr('name')].value != '')
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}
+		});
+
+		var radios = $('#form1 :input[type=radio]');
+		$.each(radios,function(){
+			var _= this, v = initData[_.name]?initData[_.name].value:null;
+			var _this = $(this);
+			if(v!=''&&v==_.value){
+				_.checked = true;
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}else{
+				_.checked=false;
+			}
+		});
+
+		var checkboxs=$('#form1 :input[type=checkbox]');
+		$.each(checkboxs,function(){
+			var _=this,v=initData[_.name]?initData[_.name].value:null;
+			var _this = $(this);
+			if(v!=''&&v==_.value){
+				_.checked=true;
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}else{
+				_.checked=false;
+			}
+		});
+	}
+
+	$('#form1 :input[type=text]').change(function(){
+		var _this=$(this);
+		var p=[];
+		p.push(_this.attr('name'));
+		p.push(_this.val());
+		p.push(Date.parse(new Date())/1000);
+		$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+		set.apply(formData,p);
+		markQuestion(_this.attr('rel'));
+	});
+
+	$('#form1 :input[type=radio]').change(function(){
+		var _=this;
+		var _this=$(this);
+		var p=[];
+		p.push(_.name);
+		if(_.checked){
+			p.push(_.value);
+			p.push(Date.parse(new Date())/1000);
+			$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+			set.apply(formData,p);
+		}else{
+			p.push('');
+			p.push(null);
+			set.apply(formData,p);
+		}
+		markQuestion(_this.attr('rel'));
+	});
+
+	$('#form1 textarea').change(function(){
+		var _= this;
+		var _this=$(this);
+		var p=[];
+		p.push(_.name);
+		p.push(_.value);
+		p.push(Date.parse(new Date())/1000);
+		$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+		set.apply(formData,p);
+		markQuestion(_this.attr('rel'));
+	});
+
+	$('#form1 :input[type=checkbox]').change(function(){
+		var _= this;
+		var _this = $(this);
+		var p=[];
+		p.push(_.name);
+		if(_.checked){
+			p.push(_.value);
+			p.push(Date.parse(new Date())/1000);
+			$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+			set.apply(formData,p);
+		}else{
+			p.push('');
+			p.push(null);
+			set.apply(formData,p);
+		}
+		markQuestion(_this.attr('rel'));
+	});
+});
+</script>
+<div class="row-fluid">
+	<div class="container-fluid logfooter">
+		<ul class="inline unstyled">
+			<li><a href="http://kquanr.com">网站首页</a></li>
+			<li>|</li>
+			<li><a href="http://kquanr.com">用户须知</a></li>
+			<li>|</li>
+			<li><a href="http://kquanr.com">隐私协议</a></li>
+			<li>|</li>
+			<li><a href="http://kquanr.com">网站论坛</a></li>
+			<li>|</li>
+			<li>鲁ICP备15022927号</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+$(".thumbnails img").bind("error",function(){$(this).attr("src","app/core/styles/images/icons/Book.png?"+Math.random());});
+</script></body>
+</html>

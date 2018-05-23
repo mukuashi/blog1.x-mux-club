@@ -1,0 +1,24 @@
+﻿@charset "utf-8";
+.fx_grid_c1{width:990px;margin:0 auto}
+
+.fx_banner{background:#f0f0f0;width:1910px;overflow:hidden;position:relative}
+.fx_banner_inner{position:relative;height:602px}
+
+.fx_banner_img{width:20000px}
+.fx_banner_img li{float:left;height:600px;width:1910px;position:relative}
+.fx_banner_img li h3 {font-size:18px; font-family:微软雅黑; color:#FFF; font-weight:bold; text-align:center; padding-top:20px}
+.fx_banner_img li p {padding:20px 15px; font-size:16px; color:#FFF;}
+.fx_banner_img li p a {color:#FFF;}
+.fx_banner_link{position:absolute;top:0;left:0;width:100%;height:602px;cursor:pointer}
+
+.fx_banner .child{position:absolute;height:602px;top: 134px !important;}
+.fx_banner .child img{width: 100%}
+.fx_banner_common{position:relative}
+.fx_banner_common a{position:absolute;top:50%;margin-top:-315px;width:41px;height:119px;cursor:pointer;display:block;overflow:hidden;opacity:.5;filter:alpha(opacity=50);}
+.fx_banner_pre{left:-460px;background:url(../images/ban_pre_24.png);}
+.fx_banner_next{right:-460px;background:url(../images/ban_next_24.png);}
+.fx_banner_pre:hover,.fx_banner_next:hover{opacity:1;filter:alpha(opacity=100)}
+.fx_banner .control{width:200px;position:absolute;top:550px;left:50%;margin-left:-100px;text-align:center}
+.fx_banner .control li{display:inline-block;*display:inline;*zoom:1;margin:0 5px;width:18px;height:18px;border-radius:50%;cursor:pointer;background:#a0a183}
+.fx_banner .control li a{display:none}
+.fx_banner .control li.current{background:#ff811b}

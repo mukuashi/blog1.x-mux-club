@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>联系我们-胡圣浩博士</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="images/bitbug_favicon.ico">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
+    <!-- Color Scheme -->
+    <link rel="stylesheet" href="css/color.css" type="text/css" media="screen">
+</head>
+<body> 
+
+	<div id="st-container" class="st-container">
+		<nav class="st-menu st-effect-4">
+			<ul>
+			 <li><h1>胡圣浩博士HuShengHao</h1></li>
+			  <li><a class="ico home" href="index.html">个人首页</a></li>
+			  <li><a class="ico portfolio" href="main.html">讲师风采</a></li>
+			  <li><a class="ico blog" href="keall.html">课程中心</a></li>
+			  <li><a class="ico services" href="service.html">服务案例</a></li>
+			  <li><a class="ico blog" href="works.html">作品展示</a></li>
+			  <li><a class="ico gallery" href="photo.html">相册回顾</a></li>
+			  <li><a class="ico aboutus" href="video.html">视频在线</a></li>
+			  <li><a class="ico contact selected" href="javascript:void(0);">联系我们</a></li>
+		    </ul>
+		</nav>
+		<div class="st-pusher">
+			<div class="st-content">
+				<div class="st-content-inner">
+					<!-- Top Navigation -->
+					<header>
+						<div id="st-trigger-effects">
+							<button data-effect="st-effect-4" id="menu-bars"></button>
+						</div>
+						<h1>联系我们</h1>
+					</header>
+					<div class="content">
+						<fieldset>
+							<legend align="center">留言板</legend>
+							<form method="post" id="signinform" action="email/index.php" onsubmit="return ck();">
+								<input type="text" name="yourname" id="name" title="输入您的昵称或手机号" placeholder="昵称/手机号" autocomplete="on" required />
+								<input type="email" name="email" id="email" title="输入您的邮件地址" placeholder="邮箱地址/Email" autocomplete="on" required />
+								<textarea name="message" id="message" title="填写您的留言内容" placeholder="留言内容/Message" rows="3" autocomplete required ></textarea>
+								<input type="submit" value="发送信息" class="button" />
+							</form>
+						</fieldset>
+						<fieldset>
+							<legend align="center">一键导航</legend>
+							<iframe style="height:240px;" src="http://map.baidu.com/mobile/webapp/place/list/qt=s&wd=%E6%B7%B1%E5%9C%B3%E9%BE%99%E5%B2%97%E9%BE%99%E6%B2%B3%E8%B7%AF&vt=map/vt=map&i=0"></iframe>
+							<table class="text-left">
+								<tr class="odd">
+									<th>地址：</th>
+									<td>深圳龙岗龙河路</td>
+								</tr>
+
+								<tr class="even">
+									<th>邮箱：</th>
+									<td>572512250@qq.com</td>
+								</tr>
+
+								<tr class="odd">
+									<th>手机</th>
+									<td>15811803117</td>
+								</tr>
+							</table>
+						</fieldset>
+						<img src="images/k9.jpg" width="100%" alt="网速慢请稍等">
+						<div class="foot">&copy;2015胡圣浩博士版权所有</div>
+					</div>
+				</div><!-- /st-content-inner -->
+
+			</div><!-- /st-content -->
+
+		</div><!-- /st-pusher -->
+
+	</div><!-- /st-container -->
+
+
+<script type="text/javascript" src="js/call.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/sidebarEffects.js"></script>
+<script src="js/custom.js"></script>
+<footer>
+		  <a href="share.html" id="share"></a>
+		  <a href="tel:15811803117" id="tel" onclick="tel()"></a>
+		  <a href="index.html" id="user"></a>
+		  <a href="sms:15811803117" id="sms" onclick="tel()"></a>
+		  <a href="http://j.map.baidu.com/776U3" target="_blank" id="map"></a>
+</footer>
+
+</body>
+</html>
+

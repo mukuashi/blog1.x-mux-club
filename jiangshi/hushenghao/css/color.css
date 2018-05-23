@@ -1,0 +1,14 @@
+﻿header, button, .button, #slider-swiper {
+
+	background-color: #0BC2A6;
+
+}
+
+.st-menu .selected {
+
+	border-color:#0BC2A6;
+
+}
+a:link, a:visited {
+	color:#0BC2A6;
+}

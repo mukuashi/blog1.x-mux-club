@@ -1,0 +1,155 @@
+座机电话：0531-82767546
+
+我的网站：跨圈儿（www.kquanr.com）账单信息（登录名手机号：15020009217   密码：qazplm1234567890）云虚拟主机用的是这个玉健的账号，暂时还没有转出
+登录账号 ： yujian0012014 (您已通过实名认证)
+
+账号ID ： 1316623919991998
+
+注册时间 ： 02-14-2015 21:19:00
+
+域名现已转到我的账户15069069579下面 密码不变
+
+
+
+IP地址：121.42.88.82  
+
+ftp地址：ftp://121.42.88.82/（在电脑本地文件夹windows+E进入，点击计算机）
+
+网页空间： 1024.0M (0.00%)  MySQL空间： 50.0M (0.00%)
+
+临时域名： qxu1146380281.my3w.com    支持语言： HTML、WAP、PHPv4.3/v5.2/v5.3
+
+开通日： 2015-02-14 22:27:05    到期日： 2017-02-14 23:59:59    732天后到期	
+
+  
+
+主机管理控制台地址：http://cp.hichina.com   
+
+FTP用户名：qxu1146380281  密码：kquanrmks(ftp，数据库管理等密码相同)
+
+FTP登录主机地址：qxu1146380281.my3w.com 到期：2017-02-14
+
+数据库名称： qdm120441567_db   MySQL数据库连接地址：qdm120441567.my3w.com  用户名：qdm120441567
+
+
+
+管理员帐号： postmaster@kquanr.com  密码KQUANRmks2015或KQUANRlm5201314
+
+密码重置邮箱访问地址： qiye.aliyun.com  
+
+邮箱帐号数：100个(共500G 空间)
+
+产品名称： 企业邮箱免费版
+
+
+
+
+
+域名状态：	
+
+ok http://www.icann.org/epp#OK
+
+ 
+
+ DNS服务器：	
+
+dns9.hichina.com
+
+dns10.hichina.com
+
+DNS已修改为万网DNS
+
+域名证书打印（http://dc.www.net.cn/print/certPrint.htm?spm=a21av.7663099.0.d201207021.jPfKu3&dtoken=s_dD1HB5WhJXi6M） 
+
+ 
+
+到期时间：	
+
+2016-02-14
+
+ 
+
+
+
+新浪开发者平台
+
+http://open.weibo.com
+
+新浪网络连接：
+
+App Key：305851978
+
+App Sercet：f69c23fadd5778a2827a521672fe142f
+
+
+
+
+
+阿里云终端连接台SecureCRT用户信息
+
+
+
+主机IP：115.28.69.7 (公)
+
+10.144.165.154 (内)
+
+
+
+登录名：root
+
+管理实例名：PhotoArtLife
+
+管理控制台密码：521kquanrMKS
+
+
+
+user name: root   host name: iZ285xjxsftZ
+
+        process ID: 32324
+
+
+
+
+
+阿里云在线6位密码管理终端密码：555841 
+
+
+
+数据库MySQL  用户名 root  密码：521wkb
+
+
+
+ssh-rsa 2048 e4:25:3c:49:cd:d0:7b:cc:91:33:7a:56:48:70:f0:ed
+
+
+
+阿里云丁丁服务管理员登录账号：521weikeba
+
+密码：ZLmks520
+
+
+
+amh云主机面板
+
+admin: 0dd4cfd45af2
+
+root: 0dd4cfd45af2 
+
+
+
+[AMH] Congratulations, AMH 5.2 install completed.
+
+AMH Management: 
+
+http://115.28.69.7:8888
+
+https://115.28.69.7:9999
+
+AMH User: admin
+
+AMH Password: 53ce53ac79ff 
+
+MySQL User: root
+
+MySQL Password: 53ce53ac79ff 
+

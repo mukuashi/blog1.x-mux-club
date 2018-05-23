@@ -1,0 +1,19 @@
+/**
+ * Copyright (c) 2014-2016 PhotoArtLife All rights reseved.
+ * @fileoverview 公共样式_基础样式
+ * @author mukuashi | mukuashi@zybang.com
+ * @version 1.0 | 2016-02-27 | @PhotoArtLife // Initial version.
+**/
+body,input,textarea,select {
+	font-size: 17pt;
+}
+#header {
+	width: 300px;
+}
+#footer {
+	margin-left: 300px;
+}
+#main {
+	margin-left: 300px;
+}
+.sign li{padding:0 6%;}

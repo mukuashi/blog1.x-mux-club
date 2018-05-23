@@ -1,0 +1,51 @@
+table {
+	margin: 0px; padding: 0px; border: 0px currentColor;
+}
+dl dd {
+	border: currentColor;
+}
+img {
+	border: currentColor;
+}
+ul li {
+	list-style-type: none;
+}
+.bannerimg {
+	background: rgb(255, 255, 255); font: 12px/1.5 Verdana, Geneva; margin:2% 0 0 -8%;overflow: hidden; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.bannerimg .loading {
+	background: rgb(44, 44, 44); width: 100%; height: 328px; text-align: center; color: rgb(255, 255, 255); line-height: 328px; vertical-align: middle; position: absolute; z-index: 9999;
+}
+.bannerimg .pic li {
+	width: 600px; overflow: hidden; position: relative;
+}
+.bannerimg .pic li p {
+	width: 600px; position: absolute;
+}
+.bannerimg .pic li p a {
+	display: block;
+}
+.bannerimg .pic li p img {
+	width: 600px; height: 328px;
+}
+.bannerimg .txt li {
+	width: 600px; height: 36px; bottom: 0px; line-height: 36px; overflow: hidden; display: none; position: absolute; z-index: 2;
+}
+.bannerimg .txt li a {
+	padding: 2px 0px 0px 16px; color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; text-decoration: none; display: block;
+}
+.bannerimg .txt-bg {
+	background: rgb(51, 51, 51); left: 1px; width: 600px; height: 36px; bottom: 0px; overflow: hidden; filter: alpha(opacity=60); position: absolute; z-index: 1; opacity: 0.6;
+}
+.bannerimg .num {
+	right: 8px; bottom: 6px; color: rgb(51, 51, 51); position: absolute; z-index: 3;
+}
+.bannerimg .num li {
+	background: rgb(67, 67, 67); width: 22px; height: 18px; text-align: center; color: rgb(255, 255, 255); line-height: 18px; margin-right: 3px; float: left; filter: alpha(opacity=90); position: relative; cursor: pointer; opacity: 0.9;
+}
+.bannerimg .num li.current {
+	background: rgb(254, 0, 114); top: -2px; height: 20px; color: rgb(255, 255, 255); line-height: 20px; font-weight: bold;
+}
+.bannerimg .num li.hover {
+	background: rgb(254, 0, 114); top: -2px; height: 20px; color: rgb(255, 255, 255); line-height: 20px; font-weight: bold;
+}

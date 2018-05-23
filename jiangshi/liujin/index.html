@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>刘进老师微官网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="讲师培训-企业内训-元鹰传媒搭建企业与讲师的平台" />
+<meta name="keywords" content="北京元鹰文化传媒有限公司" />
+<meta name="description" content="讲师培训-企业内训-搭建企业与讲师的平台"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link rel="shortcut icon" href="images/bitbug_favicon.ico">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/swipe.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!--页眉开始-->
+<div id="header">
+	<!--幻灯片 开始-->
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('.flexslider').flexslider({
+
+				controlNav: false,
+
+				directionNav: false,
+
+				animation: "slide",
+
+				//manualControls: ".myflexslider .slidenav"
+
+			});
+
+		});
+	</script>
+	<div id="banner" class="flexslider">
+		<ul class="slides">
+			<li>
+				<img src="images/1.jpg" alt="网速稍慢请稍等" />
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="网速稍慢请稍等"/>
+			</li>
+			<li>
+				<img src="images/3.jpg" alt="网速稍慢请稍等"/>
+			</li>
+			<li>
+				<img src="images/26.jpg" alt="网速稍慢请稍等"/>
+			</li>
+			<li>
+				<img src="images/27.jpg" alt="网速稍慢请稍等"/>
+			</li>
+		</ul>
+	</div>
+	<!--幻灯片 结束-->
+</div>
+<div id="content">
+	<div class="clear"></div>
+</div>
+<!--页脚开始-->
+<div id="footer">
+	<!-- 微信分享导引 开始-->
+	<script>
+		function openGuide() {
+			document.getElementById('guide').style.display = 'block';
+		}
+
+		function closeGuide() {
+			document.getElementById('guide').style.display = '';
+		}
+	</script>
+	<div id="guide" onClick="closeGuide()">
+		<img src="images/guide.png">
+	</div>
+	<!-- 微信分享导引 结束-->
+</div>
+<!--页脚结束-->
+<!--底部滑动条-->
+<div id="navigation_swipe" class="navigation_swipe_wrap">
+	<ul>
+		<li>
+		 <a href="liebiao.html">
+		    <div class="ChannelIcon"><img src="images/37.png" /></div>
+		    <div class="ChannelName">功能栏目</div>
+		 </a>
+		 <a href="main.html">
+			<div class="ChannelIcon"><img src="images/31.png" /></div>
+		    <div class="ChannelName">讲师风采</div>
+		 </a>
+		<a href="anli.html">
+		     <div class="ChannelIcon"><img src="images/36.png"/></div>
+		     <div class="ChannelName">成功案例</div>
+		</a>
+		<a href="allke.html">
+			 <div class="ChannelIcon"><img src="images/21.png"/></div>
+			 <div class="ChannelName">主创课程</div>
+		</a>
+		</li>
+
+		<li>
+		     <a href="photo.html">
+		     <div class="ChannelIcon"><img src="images/32.png"/></div>
+		     <div class="ChannelName">相册回顾</div>
+		</a>
+		   <a href="7q.html" target="_blank">
+		     <div class="ChannelIcon"><img src="images/23.png"/></div>
+		     <div class="ChannelName">7Q课程</div>
+		   </a>		
+		
+		<a href="tel:13355416188">
+		     <div class="ChannelIcon"><img src="images/35.png"/></div>
+		     <div class="ChannelName">电话联系</div>
+		</a>
+		<a href="sms:13355416188">
+		     <div class="ChannelIcon"><img src="images/30.png"/></div>
+		     <div class="ChannelName">短信留言</div>
+		</a>
+		</li>
+
+		<li>			
+		   <a href="http://v.youku.com/v_show/id_XOTIwODQ4NTEy.html" target="_blank">
+			 <div class="ChannelIcon"><img src="images/34.png"/></div>
+			 <div class="ChannelName">视频宣传</div>
+		  </a>
+		  
+
+		    <a href="http://j.map.baidu.com/OcoQt" target="_blank">
+		     <div class="ChannelIcon"><img src="images/33.png"/></div>
+		     <div class="ChannelName">预约导航</div>
+		   </a>
+		<!--    <a href="http://mp.weixin.qq.com/s?__biz=MzA3MzQ2NjIyOQ==&mid=206462116&idx=1&sn=cc40d6f280c83fc47c9727d4f8a6dac5&scene=18#rd" target="_blank">
+		     <div class="ChannelIcon"><img src="images/plugmenu15.png"/></div>
+		     <div class="ChannelName">关注我们</div>
+		   </a> -->
+           
+
+		</li>
+	</ul>
+	<ol>
+	<a href="javascript:navigation_swipe.prev();">&nbsp;</a>
+	<a href="javascript:navigation_swipe.next();">&nbsp;</a>
+	</ol>
+</div>
+<script>
+	$(document).ready(function () {
+		window.navigation_swipe = new Swipe(document.getElementById('navigation_swipe'), {
+			auto: 0
+		});
+
+	});
+</script>
+<!--首页显示特效-->
+<div class="snower">
+	<link href="css/snower.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		var urls = new Array();
+		urls.push('images/snow1.png');
+		urls.push('images/snow2.png');
+		urls.push('images/snow3.png');
+		urls.push('images/snow4.png');
+	</script>
+	<script src="js/snower.js" type="text/javascript"></script>
+</div>
+</body>
+
+</html>

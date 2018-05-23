@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>胡圣浩博士微网站</title>
+<meta http-equiv="Content-Type" Content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="images/bitbug_favicon.ico">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/call.js"></script>
+<style>
+.banner img {width: 100%;}
+</style>
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded(){
+	myScroll = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onScrollEnd: function () {
+			document.querySelector('#indicator > li.active').className = '';
+			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+		}
+	});
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+</head>
+
+<body>
+
+<!--music-->
+<style>
+.btn_music{display:inline-block;width:35px;height:35px;background:url('images/play.png') no-repeat center center;background-size:100% auto;position:absolute;z-index:100;left:15px;top:20px;}
+.btn_music.on{background-image:url("images/stop.png");}
+</style>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+var playbox = (function(){
+	//author:eric_wu
+	var _playbox = function(){
+		var that = this;
+		that.box = null;
+		that.player = null;
+		that.src = null;
+		that.on = false;
+		//
+		that.autoPlayFix = {
+			on: true,
+			//evtName: ("ontouchstart" in window)?"touchend":"click"
+			evtName: ("ontouchstart" in window)?"touchstart":"mouseover"
+			
+		}
+	}
+	
+	_playbox.prototype = {
+		init: function(box_ele){
+			this.box = "string" === typeof(box_ele)?document.getElementById(box_ele):box_ele;
+			this.player = this.box.querySelectorAll("audio")[0];
+			this.src = this.player.src;
+			this.init = function(){return this;}
+			this.autoPlayEvt(true);
+			return this;
+		},
+		play: function(){
+			if(this.autoPlayFix.on){
+				this.autoPlayFix.on = false;
+				this.autoPlayEvt(false);
+			}
+			this.on = !this.on;
+			if(true == this.on){
+				this.player.src = this.src;
+				this.player.play();
+			}else{
+				this.player.pause();
+				this.player.src = null;
+			}
+			if("function" == typeof(this.play_fn)){
+				this.play_fn.call(this);
+			}
+		},
+		handleEvent: function(evt){
+			this.play();
+		},
+		autoPlayEvt: function(important){
+			if(important || this.autoPlayFix.on){
+				document.body.addEventListener(this.autoPlayFix.evtName, this, false);
+			}else{
+				document.body.removeEventListener(this.autoPlayFix.evtName, this, false);
+			}
+		}
+	}
+
+	return new _playbox();
+	
+})();
+
+playbox.play_fn = function(){
+	this.box.className = this.on?"btn_music on":"btn_music";
+}
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	playbox.init("playbox");
+});
+</script>
+
+<span id="playbox" class="btn_music" onclick="playbox.init(this).play();"><audio id="audio" loop src="images/4.mp3"></audio></span>
+
+<div class="banner">
+
+	<div id="wrapper">
+		<div id="scroller">
+			<ul id="thelist">
+			<li><p>培训活动合影</p><a href="#"><img src="images/1.jpg" alt="网速稍慢请稍等"></a></li>
+			<li><p>精彩演讲相册</p><a href="#"><img src="images/2.jpg" alt="网速稍慢请稍等"></a></li>
+			<li><p>颁奖现场会议</p><a href="#"><img src="images/3.jpg" alt="网速稍慢请稍等"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="nav">
+		<ul id="indicator">
+			<li class="active" ></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+</div>
+
+<ul class="mainmenu">
+    <li><a href="index.html" ><b><img src="images/tb02.png" /></b><span>个人首页</span></a></li>
+	<li><a href="main.html" ><b><img src="images/tb01.png" /></b><span>讲师风采</span></a></li>
+	<li><a href="keall.html" ><b><img src="images/tb06.png" /></b><span>课程中心</span></a></li>
+	<li><a href="service.html" ><b><img src="images/tb07.png" /></b><span>服务案例</span></a></li>
+	<li><a href="works.html" ><b><img src="images/tb03.png" /></b><span>作品展示</span></a></li>
+	<li><a href="photo.html" ><b><img src="images/tb03.png" /></b><span>相册回顾</span></a></li>
+	<li><a href="video.html" ><b><img src="images/tb08.png" /></b><span>视频在线</span></a></li>
+	<li><a href="contact.html"><b><img src="images/tb05.png" /></b><span>联系我们</span></a></li>
+	<li><a href="contact.html"><b><img src="images/tb04.png" /></b><span>在线留言</span></a></li>
+</ul>
+<script type="text/javascript">
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+for(i=0;i<count;i++){
+	document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+setInterval(function(){
+	myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+
+window.onresize = function(){ 
+	for(i=0;i<count;i++){
+		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+	}
+	document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+} 
+</script>
+<div class="copyright">&copy;2015胡圣浩博士版权所有</div>
+<nav role="navigation" class="top_bar">
+	<ul id="top_menu" class="top_menu">
+		<li><a href="share.html"><img src="images/plugmenu5.png"><label>分享</label></a></li>
+		<li><a href="tel:15811803117" onclick="tel()"><img src="images/plugmenu1.png"><label>拨号</label></a></li>
+		<li><a href="index.html"><img src="images/plugmenu2.png"><label>主页</label></a></li>
+		<li><a href="tel:15811803117" onclick="tel()"><img src="images/plugmenu4.png"><label>留言</label></a></li>
+		<li><a href="http://j.map.baidu.com/776U3" target="_blank"><img src="images/plugmenu3.png"><label>导航</label></a></li>
+	</ul>
+</nav>
+</body>
+</html>
