@@ -1,10 +1,9 @@
-# Personal-Blog
+# 1.x Blog
 首页：<a href="http://kquanr.com" target="_blank">kquanr.com</a>
-
-几个子网站的集合，记于2016年之前的老项目，后续不定期更新。
+以及几个子网站的集合，记于2016年及之前的老项目，后续不定期更新。
 
 # 2016及之前版本
-技术框架：jQuery、PHP、响应式、DOM等
+技术关键词：jQuery、PHP、HTML5、响应式等
 
 # 2017及之后版本(新)
 技术栈，下面做一些简要介绍：
@@ -30,6 +29,7 @@
 <a href="http://www.expressjs.com.cn/" target="_blank">Express,基于Node.js平台，快速、开放、极简的web开发框架：http://www.expressjs.com.cn</a>
 
 # View
-首页截图：PC及响应式
+* 1.x：http://kquanr.com
+* 2.x：http://kquanr.com/2.x
+* ...
 
-<img src ="https://mmbiz.qlogo.cn/mmbiz_jpg/g7N4GSDkLL60vQOqzW8CREQakHf5lev9QtXsWcOOA6aiaWCD0YDkqJO3ZlPCpaQabBbgXhuozUiaxGzgaWsN1z4w/0?wx_fmt=jpeg" width="100%">
