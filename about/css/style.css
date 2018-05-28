@@ -183,9 +183,11 @@
 	header.major h2 {
 		line-height: 1.45em;
 	}
-	header.major h2.alone{
-		color: #01BBA3;
-		margin: 1% 0;
+	header.major h2 {
+		line-height: 1.45em;
+	}
+	header.major h2 > a{
+		color: #09bfac;
 	}
 	header.major h2.alone:hover{
 		font-weight: bold;
@@ -435,47 +437,41 @@
 				float: left;
 				padding: 3em;
 				width: 50%;
-				margin: 0 0 -3% 0;
+			}
+			.box.features .features-row section a {
+				border-bottom: none;
 			}
 
-				.box.features .features-row section :last-child {
-					margin-bottom: 0;
-				}
+			.box.features .features-row section :last-child {
+				margin-bottom: 0;
+			}
 
-				.box.features .features-row section:nth-child(2n) {
-					padding-right: 0;
-				}
+			.box.features .features-row section:nth-child(2n) {
+				padding-right: 0;
+			}
 
-					.box.features .features-row section:nth-child(2n):before {
-						background: #e5e5e5;
-						content: '';
-						display: block;
-						height: 100%;
-						margin-left: -3em;
-						position: absolute;
-						top: 0;
-						width: 2px;
-					}
-
-				.box.features .features-row section:nth-child(2n-1) {
-					padding-left: 0;
-				}
+			.box.features .features-row section:nth-child(2n):before {
+				background: #e5e5e5;
+				content: '';
+				display: block;
+				height: 100%;
+				margin-left: -3em;
+				position: absolute;
+				top: 0;
+				width: 2px;
+			}
 
 			.box.features .features-row:first-child {
 				border-top: 0;
 			}
 
-				.box.features .features-row:first-child section {
-					padding-top: 0;
-				}
-
 			.box.features .features-row:last-child {
 				padding-bottom: 0;
 			}
 
-				.box.features .features-row:last-child section {
-					padding-bottom: 0;
-				}
+			.box.features .features-row:last-child section {
+				padding-bottom: 5%;
+			}
 
 		.box.special {
 			text-align: center;
@@ -943,7 +939,6 @@
 		input[type="button"].alt,
 		.button.alt {
 			background-color: #49bf9d;
-			box-shadow: inset 0 0 0 2px #e5e5e5;
 			color: #FFF;
 		    padding: 0 4em 0 4em;
 		    font-size: 1.1em;
@@ -1270,7 +1265,7 @@
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../images/index-banner-p1.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -1357,7 +1352,7 @@
 }
 
 	#main {
-		padding: 4em 0;
+		padding: 4em 0 1em;
 	}
 
 		#main > header {
@@ -1388,7 +1383,7 @@
 
 	#footer {
 		background: #f0f0f0;
-		padding: 4em 0 2em 0;
+		padding: 4em 0 1.1em 0;
 		text-align: center;
 	}
 
@@ -1420,7 +1415,6 @@
 		#footer .copyright li {
 			/*border-left: solid 1px #dddddd;*/
 			display: inline-block;
-			margin:1em 0 0 2.3em;
 		}
 
 		#footer .copyright li:first-child {
@@ -1436,15 +1430,13 @@
 		#footer .copyright ul.banshi1 li{
 			display: inline-block;
 			text-align: center;
-			margin:0 2% 1% 0;
+			margin:0 2% 1.5% 0;
 		}
 		#footer .copyright ul.banshi2 li{
 			display: inline-block;
 			text-align: center;
-			margin:0 -2% 0 2%;
 		}
 			#footer .copyright ul.banshi1 li a{
-				
 				border:0;
 			}
 			#footer .copyright ul.banshi1 li.active1{

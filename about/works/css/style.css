@@ -952,11 +952,16 @@
 				font-size: 1.75em;
 				margin: 0;
 			}
-
-			#header > header p {
+			#header > header > p > span {
+				font-size: 1.2rem;
+				font-weight: 400;
+			}
+			#header > header > p {
 				color: #d1f1e9;
-				font-weight:bold;
+				font-weight: 300;
 				margin: 1em 0 0 0;
+				font-size: 1rem;
+				line-height: 1.7;
 			}
 
 		#header > footer {
@@ -1033,7 +1038,7 @@
 /* One */
 
 	#one:before {
-		background-image: url("../images/banner.jpg");
+		background-image: url("../images/index-banner.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: cover;

@@ -82,7 +82,7 @@
 		}
 
 		#banner p {
-			font-size: 1.25em;
+			font-size: 1.1em;
 		}
 
 /* Main */
@@ -112,7 +112,7 @@
 /* Footer */
 
 	#footer {
-		padding: 4em 0;
+		padding: 3em 0 1em;
 	}
 
 		#footer .copyright li {

@@ -1,0 +1,39 @@
+#more_label {
+    position:relative;
+    margin:25% auto 50%;
+}
+#more_label a{
+    position:absolute;
+    top:0px;
+    left:0px;
+    font-family:'Microsoft YaHei';
+    color:#fff;
+    font-size:1.3em!important;
+    text-shadow:-1px -0.5px 0px #E210CF;
+    font-weight:bold;
+    text-decoration:none;
+    padding: 3px 6px;
+}
+#more_label a:hover {
+    border: 1px solid #eee;
+    background: #000;
+}
+#more_label .color1 {color:rgb(255,69,0);}
+#more_label .color2 {color:rgb(255,140,0);}
+#more_label .color3 {color:rgb(186,85,211);}
+#more_label .color4 {color:rgb(154,205,50);}
+#more_label .color5 {color:rgb(0,128,0);}
+#more_label .color6 {color:rgb(153,50,204);}
+#more_label .color7 {color:rgb(139,69,19);}
+#more_label .color8 {color:rgb(32,178,170);}
+#more_label .color9 {color:rgb(255,127,80);}
+@media screen and (max-width:640px){
+   #more_label {margin:30% auto 65%;}
+}
+@media screen and (max-width:480px){
+   #more_label {margin:45% auto 90%;}
+}
+@media screen and (max-width:360px){
+   #more_label {margin:55% auto 105%;}
+   #more_label a{font-size:1em!important;}
+}
