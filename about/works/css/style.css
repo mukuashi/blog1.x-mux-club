@@ -1049,13 +1049,18 @@
 	}
 
 /* one two public style*/
-	#one p,#two p,#four p{text-indent: 4%;}
-    #one div.loading,#two div.loading{
-    	margin:0 0 2%;
-    	padding:0;
-    	text-align:center;
-    }
-    #one span.little{font-size:60%;color:#4acaa8;}
+	#one p,#two p,#four p{
+		text-indent: 4%;
+	}
+	#one div.loading,#two div.loading{
+		margin:0 0 2%;
+		padding:0;
+		text-align:center;
+	}
+  #one span.little{
+		font-size:60%;
+		color:#4acaa8;
+	}
 
 /* Footer */
 
