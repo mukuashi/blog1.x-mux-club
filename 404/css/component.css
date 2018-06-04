@@ -2,30 +2,15 @@
 .large-header {
 	position: relative;
 	width: 100%;
+	height: 100vh;
 	background: #333;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
 	z-index: 1;
-}
-
-.demo-1 .large-header {
 	background-image: url('../img/demo-1-bg.jpg');
+	/* background-image: url('../img/demo-2-bg.jpg'); */
 }
-
-.demo-2 .large-header {
-	background-image: url('../img/demo-2-bg.jpg');
-	background-position: center bottom;
-}
-
-.demo-3 .large-header {
-	background: #7f8c8d;
-}
-
-.demo-4 .large-header {
-	background: #f9f1e9;
-}
-
 .main-title {
 	display: inline-block;
 	position: absolute;
@@ -35,13 +20,13 @@
 }
 .main-title a {
 	font-family: "Heiti SC","Hiragino Sans GB","Century Gothic","Microsoft YaHei", serif;
-	font-weight: 300;
+	font-weight: 400;
+	font-size: 1.1rem;
 	-webkit-tap-highlight-color: transparent;
 	background: rgba(9, 198, 198, 0.92);
 	color: #fff;
 	padding: .6rem 2.5rem;
 	border-radius: 20px;
-	font-size: 1.1rem;
 	letter-spacing: 2px;
 	vertical-align: middle;
 	margin: auto;
@@ -50,48 +35,9 @@
 	background: rgb(10, 178, 229);
 }
 
-.demo-2 .main-title {
-	font-family: 'Clicker Script', cursive;
-	font-weight: normal;
-	font-size: 8em;
-	padding-left: 10px;
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
-
-.demo-2 .main-title::before {
-	content: '';
-	width: 20vw;
-	height: 20vw;
-	min-width: 3.5em;
-	min-height: 3.5em;
-	background: url(../img/deco.svg) no-repeat center center;
-	background-size: cover;
-	position: absolute;
-	bottom: 1%;
-	left: 50%;
-	border-radius: 50%;
-	z-index: -1;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
-}
-
-.demo-3 .main-title {
-	padding: 10px 40px;
-	border: 10px double #f9f1e9;
-	text-transform: uppercase;
-	font-family: Londrina Outline, sans-serif;
-}
-
-.demo-4 .main-title {
-	font-size: 1em;
-	font-weight: 300;
-	padding: 10px 30px;
-	text-transform: uppercase;
-	color: #222;
-}
-
-@media only screen and (max-width : 480px) {
-	.main-title a{
-		font-size: 1rem;
+@media only screen and (max-width : 640px) {
+	.main-title a {
+		font-size: .9rem;
+		padding: .4rem 2rem;
 	}
 }
