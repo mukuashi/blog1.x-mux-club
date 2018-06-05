@@ -272,8 +272,13 @@
 	</footer>
 	<script src="../layer/layer.js"></script>
 	<script src="../js/main.js"></script>
-	<!--引用腾讯分析网站分析脚本-->
-	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=53256496" charset="UTF-8"></script>
+	<script>
+		//接入阿里云监控日志API 
+		!(function (c, b, d, a) {
+			c[a] || (c[a] = {}); c[a].config = { pid: "gioyshyyzz@63fb9eb5dd7853a", imgUrl: "https://arms-retcode.aliyuncs.com/r.png?" };
+			with (b) with (body) with (insertBefore(createElement("script"), firstChild)) setAttribute("crossorigin", "", src = d)
+		})(window, document, "https://retcode.alicdn.com/retcode/bl.js", "__bl");
+	</script>
 </body>
 
 </html>
