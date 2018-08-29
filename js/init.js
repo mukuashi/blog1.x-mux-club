@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function() {
+(function () {
 
 	skel.init({
 		reset: 'full',
@@ -18,45 +18,19 @@
 	});
 
 	// Events (JS).
-		
-		// Remove "loading" class once the page has fully loaded.
-			window.onload = function() {
-				document.body.className = '';
-			}
 
-		// Prevent scrolling on touch.
-			window.ontouchmove = function() {
-				return false;
-			}
+	// Remove "loading" class once the page has fully loaded.
+	window.onload = function () {
+		document.body.className = '';
+	}
 
-		// Fix scroll position on orientation change.
-			window.onorientationchange = function() {
-				document.body.scrollTop = 0;
-			}
+	// Prevent scrolling on touch.
+	window.ontouchmove = function () {
+		return false;
+	}
 
-	/*
-
-	// Events (jQuery).
-	// Aerial doesn't need jQuery, but if you're going to use it anyway remove the
-	// block of JS events above and use the jQuery-based ones below instead.
-
-		jQuery(window)
-
-			// Remove "loading" class once the page has fully loaded.
-				.on('load', function() {
-					jQuery('body').removeClass('loading');
-				})
-
-			// Prevent scrolling on touch.
-				.on('touchmove', function() {
-					return false;
-				})
-
-			// Fix scroll position on orientation change.
-				.on('orientationchange', function() {
-					jQuery('body').scrollTop(0);
-				});
-
-	*/
-
+	// Fix scroll position on orientation change.
+	window.onorientationchange = function () {
+		document.body.scrollTop = 0;
+	}
 })();

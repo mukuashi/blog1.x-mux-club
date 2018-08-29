@@ -309,46 +309,18 @@ a:hover {
 	animation-delay: 3.75s;
 }
 
-#header nav li:nth-child(7) {
-	-moz-animation-delay: 4s;
-	-webkit-animation-delay: 4s;
-	-o-animation-delay: 4s;
-	-ms-animation-delay: 4s;
-	animation-delay: 4s;
+#header nav li:last-child a:before {
+	
 }
 
-#header nav li:nth-child(8) {
-	-moz-animation-delay: 4.25s;
-	-webkit-animation-delay: 4.25s;
-	-o-animation-delay: 4.25s;
-	-ms-animation-delay: 4.25s;
-	animation-delay: 4.25s;
-}
-
-#header nav li:nth-child(9) {
-	-moz-animation-delay: 4.5s;
-	-webkit-animation-delay: 4.5s;
-	-o-animation-delay: 4.5s;
-	-ms-animation-delay: 4.5s;
-	animation-delay: 4.5s;
-}
-
-#header nav li:nth-child(10) {
-	-moz-animation-delay: 4.75s;
-	-webkit-animation-delay: 4.75s;
-	-o-animation-delay: 4.75s;
-	-ms-animation-delay: 4.75s;
-	animation-delay: 4.75s;
-}
-
-#header nav a {
+#header nav li a {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	border: 0;
 	display: inline-block;
 }
 
-#header nav a:before {
+#header nav li a:before {
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -366,27 +338,27 @@ a:hover {
 	width: 2.5em;
 }
 
-#header nav a:hover {
+#header nav li a:hover {
 	font-size: 1.3em;
 }
 
-#header nav a:hover:before {
+#header nav li a:hover:before {
 	background-color: rgba(255, 255, 255, 0.175);
 	color:#FFF200;
 	border:solid 2px #00FFE2;
 }
 
-#header nav a:active {
+#header nav li a:active {
 	font-size: 0.95em;
 	background: none;
 }
 
-#header nav a:active:before {
+#header nav li a:active:before {
 	background-color: rgba(255, 255, 255, 0.35);
 	color: white;
 }
 
-#header nav a span {
+#header nav li a span {
 	display: none;
 }
 
