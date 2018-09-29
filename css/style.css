@@ -371,8 +371,8 @@ a:hover {
 	background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 	background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 	cursor: default;
-	height: 6em;
-	line-height:8.5em;
+	height: 5.2rem;
+	line-height: 7.5rem;
 	bottom:0;
 	left: 0;
 	position: absolute;

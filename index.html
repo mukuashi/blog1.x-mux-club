@@ -50,23 +50,23 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://github.com/PhotoArtLife" class="icon fa fa-code" title="Github" target="_blank">
-								<span class="label">Github</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://photoartlife.lofter.com" target="_blank" class="icon fa-picture-o" title="LOFTER博客" target="_blank">
+							<a href="http://photoartlife.lofter.com" target="_blank" class="icon fa-fire" title="LOFTER博客" target="_blank">
 								<span class="label">LOFTER博客</span>
 							</a>
 						</li>
 						<li>
-							<a href="http://t.cn/Rt1xb42" class="icon fa-wechat" title="微信原创专栏" target="_blank">
-								<span class="label">微信原创专栏</span>
+							<a href="https://github.com/PhotoArtLife/blog1.x-mux-club" class="icon fa fa-code" title="Github" target="_blank">
+								<span class="label">Github</span>
 							</a>
 						</li>
 						<li>
-							<a href="//kquanr.com/2.x" class="icon fa-fire" title="2.x Studio">
+							<a href="//kquanr.com/2.x" class="icon fa-female" title="2.x Studio">
 								<span class="label">2.x Studio</span>
+							</a>
+						</li>
+						<li>
+							<a href="//kquanr.com" class="icon fa-male" title="3.x Studio">
+								<span class="label">3.x Studio</span>
 							</a>
 						</li>
 					</ul>
@@ -91,13 +91,13 @@
 		//首页版本切换-弹框提示
 		swal({
 			html: true,
-			title: '2.x版本上线了，来看下么?<p>当前博客版本<a href="javascript:;" style="color: #3085d6;">1.x</a>（2017之前）<br/>新版本<a href="//kquanr.com/2.x" style="color: #3085d6;">2.x</a>（2017及之后）</p><br/><p>3秒后系统会默认为你选择1.x老版本</p>',
+			title: '2.x、3.x版本上线了，来看下么?<p>当前博客版本<a href="javascript:;" style="color: #3085d6;">1.x</a>（2016及之前）<br/>版本<a href="//kquanr.com/2.x" style="color: #3085d6;">2.x</a>（2016-2017）版本<a href="//kquanr.com" style="color: #3085d6;">3.x</a>（2018）</p><p style="padding-top:.6rem">3秒后系统会默认为你选择1.x老版本</p>',
 			type: 'info',
 			showCancelButton: true,
 			cancelButtonColor: '#d33',
 			cancelButtonText: '就这个了',
 			confirmButtonColor: '#3085d6',
-			confirmButtonText: 'Go 2.x 版',
+			confirmButtonText: '先去 2.x',
 			closeOnConfirm: false,
 			closeOnCancel: false,
 			timer: 5000
@@ -127,9 +127,9 @@
 		document.getElementById('version').addEventListener("click", function () {
 			swal({
 				html: true,
-				timer: 7000,
+				timer: 10000,
 				title: 'Hey，欢迎访问 PhotoArtLife<a href="javascript:;" style="display: block;text-decoration: none;color: #09bfac;font-weight: 40←0;">version: 1.x</a>',
-				text: '当前页为2017年之前的老版本<br /><a href="http://kquanr.com/2.x" style="border:none;color: rgba(222, 67, 23, 0.76);font-weight: 400;">新版本2.x </a> ← 点击访问（3秒后自动关闭）',
+				text: '当前页为2017年之前的老版本<br /><a href="http://kquanr.com/2.x" style="border:none;color: rgba(222, 67, 23, 0.76);font-weight: 400;">版本2.x </a> （5秒后自动关闭）<a href="http://kquanr.com" style="border:none;color: rgba(222, 67, 23, 0.76);font-weight: 400;"> 版本3.x </a>',
 				imageUrl: 'http://kquanr.com/images/header-avatar.png',
 				confirmButtonText: '关闭'
 			});

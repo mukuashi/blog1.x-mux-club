@@ -1436,15 +1436,15 @@
 			display: inline-block;
 			text-align: center;
 		}
-			#footer .copyright ul.banshi1 li a{
-				border:0;
-			}
-			#footer .copyright ul.banshi1 li.active1{
-				color:#f00;
-			}
-			#footer .copyright ul.banshi1 li.hover2:hover{
-				color:#E89980;
-			}
+		#footer .copyright ul.banshi1 li a {
+			border: 0;
+		}
+		#footer .copyright ul.banshi1 li:first-child a{
+			color:#E89980;
+		}
+		#footer .copyright ul.banshi1 li:last-child a{
+			color: #49bf9d;
+		}
 			li#cprttwo a{
 				color:#E89980!important;
 				font-weight:600;
