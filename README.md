@@ -29,7 +29,8 @@
 <a href="http://www.expressjs.com.cn/" target="_blank">Express,基于Node.js平台，快速、开放、极简的web开发框架：http://www.expressjs.com.cn</a>
 
 # View
-* 1.x：http://kquanr.com
+* 1.x：http://kquanr.com/1.x
 * 2.x：http://kquanr.com/2.x
+* 3.x：http://kquanr.com
 * ...
 
