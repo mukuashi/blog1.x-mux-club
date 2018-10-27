@@ -17,7 +17,8 @@ body {
   background: #FFF;
 }
 .messages {
-  overflow: auto;
+  overflow: hidden;
+  overflow-y: auto;
   width: 100vw;
   max-height: 100vh;
   padding: 1rem .9rem;
