@@ -26,7 +26,7 @@ $(document).ready(function () {
       title: '微信扫一扫(或微信里长按识别二维码)',
       skin: 'layui-layer-rim', //加上边框
       area: ['350px', '410px'], //宽高
-      content: '<div class="img_wechat"><img src="http://www.kquanr.com/images/wechat-public.jpg" alt="请检查您的网络连接哟"><p>微信公众号ID：PhotoArtLife<br>如有问题，可以给我留言哈</p></div>'
+      content: '<div class="img_wechat"><img src="http://kquanr.com/1.x/images/wechat-public.jpg" alt="请检查您的网络连接哟"><p>微信公众号ID：PhotoArtLife<br>如有问题，可以给我留言哈</p></div>'
     });
   });
   //2-个人微信
@@ -36,7 +36,7 @@ $(document).ready(function () {
       title: '微信扫一扫(或微信里长按识别二维码)',
       skin: 'layui-layer-rim', //加上边框
       area: ['350px', '410px'], //宽高
-      content: '<div class="img_wechat"><img src="http://www.kquanr.com/images/wechat-private.jpg" alt="请检查您的网络连接哟"><p>作者微信ID：mukuashi<br>如有问题，可以给我留言哈。</p></div>'
+      content: '<div class="img_wechat"><img src="http://kquanr.com/1.x/images/wechat-private.jpg" alt="请检查您的网络连接哟"><p>作者微信ID：mukuashi<br>如有问题，可以给我留言哈。</p></div>'
     });
   });
 

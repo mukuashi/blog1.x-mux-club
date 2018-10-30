@@ -263,11 +263,12 @@
 			<li>
 				<em class="beian">备案号：鲁ICP备15022927号 </em>
 			</li>
-			<li>Copyright ©&nbsp;2015-Now&nbsp;All Rights Reserved</li>
+			<li>Copyright ©&nbsp;2015-<span id="currentYear"></span>&nbsp;All Rights Reserved</li>
 			<li>
-				<a id="meMore" href="javascript:;" title="关于作者" target="_blank"> mukuashi </a>Design For Life</li>
+				<a href="../contact/" title="联系作者"> mukuashi </a>Design For Life</li>
 			<li>
-				<a href="http://kquanr.com/2.x" title="2.x版">Go version 2.x</a>
+				<a href="../../2.x" title="2.x版">2.x</a> |
+				<a href="../../" title="3.x版">3.x</a>
 			</li>
 		</ul>
 	</footer>
@@ -275,9 +276,9 @@
 	<script src="js/target.js"></script>
 	<script src="../layer/layer.js"></script>
 	<script src="../js/main.js"></script>
-	<script src="../js/navigator-version.dev.js"></script>
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script>
+		document.getElementById('currentYear').innerHTML = new Date().getFullYear()
 		//接入阿里云监控日志API 
 		!(function (c, b, d, a) {
 			c[a] || (c[a] = {}); c[a].config = { pid: "gioyshyyzz@63fb9eb5dd7853a", imgUrl: "https://arms-retcode.aliyuncs.com/r.png?" };

@@ -406,12 +406,14 @@
 				<ul class="copyright">
 					<li id="cprtone">
 						<em class="beian">备案号：鲁ICP备15022927号 </em>
-						Copyright ©&nbsp;2015-Now&nbsp;All Rights Reserved
+						Copyright ©&nbsp;2015-<span id="currentYear"></span>&nbsp;All Rights Reserved
 					</li>
 					<li id="cprttwo">
-						<a href="http://kquanr.com/2.x">Go 版本2.x </a>Crafted By
+						<a href="../../../2.x">版本2.x </a> |
+						<a href="../../../">版本3.x </a>
+						Crafted By
 						<a href="http://photoartlife.lofter.com" target="_blank"> PhotoArtLife·跨世</a>&nbsp;|&nbsp;Powered by
-						<a href="javascript:;" class="private-wechat"> mukuashi </a>
+						<a href="../../contact/" title="俩系作者"> mukuashi </a>
 						<span class="motto2">Design For Life</span>
 					</li>
 				</ul>
@@ -421,6 +423,7 @@
 	<script src="../../layer/layer.js"></script>
 	<script src="../../js/main.js"></script>
 	<script>
+		document.getElementById('currentYear').innerHTML = new Date().getFullYear()
 		//接入阿里云监控日志API 
 		!(function (c, b, d, a) {
 			c[a] || (c[a] = {}); c[a].config = { pid: "gioyshyyzz@63fb9eb5dd7853a", imgUrl: "https://arms-retcode.aliyuncs.com/r.png?" };
