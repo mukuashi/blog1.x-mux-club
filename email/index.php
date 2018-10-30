@@ -47,7 +47,7 @@ if($_POST['yourname']){
   if(!$mail->Send()) {
     echo '<script>alert("您的信息填写有误提交失败了，请重新填写信息！");window.history.go(-1);</script>';
   } else {
-    echo '<script>alert("邮件发送成功！稍后我会及时给你答复的，谢谢反馈哈！");window.location.href="../project/works/index.html#four";</script>';
+    echo '<script>alert("邮件发送成功！稍后我会及时给您及时答复的，谢谢反馈哈！");window.location.href="/";</script>';
   }
 }
 ?>
