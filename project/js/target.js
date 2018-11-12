@@ -5,25 +5,25 @@ $(document).ready(function () {
         location.href = "http://www.lofter.com/app/photoartlife";
     });
     $('.web_mall').click(function () {
-        location.href = "http://kquanr.com/mall";
+        location.href = "http://kquanr.com/1.x/project/demo/mall";
     });
     $('.web_jiacheng2').click(function () {
-        location.href = "http://kquanr.com/project/demo/jiacheng2";
+        location.href = "http://kquanr.com/1.x/project/demo/jiacheng2";
     });
     $('.web_jiacheng1').click(function () {
-        location.href = "http://kquanr.com/project/demo/jiacheng1";
+        location.href = "http://kquanr.com/1.x/project/demo/jiacheng1";
     });
     $('.web_edu').click(function () {
-        location.href = "http://kquanr.com/kaoshi";
+        location.href = "http://kquanr.com/1.x/project/demo/kaoshi";
     });
     $('.web_feidajie').click(function () {
-        location.href = "http://kquanr.com/project/demo/feidajie";
+        location.href = "http://kquanr.com/1.x/project/demo/feidajie";
     });
     $('.web_hiyo').click(function () {
-        location.href = "http://kquanr.com/project/demo/hiyo";
+        location.href = "http://kquanr.com/1.x/project/demo/hiyo";
     });
     $('.web_baihua').click(function () {
-        location.href = "http://kquanr.com/project/demo/baihua";
+        location.href = "http://kquanr.com/1.x/project/demo/baihua";
     });
     // $('.web_jingnan').click(function () {
     //     layer.open({
