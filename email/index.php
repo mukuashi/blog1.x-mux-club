@@ -45,9 +45,9 @@ if($_POST['yourname']){
   $mail->MsgHTML($html);  
   $mail->IsHTML(true); 
   if(!$mail->Send()) {
-    echo '<script>alert("您的信息填写有误提交失败了，请重新填写信息！");window.history.go(-1);</script>';
+    echo '<script>alert("提交失败，请检查后再试哟！");window.history.go(-1);</script>';
   } else {
-    echo '<script>alert("邮件发送成功！稍后我会及时给您及时答复的，谢谢反馈哈！");window.location.href="/";</script>';
+    echo '<script>alert("恭喜你，邮件发送成功，稍后我会给您及时答复的，谢谢！");window.location.href="/";</script>';
   }
 }
 ?>
