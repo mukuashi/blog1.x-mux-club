@@ -5,7 +5,7 @@
  * @Date:  2018-09-1012:25:27
  * @version 0.1 | 2018-09-10 // Initial version.
  * @Last Modified by: mukuashi
- * @Last Modified time: 2018-10-27 22:54:55
+ * @Last Modified time: 2020-02-17 13:39:13
 */
 window.onload = function () {
 
@@ -14,26 +14,43 @@ window.onload = function () {
   var loadingText = '<b>•</b><b>•</b><b>•</b>';
   var messageIndex = 0;
 
-  var getCurrentTime = function () {
+  function getCurrentTime() {
     var date = new Date();
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var current = hours + (minutes * .01);
-    if (current >= 5 && current < 19) return 'Have a nice day';
-    if (current >= 19 && current < 22) return 'Have a nice evening';
-    if (current >= 22 || current < 5) return 'Have a good night';
+    if (current >= 5 && current < 19) return ['Have a nice day', '☀️ 🥛 🍝'];
+    if (current >= 19 && current < 22) return ['Have a nice evening', '☕️ 🍓 🥙'];
+    if (current >= 22 || current < 5) return ['Have a good night', '🛋 🛏 🌛'];
   }
-
+  var socials = [
+    '🚴 <a href="http://kquanr.com/1.x">kquanr.com/1.x</a>',
+    '🐿 <a href="http://kquanr.com/2.x">kquanr.com/2.x</a>',
+    '🤔 <a target="_blank" href="https://weibo.com/mukuashi">weibo.com/mukuashi</a>',
+    '😘 <a target="_blank" href="https://instagram.com/mukuashi">instagram.com/mukuashi</a>',
+    '😋 <a target="_blank" href="https://www.behance.net/PhotoArtLife">behance.net/PhotoArtLife</a>',
+    '😍 <a target="_blank" href="http://photoartlife.lofter.com">photoartlife.lofter.com</a>',
+    '😜 <a target="_blank" href="https://www.mepai.me/photographyer/u_592e418fe4a53">mepai.me/PhotoArtLife</a>',
+    '🤗 <a target="_blank" href="https://500px.me/PhotoArtLife">500px.me/PhotoArtLife</a>',
+    '😝 <a target="_blank" href="https://photoartlife.tuchong.com">tuchong.com/PhotoArtLife</a>',
+    '😀 <a target="_blank" href="https://www.xiaohongshu.com/user/profile/5b5d996f4eacab2d60ff6190">xiaohongshu.com/mukuashi</a>',
+    '😁 <a target="_blank" href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIwOTE1MzYyNg==&hid=4">mp.weixin.com/mukuashi</a>',
+    '🤠 <a target="_blank" href="http://i.youku.com/mukuashi">i.youku.com/mukuashi</a>',
+    '👨‍💻‍ <a target="_blank" href="https://www.xinpianchang.com/u10246467">xinpianchang.com/mukuashi</a>',
+    '‍😴‍ <a target="_blank" href="https://github.com/PhotoArtLife">github.com/PhotoArtLife</a>'
+  ]
   var messages = [
-    'Hey there 👋',
+    'Hey buddy 👋',
     "I'm mukuashi@PhotoArtLife",
-    'I\'m a Creator，MUX VF-Studio Founder | Independent Designer、Photographer、Programmer/Software Engineer、Producer、Media/Novel Author etc. If you have some related needs then may contact me at <a href="mailto:mukuashi@icloud.com">mukuashi@icloud.com</a>',
-    'I Design、Photography、Code、Create and Share something on the Internet',
-    '🚴 <a href="http://kquanr.com/1.x">kquanr.com/1.x</a><br>🐿 <a href="http://kquanr.com/2.x">kquanr.com/2.x</a><br>🐳 <a target="_blank" href="https://weibo.com/mukuashi">weibo.com/mukuashi</a><br>📸 <a target="_blank" href="http://photoartlife.lofter.com">photoartlife.lofter.com</a><br>🤡 <a target="_blank" href="https://m.mepai.me/photographyer/u_592e418fe4a53.html">mepai.me/PhotoArtLife</a><br>🐶 <a target="_blank" href="https://500px.me/PhotoArtLife">500px.me/PhotoArtLife</a><br>🦁 <a target="_blank" href="https://photoartlife.tuchong.com">photoartlife.tuchong.com</a><br>🐱 <a target="_blank" href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIwOTE1MzYyNg%3D%3D&hid=1&sn=63462387b1c18ed331bd84d54afab7b9">mp.weixin.com/mukuashi</a><br>👨‍💻‍ <a target="_blank" href="https://github.com/PhotoArtLife">github.com/PhotoArtLife</a>',
-    '🏠 <a href="http://kquanr.com">My Home 3.x</a>',
-    getCurrentTime(),
-    '👀 M. 🏊',
-    '🍲'
+    "Of course a Creator，MUX Lab、MUX VF-Studio、Asako Studio Founder",
+    'Specifically my work is a independent designer、photographer、full stack developer、producer、media author etc.<br>If you have some related needs then may contact me at <a href="mailto:mukuashi@icloud.com">mukuashi@icloud.com</a>',
+    'I design、photography、code、create and share something on the internet',
+    'Below I send some of my own works',
+    socials.join('<br>'),
+    'Recently it was my 3.x version<br>🏠<br><a href="http://kquanr.com">Home</a>',
+    '4.x and 5.x will meet you soon, so stay tuned friends 👬',
+    getCurrentTime()[0],
+    getCurrentTime()[1]
   ];
 
   var getFontSize = function () {
