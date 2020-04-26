@@ -1091,14 +1091,17 @@
 					border-left: 0;
 					margin-left: 0;
 					padding-left: 0;
+					padding-top: 1.2rem;
 				}
 
 				#footer .copyright li a {
 				    color:#E89980!important;
 				    border-bottom
 				}
-				#footer .copyright li a:hover{color:#4acaa8!important;}
+				#footer .copyright li a:hover{
+					color:#4acaa8!important;
+				}
 				li#cprtone em.beian {
-				font-family:"Microsoft YaHei","Times New Roman",Georgia,Serif;;
+				font-family:"Microsoft YaHei","Times New Roman",Georgia,Serif;
 				font-style: normal;
 				}
