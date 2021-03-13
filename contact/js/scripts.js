@@ -5,7 +5,7 @@
  * @Date:  2018-09-1012:25:27
  * @version 0.1 | 2018-09-10 // Initial version.
  * @Last Modified by: mukuashi
- * @Last Modified time: 2020-02-17 13:39:13
+ * @Last Modified time: 2021-03-13 11:39:08
 */
 window.onload = function () {
 
@@ -42,7 +42,7 @@ window.onload = function () {
   var messages = [
     'Hey buddy 👋',
     "I'm mukuashi@PhotoArtLife",
-    "Of course a Creator，MUX Lab、MUX VF-Studio、Asako Studio Founder",
+    "Of course a Creator，Asako Studio Founder",
     'Specifically my work is a independent designer、photographer、full stack developer、producer、media author etc.<br>If you have some related needs then may contact me at <a href="mailto:mukuashi@icloud.com">mukuashi@icloud.com</a>',
     'I design、photography、code、create and share something on the internet',
     'Below I send some of my own works',
