@@ -6,22 +6,22 @@
  * @version 0.1 | 2018-09-10 // Initial version.
  * @Last Modified by: mukuashi
  * @Last Modified time: 2021-03-13 11:39:08
-*/
+ */
 window.onload = function () {
-
-  var messagesEl = document.querySelector('.messages');
+  var messagesEl = document.querySelector(".messages");
   var typingSpeed = 20;
-  var loadingText = '<b>•</b><b>•</b><b>•</b>';
+  var loadingText = "<b>•</b><b>•</b><b>•</b>";
   var messageIndex = 0;
 
   function getCurrentTime() {
     var date = new Date();
     var hours = date.getHours();
     var minutes = date.getMinutes();
-    var current = hours + (minutes * .01);
-    if (current >= 5 && current < 19) return ['Have a nice day', '☀️ 🥛 🍝'];
-    if (current >= 19 && current < 22) return ['Have a nice evening', '☕️ 🍓 🥙'];
-    if (current >= 22 || current < 5) return ['Have a good night', '🛋 🛏 🌛'];
+    var current = hours + minutes * 0.01;
+    if (current >= 5 && current < 19) return ["Have a nice day", "☀️ 🥛 🍝"];
+    if (current >= 19 && current < 22)
+      return ["Have a nice evening", "☕️ 🍓 🥙"];
+    if (current >= 22 || current < 5) return ["Have a good night", "🛋 🛏 🌛"];
   }
   var socials = [
     '🚴 <a href="http://kquanr.com/1.x">kquanr.com/1.x</a>',
@@ -30,47 +30,49 @@ window.onload = function () {
     '😘 <a target="_blank" href="https://instagram.com/mukuashi">instagram.com/mukuashi</a>',
     '😋 <a target="_blank" href="https://www.behance.net/PhotoArtLife">behance.net/PhotoArtLife</a>',
     '😍 <a target="_blank" href="http://photoartlife.lofter.com">photoartlife.lofter.com</a>',
-    '😜 <a target="_blank" href="https://www.mepai.me/photographyer/u_592e418fe4a53">mepai.me/PhotoArtLife</a>',
+    '😜 <a target="_blank" href="https://www.mepai.me/photographyer/u_592e418fe4a53">mepai.me/mukuashi</a>',
     '🤗 <a target="_blank" href="https://500px.me/PhotoArtLife">500px.me/PhotoArtLife</a>',
     '😝 <a target="_blank" href="https://photoartlife.tuchong.com">tuchong.com/PhotoArtLife</a>',
     '😀 <a target="_blank" href="https://www.xiaohongshu.com/user/profile/5b5d996f4eacab2d60ff6190">xiaohongshu.com/mukuashi</a>',
     '😁 <a target="_blank" href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIwOTE1MzYyNg==&hid=4">mp.weixin.com/mukuashi</a>',
     '🤠 <a target="_blank" href="http://i.youku.com/mukuashi">i.youku.com/mukuashi</a>',
     '👨‍💻‍ <a target="_blank" href="https://www.xinpianchang.com/u10246467">xinpianchang.com/mukuashi</a>',
-    '‍😴‍ <a target="_blank" href="https://github.com/PhotoArtLife">github.com/PhotoArtLife</a>'
-  ]
+    '‍😴‍ <a target="_blank" href="https://github.com/mukuashi">github.com/PhotoArtLife</a>',
+  ];
   var messages = [
-    'Hey buddy 👋',
+    "Hey buddy 👋",
     "I'm mukuashi@PhotoArtLife",
     "Of course a Creator，Asako Studio Founder",
     'Specifically my work is a independent designer、photographer、full stack developer、producer、media author etc.<br>If you have some related needs then may contact me at <a href="mailto:mukuashi@icloud.com">mukuashi@icloud.com</a>',
-    'I design、photography、code、create and share something on the internet',
-    'Below I send some of my own works',
-    socials.join('<br>'),
+    "I design、photography、code、create and share something on the internet",
+    "Below I send some of my own works",
+    socials.join("<br>"),
     'Recently it was my 3.x version<br>🏠<br><a href="http://kquanr.com">Home</a>',
-    '4.x and 5.x will meet you soon, so stay tuned friends 👬',
+    "4.x and 5.x will meet you soon, so stay tuned friends 👬",
     getCurrentTime()[0],
-    getCurrentTime()[1]
+    getCurrentTime()[1],
   ];
 
   var getFontSize = function () {
-    return parseInt(getComputedStyle(document.body).getPropertyValue('font-size'));
-  }
+    return parseInt(
+      getComputedStyle(document.body).getPropertyValue("font-size")
+    );
+  };
 
   var pxToRem = function (px) {
-    return px / getFontSize() + 'rem';
-  }
+    return px / getFontSize() + "rem";
+  };
 
   var createBubbleElements = function (message, position) {
-    var bubbleEl = document.createElement('div');
-    var messageEl = document.createElement('span');
-    var loadingEl = document.createElement('span');
-    bubbleEl.classList.add('bubble');
-    bubbleEl.classList.add('is-loading');
-    bubbleEl.classList.add('cornered');
-    bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
-    messageEl.classList.add('message');
-    loadingEl.classList.add('loading');
+    var bubbleEl = document.createElement("div");
+    var messageEl = document.createElement("span");
+    var loadingEl = document.createElement("span");
+    bubbleEl.classList.add("bubble");
+    bubbleEl.classList.add("is-loading");
+    bubbleEl.classList.add("cornered");
+    bubbleEl.classList.add(position === "right" ? "right" : "left");
+    messageEl.classList.add("message");
+    loadingEl.classList.add("loading");
     messageEl.innerHTML = message;
     loadingEl.innerHTML = loadingText;
     bubbleEl.appendChild(loadingEl);
@@ -79,34 +81,35 @@ window.onload = function () {
     return {
       bubble: bubbleEl,
       message: messageEl,
-      loading: loadingEl
-    }
-  }
+      loading: loadingEl,
+    };
+  };
 
   var getDimentions = function (elements) {
-    return dimensions = {
+    return (dimensions = {
       loading: {
-        w: '4rem',
-        h: '2.25rem'
+        w: "4rem",
+        h: "2.25rem",
       },
       bubble: {
         w: pxToRem(elements.bubble.offsetWidth + 4),
-        h: pxToRem(elements.bubble.offsetHeight)
+        h: pxToRem(elements.bubble.offsetHeight),
       },
       message: {
         w: pxToRem(elements.message.offsetWidth + 4),
-        h: pxToRem(elements.message.offsetHeight)
-      }
-    }
-  }
+        h: pxToRem(elements.message.offsetHeight),
+      },
+    });
+  };
 
   var sendMessage = function (message, position) {
-    var loadingDuration = (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + 500;
+    var loadingDuration =
+      message.replace(/<(?:.|\n)*?>/gm, "").length * typingSpeed + 500;
     var elements = createBubbleElements(message, position);
     messagesEl.appendChild(elements.bubble);
-    messagesEl.appendChild(document.createElement('br'));
+    messagesEl.appendChild(document.createElement("br"));
     var dimensions = getDimentions(elements);
-    elements.bubble.style.width = '0rem';
+    elements.bubble.style.width = "0rem";
     elements.bubble.style.height = dimensions.loading.h;
     elements.message.style.width = dimensions.message.w;
     elements.message.style.height = dimensions.message.h;
@@ -116,41 +119,43 @@ window.onload = function () {
       var scrollMessages = anime({
         targets: messagesEl,
         scrollTop: bubbleOffset,
-        duration: 750
+        duration: 750,
       });
     }
     var bubbleSize = anime({
       targets: elements.bubble,
-      width: ['0rem', dimensions.loading.w],
-      marginTop: ['2.5rem', 0],
-      marginLeft: ['-2.5rem', 0],
+      width: ["0rem", dimensions.loading.w],
+      marginTop: ["2.5rem", 0],
+      marginLeft: ["-2.5rem", 0],
       duration: 800,
-      easing: 'easeOutElastic'
+      easing: "easeOutElastic",
     });
     var loadingLoop = anime({
       targets: elements.bubble,
-      scale: [1.05, .95],
+      scale: [1.05, 0.95],
       duration: 1100,
       loop: true,
-      direction: 'alternate',
-      easing: 'easeInOutQuad'
+      direction: "alternate",
+      easing: "easeInOutQuad",
     });
     var dotsStart = anime({
       targets: elements.loading,
-      translateX: ['-2rem', '0rem'],
-      scale: [.5, 1],
+      translateX: ["-2rem", "0rem"],
+      scale: [0.5, 1],
       duration: 400,
       delay: 25,
-      easing: 'easeOutElastic',
+      easing: "easeOutElastic",
     });
     var dotsPulse = anime({
-      targets: elements.bubble.querySelectorAll('b'),
+      targets: elements.bubble.querySelectorAll("b"),
       scale: [1, 1.25],
-      opacity: [.5, 1],
+      opacity: [0.5, 1],
       duration: 300,
       loop: true,
-      direction: 'alternate',
-      delay: function (i) { return (i * 100) + 50 }
+      direction: "alternate",
+      delay: function (i) {
+        return i * 100 + 50;
+      },
     });
     setTimeout(function () {
       loadingLoop.pause();
@@ -158,17 +163,20 @@ window.onload = function () {
         opacity: 0,
         scale: 0,
         loop: false,
-        direction: 'forwards',
+        direction: "forwards",
         update: function (a) {
-          if (a.progress >= 65 && elements.bubble.classList.contains('is-loading')) {
-            elements.bubble.classList.remove('is-loading');
+          if (
+            a.progress >= 65 &&
+            elements.bubble.classList.contains("is-loading")
+          ) {
+            elements.bubble.classList.remove("is-loading");
             anime({
               targets: elements.message,
               opacity: [0, 1],
               duration: 300,
             });
           }
-        }
+        },
       });
       bubbleSize.restart({
         scale: 1,
@@ -177,20 +185,24 @@ window.onload = function () {
         marginTop: 0,
         marginLeft: 0,
         begin: function () {
-          if (messageIndex < messages.length) elements.bubble.classList.remove('cornered');
-        }
-      })
+          if (messageIndex < messages.length)
+            elements.bubble.classList.remove("cornered");
+        },
+      });
     }, loadingDuration - 50);
-  }
+  };
 
   var sendMessages = function () {
     var message = messages[messageIndex];
     if (!message) return;
     sendMessage(message);
     ++messageIndex;
-    setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1200));
-  }
+    setTimeout(
+      sendMessages,
+      message.replace(/<(?:.|\n)*?>/gm, "").length * typingSpeed +
+        anime.random(900, 1200)
+    );
+  };
 
   sendMessages();
-
-}
+};
