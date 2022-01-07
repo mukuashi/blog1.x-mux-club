@@ -5,7 +5,7 @@
  * @Date:  2018-09-1012:25:27
  * @version 0.1 | 2018-09-10 // Initial version.
  * @Last Modified by: mukuashi
- * @Last Modified time: 2021-03-13 11:39:08
+ * @Last Modified time: 2022-01-07 15:48:46
  */
 window.onload = function () {
   var messagesEl = document.querySelector(".messages");
@@ -24,30 +24,31 @@ window.onload = function () {
     if (current >= 22 || current < 5) return ["Have a good night", "🛋 🛏 🌛"];
   }
   var socials = [
-    '🚴 <a href="http://kquanr.com/1.x">kquanr.com/1.x</a>',
-    '🐿 <a href="http://kquanr.com/2.x">kquanr.com/2.x</a>',
-    '🤔 <a target="_blank" href="https://weibo.com/mukuashi">weibo.com/mukuashi</a>',
-    '😘 <a target="_blank" href="https://instagram.com/mukuashi">instagram.com/mukuashi</a>',
-    '😋 <a target="_blank" href="https://www.behance.net/PhotoArtLife">behance.net/PhotoArtLife</a>',
-    '😍 <a target="_blank" href="http://photoartlife.lofter.com">photoartlife.lofter.com</a>',
-    '😜 <a target="_blank" href="https://www.mepai.me/photographyer/u_592e418fe4a53">mepai.me/mukuashi</a>',
-    '🤗 <a target="_blank" href="https://500px.me/PhotoArtLife">500px.me/PhotoArtLife</a>',
-    '😝 <a target="_blank" href="https://photoartlife.tuchong.com">tuchong.com/PhotoArtLife</a>',
-    '😀 <a target="_blank" href="https://www.xiaohongshu.com/user/profile/5b5d996f4eacab2d60ff6190">xiaohongshu.com/mukuashi</a>',
-    '😁 <a target="_blank" href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIwOTE1MzYyNg==&hid=4">mp.weixin.com/mukuashi</a>',
-    '🤠 <a target="_blank" href="http://i.youku.com/mukuashi">i.youku.com/mukuashi</a>',
-    '👨‍💻‍ <a target="_blank" href="https://www.xinpianchang.com/u10246467">xinpianchang.com/mukuashi</a>',
-    '‍😴‍ <a target="_blank" href="https://github.com/mukuashi">github.com/PhotoArtLife</a>',
+    '🚴 <a href="//kquanr.com/1.x">kquanr.com/1.x</a>',
+    '🐿 <a href="//kquanr.com/2.x">kquanr.com/2.x</a>',
+    '🤔 <a target="_blank" href="//weibo.com/mukuashi">weibo.com/mukuashi</a>',
+    '😘 <a target="_blank" href="//instagram.com/mukuashi">instagram.com/mukuashi</a>',
+    '😋 <a target="_blank" href="//behance.net/mukuashi">behance.net/mukuashi</a>',
+    '😜 <a target="_blank" href="//mepai.me/mukuashi">mepai.me/mukuashi</a>',
+    '🤗 <a target="_blank" href="//500px.com.cn/mukuashi">500px.com.cn/mukuashi</a>',
+    '😍 <a target="_blank" href="//photoartlife.lofter.com">photoartlife.lofter.com</a>',
+    '😝 <a target="_blank" href="//photoartlife.tuchong.com">tuchong.com/PhotoArtLife</a>',
+    '😀 <a target="_blank" href="//www.xiaohongshu.com/user/profile/5b5d996f4eacab2d60ff6190">xiaohongshu.com/mukuashi</a>',
+    '😁 <a target="_blank" href="//mp.weixin.qq.com/mp/homepage?__biz=MzIwOTE1MzYyNg==&hid=4">mp.weixin.com/mukuashi</a>',
+    '🤠 <a target="_blank" href="//i.youku.com/mukuashi">i.youku.com/mukuashi</a>',
+    '👨‍💻‍ <a target="_blank" href="//www.xinpianchang.com/u10246467">xinpianchang.com/mukuashi</a>',
+    '‍😴‍ <a target="_blank" href="//github.com/mukuashi">github.com/mukuashi</a>',
+    '🤡 <a target="_blank" href="//ltx.bio/mukuashi">ltx.bio/mukuashi</a>',
   ];
   var messages = [
     "Hey buddy 👋",
     "I'm mukuashi@PhotoArtLife",
-    "Of course a Creator，Asako Studio Founder",
-    'Specifically my work is a independent designer、photographer、full stack developer、producer、media author etc.<br>If you have some related needs then may contact me at <a href="mailto:mukuashi@icloud.com">mukuashi@icloud.com</a>',
+    "Of course a Creator、Crypto NFT Artist、Asako Studio Founder",
+    'Specifically my work is a independent designer、photographer、full stack developer、producer、media author etc.<br>If you have some related needs then may contact me at <a href="mailto:cryptostudiolab@gmail.com">cryptostudiolab@gmail.com</a>',
     "I design、photography、code、create and share something on the internet",
     "Below I send some of my own works",
     socials.join("<br>"),
-    'Recently it was my 3.x version<br>🏠<br><a href="http://kquanr.com">Home</a>',
+    'Recently it was my 3.x version<br>🏠<br><a href="//kquanr.com">Home</a>',
     "4.x and 5.x will meet you soon, so stay tuned friends 👬",
     getCurrentTime()[0],
     getCurrentTime()[1],
