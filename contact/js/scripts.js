@@ -5,7 +5,7 @@
  * @Date:  2018-09-1012:25:27
  * @version 0.1 | 2018-09-10 // Initial version.
  * @Last Modified by: mukuashi
- * @Last Modified time: 2022-01-07 15:48:46
+ * @Last Modified time: 2022-01-09 03:00:24
  */
 window.onload = function () {
   var messagesEl = document.querySelector(".messages");
@@ -32,7 +32,7 @@ window.onload = function () {
     '😜 <a target="_blank" href="//mepai.me/mukuashi">mepai.me/mukuashi</a>',
     '🤗 <a target="_blank" href="//500px.com.cn/mukuashi">500px.com.cn/mukuashi</a>',
     '😍 <a target="_blank" href="//photoartlife.lofter.com">photoartlife.lofter.com</a>',
-    '😝 <a target="_blank" href="//photoartlife.tuchong.com">tuchong.com/PhotoArtLife</a>',
+    '😝 <a target="_blank" href="//photoartlife.tuchong.com">tuchong.com/mukuashi</a>',
     '😀 <a target="_blank" href="//www.xiaohongshu.com/user/profile/5b5d996f4eacab2d60ff6190">xiaohongshu.com/mukuashi</a>',
     '😁 <a target="_blank" href="//mp.weixin.qq.com/mp/homepage?__biz=MzIwOTE1MzYyNg==&hid=4">mp.weixin.com/mukuashi</a>',
     '🤠 <a target="_blank" href="//i.youku.com/mukuashi">i.youku.com/mukuashi</a>',
